@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { slide1, slide2 } from '../../assets';
-import styles from './Slider.module.scss';
 
 const images = [slide1, slide2];
 
@@ -15,9 +14,9 @@ export default function Slider({ children }) {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+     <div className="flex relative">
         <div className="container mx-auto">
-            <div className="sliderimage">
+            <div className="bg-white border-b">
                 {images.map((src, index) => (
                     <img
                     key={index}

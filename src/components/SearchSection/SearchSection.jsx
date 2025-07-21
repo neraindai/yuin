@@ -1,8 +1,9 @@
-import React from "react";
 import { FaSearch, FaMapMarkerAlt, FaSearchLocation } from "react-icons/fa";
+
+
 export default function SearchSection() {
   return (
-    <div className="bg-white bg-opacity-90 rounded-lg p-6 max-w-md shadow-lg">
+    <div className="mt-16 mb-16 w-[488px] p-5 shadow-[0_4px_16px_rgba(0,0,0,0.1)] rounded-[10px] bg-white bg-opacity-90 rounded-lg p-6 max-w-md shadow-lg">
       <h2 className="text-lg font-semibold mb-4 flex items-center space-x-2">
         <FaMapMarkerAlt />
         <span>結婚式場を探す</span>

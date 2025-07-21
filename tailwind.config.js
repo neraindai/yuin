@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+   extend: {
+      fontFamily: {
+        // inter: ['Inter', 'sans-serif'],
+        // titillium: ['"Titillium Web"', 'sans-serif'],
+        zen: ['"Zen Maru Gothic"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
