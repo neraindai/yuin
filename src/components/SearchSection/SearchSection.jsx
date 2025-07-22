@@ -12,7 +12,7 @@ export default function SearchSection() {
       <form className="space-y-4 text-sm">
         {/* Search by area */}
         <div>
-          <label className="block mb-1">挙式希望エリアから探す</label>
+          <label className="font-bold text-[#5B5B5B] text-[12px] font-zen font-semibold block mb-1">挙式希望エリアから探す</label>
           <div className="flex items-center border rounded-md overflow-hidden">
             <select
               className="flex-1 px-3 py-2 outline-none border-none"
@@ -37,7 +37,7 @@ export default function SearchSection() {
 
         {/* Search by venue name */}
         <div>
-          <label className="block mb-1">式場名で探す</label>
+          <label className="font-bold text-[#5B5B5B] text-[12px] font-zen font-semibold block mb-1">式場名で探す</label>
           <div className="flex items-center border rounded-md overflow-hidden">
             <input
               type="text"
@@ -55,7 +55,7 @@ export default function SearchSection() {
 
         {/* Search by keyword */}
         <div>
-          <label className="block mb-1">キーワードで探す</label>
+          <label className="font-bold text-[#5B5B5B] text-[12px] font-zen font-semibold block mb-1">キーワードで探す</label>
           <div className="flex items-center border rounded-md overflow-hidden">
             <input
               type="text"

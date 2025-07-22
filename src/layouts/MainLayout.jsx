@@ -4,7 +4,9 @@ import Slider from "../components/Slider/Slider";
 import SearchSection from "../components/SearchSection/SearchSection";
 import RegisterLoginSection from '../components/ExtraComponent/RegisterLoginSection';
 import PopularVenuesSection from '../components/ExtraComponent/PopularVenuesSection';
-
+import VenueCampaign from '../components/ExtraComponent/VenueCampaign';
+import AboutSection from '../components/ExtraComponent/AboutSection';
+import StepComponent from '../components/ExtraComponent/StepComponent';
 const MainLayout = ({ children }) => {
   return (
     <>
@@ -15,6 +17,9 @@ const MainLayout = ({ children }) => {
        <main>
         <RegisterLoginSection />
         <PopularVenuesSection />
+        <VenueCampaign />
+        <AboutSection/>
+        <StepComponent/>
       </main>
       <Footer />
     </>

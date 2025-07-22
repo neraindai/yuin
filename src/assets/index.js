@@ -8,6 +8,13 @@ import venue1 from './venue1.jpg';
 import venue2 from './venue2.jpg';
 import venue3 from './venue3.jpg';
 import venue4 from './venue4.jpg';
+import venue5 from './venue5.jpg';
+import venue6 from './venue6.jpg';
+import steps1 from './steps1.svg';
+import steps2 from './steps2.svg';
+import steps3 from './steps3.svg';
+import steps4 from './steps4.svg';
+import steps5 from './steps5.svg';
 
 export {
   logo,
@@ -17,6 +24,13 @@ export {
   venue2,
   venue3,
   venue4,
+  venue5,
+  venue6,
+  steps1,
+  steps2,
+  steps3,
+  steps4,
+  steps5,
   dividershape,
   
 };

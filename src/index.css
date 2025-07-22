@@ -1,23 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
-.logoCstsize {
-  width: 201px;
-  height: auto;
+
+
+@layer base {
+  body {
+    @apply font-yugothic text-primary-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-yugothic font-bold text-primary-text;
+  }
+
+  p {
+    @apply font-yugothic text-base text-black-text font-normal;
+  }
 }
 
-.headerCustom {
-  background-color: #fff;
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
+@layer components {
+  .heading {
+    @apply text-xl font-bold text-primary-text;
+  }
 
-/* Tailwind custom - hide scrollbar */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  .paragraph {
+    @apply text-base font-normal text-black-text tracking-tightest;
+  }
 }

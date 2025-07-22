@@ -17,9 +17,9 @@ const RegisterLoginSection = () => {
 
       <DecorativeDivider />
 
-      <div className="mt-6">
-        <h2 className="text-green-700 text-2xl md:text-3xl font-bold mb-2">結婚式場一覧</h2>
-        <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+      <div className="container mx-auto">
+        <h2 className="md:text-3xl font-bold mb-2 heading">結婚式場一覧</h2>
+        <p className="text-center relative mb-1 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">
           特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！
         </p>
       </div>

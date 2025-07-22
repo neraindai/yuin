@@ -31,13 +31,38 @@ const venues = [
     description: 'セレスティアルガーデンホールは、緑豊かなガーデン付きの開放的なイベント会場...',
     link: '#',
   },
+  {
+    image: venue1,
+    title: 'セレスティアルガーデンホール',
+    description: 'セレスティアルガーデンホールは、緑豊かなガーデン付きの開放的なイベント会場...',
+    link: '#',
+  },
+  {
+    image: venue2,
+    title: 'セレスティアルガーデンホール',
+    description: 'セレスティアルガーデンホールは、緑豊かなガーデン付きの開放的なイベント会場...',
+    link: '#',
+  },
+  {
+    image: venue3,
+    title: 'セレスティアルガーデンホール',
+    description: 'セレスティアルガーデンホールは、緑豊かなガーデン付きの開放的なイベント会場...',
+    link: '#',
+  },
+  {
+    image: venue4,
+    title: 'セレスティアルガーデンホール',
+    description: 'セレスティアルガーデンホールは、緑豊かなガーデン付きの開放的なイベント会場...',
+    link: '#',
+  },
+  
 ];
 
 const PopularVenuesSection = () => {
   return (
-    <section className="px-4 py-12 text-center">
-        <div className="container mx-auto px-4 py-3">
-      <h2 className="text-2xl md:text-3xl font-bold text-green-700 mb-8">人気会場</h2>
+    <section className=" text-center">
+        <div className="container mx-auto ">
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 heading">人気会場</h2>
 
       <Swiper
         modules={[Autoplay, Navigation]}
@@ -60,8 +85,8 @@ const PopularVenuesSection = () => {
         ))}
       </Swiper>
 
-      <div className="mt-8">
-        <button className="bg-green-100 hover:bg-green-200 text-green-800 font-semibold px-6 py-3 rounded-full transition">
+      <div className="mt-4">
+        <button className="bg-green-100 hover:bg-green-200 font-semibold pl-12 pr-12 py-3 rounded-full transition shadow-md text-primary">
           もっと見る
         </button>
       </div>
