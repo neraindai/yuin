@@ -13,6 +13,7 @@ export default {
       colors: {
         'primary-text': '#4C8B6D',
         'black-text': '#000000',
+        'light-bg': '#F7F8F1',
       },
       fontFamily: {
         zen: ['"Zen Maru Gothic"', 'sans-serif'],
@@ -22,10 +23,10 @@ export default {
       fontSize: {
         sm: '12px',
         nm: '14px',
-        base:'16px',   
+        base:'16px',
         md: '17px', 
-        lg: '28px',  
-        xl: '36px',   
+        lg: '28px',
+        xl: '36px',
         xxl: '48px',   
           
       },

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import StepCard from './StepCard';
+import ActionCard from './ActionCard';
 import DecorativeDivider from './DecorativeDivider';
 import { steps1,steps2,steps3,steps4,steps5} from '../../assets';
 const steps = [
@@ -43,12 +44,12 @@ const StepComponent = () => {
         サービスの流れ
       </h2>
       
-      <p className="text-center relative mb-1 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">
+      <p className="text-center relative mb-16 font-yumincho pr-16 pl-16 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">
         「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。]
       </p>
       <div className="">
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -56,17 +57,16 @@ const StepComponent = () => {
         >
           {steps.map((step, index) => (
             <div
-              key={index}
-              className={`
-                ${index === 3 ? 'md:col-start-2' : ''}
-                ${index === 4 ? 'md:col-start-3' : ''}
-              `}
-            >
+              key={index}            >
               <StepCard {...step} />
             </div>
           ))}
         </motion.div>
-        
+        <div className="mt-4">
+          <button className="bg-green-100 hover:bg-green-200 font-semibold pl-12 pr-12 py-3 rounded-full transition shadow-md text-primary">
+            もっと見る
+          </button>
+        </div>
       </div>
     </div>
   );

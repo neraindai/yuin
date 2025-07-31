@@ -16,7 +16,7 @@ const StepCard = ({ image, title, description, number }) => {
        
         <div className="w-full lg:w-[80%] mt-4">
           <h3 className="font-yugothic text-md text-black-text font-bold text-left">{title}</h3>
-          <p className="font-yugothic text-black-text font-light text-nm text-left">
+          <p className="font-yugothic text-black-text font-regular text-nm text-left">
            {description}
           </p>
         </div>

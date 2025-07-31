@@ -14,15 +14,7 @@ const RegisterLoginSection = () => {
           buttonText="ログイン"
         />
       </div>
-
       <DecorativeDivider />
-
-      <div className="container mx-auto">
-        <h2 className="md:text-3xl font-bold mb-2 heading">結婚式場一覧</h2>
-        <p className="text-center relative mb-1 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">
-          特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！
-        </p>
-      </div>
     </section>
   );
 };

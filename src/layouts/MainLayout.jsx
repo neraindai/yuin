@@ -7,6 +7,9 @@ import PopularVenuesSection from '../components/ExtraComponent/PopularVenuesSect
 import VenueCampaign from '../components/ExtraComponent/VenueCampaign';
 import AboutSection from '../components/ExtraComponent/AboutSection';
 import StepComponent from '../components/ExtraComponent/StepComponent';
+import DecorativeDivider from '../components/ExtraComponent/DecorativeDivider';
+import TestimonialCarousel from '../components/ExtraComponent/TestimonialCarousel';
+
 const MainLayout = ({ children }) => {
   return (
     <>
@@ -20,6 +23,9 @@ const MainLayout = ({ children }) => {
         <VenueCampaign />
         <AboutSection/>
         <StepComponent/>
+        <DecorativeDivider/>
+        <RegisterLoginSection />
+        <TestimonialCarousel/>
       </main>
       <Footer />
     </>
