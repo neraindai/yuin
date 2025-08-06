@@ -9,6 +9,8 @@ import AboutSection from '../components/ExtraComponent/AboutSection';
 import StepComponent from '../components/ExtraComponent/StepComponent';
 import DecorativeDivider from '../components/ExtraComponent/DecorativeDivider';
 import TestimonialCarousel from '../components/ExtraComponent/TestimonialCarousel';
+import BrideGroomCardList from '../components/ExtraComponent/BrideGroomCardList';
+import TabSection from '../components/ExtraComponent/TabSection';
 
 const MainLayout = ({ children }) => {
   return (
@@ -26,6 +28,8 @@ const MainLayout = ({ children }) => {
         <DecorativeDivider/>
         <RegisterLoginSection />
         <TestimonialCarousel/>
+        <BrideGroomCardList />
+         <TabSection />
       </main>
       <Footer />
     </>

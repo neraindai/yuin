@@ -25,6 +25,7 @@ export default {
         nm: '14px',
         base:'16px',
         md: '17px', 
+        semmd: '20px', 
         lg: '28px',
         xl: '36px',
         xxl: '48px',   

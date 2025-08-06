@@ -15,6 +15,11 @@ import steps2 from './steps2.svg';
 import steps3 from './steps3.svg';
 import steps4 from './steps4.svg';
 import steps5 from './steps5.svg';
+import iconquote from './iconquote.svg';
+import bridegroom1 from './bridegroom1.png';
+import bridegroom2 from './bridegroom2.png';
+import iconarrowgreen from './iconarrowgreen.png';
+
 
 export {
   logo,
@@ -32,5 +37,9 @@ export {
   steps4,
   steps5,
   dividershape,
+  iconquote,
+  bridegroom1, 
+  bridegroom2,
+  iconarrowgreen
   
 };

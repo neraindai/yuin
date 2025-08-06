@@ -3,42 +3,55 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import { venue1 } from '../../assets';
-
+import { venue1, venue2, venue3, iconquote } from '../../assets';
+import DecorativeDivider from './DecorativeDivider';
 
 const testimonials = [
   {
     name: '佐藤 健太',
+    email: 'testuser@tai.com',
+    title: '理想の会場に出会えました！',
     image: venue1,
-    message: '理想の出会いに出会えました！このサイトで素敵な相手を見つけることができ、真剣に交際を始めました。生活がより豊かに、幸せになりました。',
+    message: 'このサイトで簡単に理想の結婚式場を見つけることができました。写真やレビューがとても参考になり、数日で予約まで進めました。実際の会場も想像以上に素敵で、当日は本当に感動的な時間を過ごせました。これから結婚式を考えている方にぜひおすすめしたいサイトです！',
   },
   {
     name: '佐藤 健太',
-    image: venue1,
-    message: 'このサイトで素敵な相手を見つけることができ、真剣に交際を始めました。生活がより豊かに、幸せになりました。',
+    email: 'testuser@tai.com',
+    title: '理想の会場に出会えました！',
+    image: venue2,
+    message: 'このサイトで簡単に理想の結婚式場を見つけることができました。写真やレビューがとても参考になり、数日で予約まで進めました。実際の会場も想像以上に素敵で、当日は本当に感動的な時間を過ごせました。これから結婚式を考えている方にぜひおすすめしたいサイトです！',
   },
   {
     name: '佐藤 健太',
-    image: venue1,
-    message: '真剣に交際を始めました。生活がより豊かに、幸せになりました。婚活を考えている方におすすめしたいサイトです！',
+    email: 'testuser@tai.com',
+    title: '理想の会場に出会えました！',
+    image: venue3,
+    message: 'このサイトで簡単に理想の結婚式場を見つけることができました。写真やレビューがとても参考になり、数日で予約まで進めました。実際の会場も想像以上に素敵で、当日は本当に感動的な時間を過ごせました。これから結婚式を考えている方にぜひおすすめしたいサイトです！',
   },
   {
     name: '佐藤 健太',
-    image: venue1,
-    message: '婚活を考えている方におすすめしたいサイトです！真剣に交際を始めました。生活がより豊かに、幸せになりました。',
+    email: 'testuser@tai.com',
+    title: '理想の会場に出会えました！',
+    image: venue3,
+    message: 'このサイトで簡単に理想の結婚式場を見つけることができました。写真やレビューがとても参考になり、数日で予約まで進めました。実際の会場も想像以上に素敵で、当日は本当に感動的な時間を過ごせました。これから結婚式を考えている方にぜひおすすめしたいサイトです！',
   },
   {
     name: '佐藤 健太',
+    email: 'testuser@tai.com',
+    title: '理想の会場に出会えました！',
     image: venue1,
-    message: 'このサイトで素敵な相手を見つけることができました。生活がより豊かに、幸せになりました。',
+    message: 'このサイトで簡単に理想の結婚式場を見つけることができました。写真やレビューがとても参考になり、数日で予約まで進めました。実際の会場も想像以上に素敵で、当日は本当に感動的な時間を過ごせました。これから結婚式を考えている方にぜひおすすめしたいサイトです！',
   },
 ];
 
-const TestimonialCard = ({ image, name, message }) => (
+const TestimonialCard = ({ image, name, email, title, message }) => (
   <div className="bg-light-bg rounded-lg shadow p-9 flex flex-col items-center text-center h-full" style={{ boxShadow:'1px 4px 6px 0px rgba(0,0,0,0.2)'}}>
-    <img src={image} alt={name} className="w-16 h-16 rounded-full mb-2" />
-    <h3 className="font-semibold">{name}</h3>
-    <p className="text-sm text-gray-600 mt-2">{message}</p>
+    <img src={iconquote} className="absolute right-[40px] top-[-10px]" />
+    <img src={image} alt={name} className="w-[82px] h-[82px] border-[2px] border-[#B2D6BC] mt-[-70px] mb-[20px] rounded-full" />
+    <h3 className="text-semmd font-bold text-black-text mt-0 font-yugothic">{name}</h3>
+    <span className="text-nm font-md text-black mt-2 mb-2 opacity-0.5">{email}</span>
+    <strong className="text-md font-md text-black mb-2">{title}</strong>
+    <p className="paragraph">{message}</p>
   </div>
 );
 
@@ -46,7 +59,7 @@ export default function TestimonialCarousel() {
   return (
     <section className="py-10">
       <div className="container mx-auto text-center mb-8">
-        <h2 className="text-center heading text-3xl font-bold mb-5 mt-5 font-yumincho">利用者の声</h2>
+        <h2 className="text-center heading text-3xl font-bold mb-5 mt-0 font-yumincho">利用者の声</h2>
         <p className="text-center relative mb-1 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります</p>
       </div>
 
@@ -69,6 +82,8 @@ export default function TestimonialCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <DecorativeDivider/>
     </section>
+    
   );
 }
