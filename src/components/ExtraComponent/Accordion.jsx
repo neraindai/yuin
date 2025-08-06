@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Accordion = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
@@ -12,11 +13,22 @@ const Accordion = ({ question, answer }) => {
         <span className="text-gray-800">{question}</span>
         <span className="text-xl font-bold text-green-600">{open ? '−' : '+'}</span>
       </button>
-      {open && (
-        <div className="pb-4 px-1 text-gray-600 text-sm leading-relaxed">
-          {answer}
-        </div>
-      )}
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden"
+          >
+            <div className="pb-4 px-1 text-gray-600 text-sm leading-relaxed">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

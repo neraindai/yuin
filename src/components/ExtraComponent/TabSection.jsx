@@ -1,8 +1,10 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
 import Tabs from './Tabs';
 import Accordion from './Accordion';
 
 const tabLabels = ['新郎新婦', '結婚式場', '広告会社'];
+
 
 const content = [
   [ // 新郎新婦
@@ -48,14 +50,26 @@ const TabSection = () => {
   return (
     <div className="max-w-4xl mx-auto mt-10 border border-green-200 rounded-md shadow-sm">
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabLabels} />
-      <div className="p-4">
-        {content[activeTab].map((item, index) => (
-          <Accordion
-            key={index}
-            question={item.question}
-            answer={item.answer || ''}
-          />
-        ))}
+      
+      {/* Animate tab content */}
+      <div className="p-4 min-h-[200px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+          >
+            {content[activeTab].map((item, index) => (
+              <Accordion
+                key={index}
+                question={item.question}
+                answer={item.answer || ''}
+              />
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
