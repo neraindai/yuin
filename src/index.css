@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply font-yugothic text-primary-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-yugothic font-bold text-primary-text;
+  }
+
+  p {
+    @apply font-yugothic text-base text-black-text font-normal;
+  }
+}
+
+@layer components {
+  .heading {
+    @apply text-xl font-bold text-primary-text;
+  }
+
+  .paragraph {
+    @apply text-base font-normal text-black-text tracking-tightest;
+  }
+}
