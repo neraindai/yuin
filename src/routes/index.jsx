@@ -1,18 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import About from "../pages/About";
+import CelestialGardenHall from "../pages/CelestialGardenHall/CelestialGardenHall";
 import NotFound from "../pages/NotFound";
 import VenueList from "../components/ExtraComponent/VenueList";
-import FavoriteVenueList from "../components/ExtraComponent/FavoriteVenueList";
+import FavoriteVenueList from "../pages/venue-list/FavoriteVenueList";
+import GradenSomePage from "../pages/CelestialGardenHall/GradenSomePage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/celestial-garden-hall" element={<CelestialGardenHall />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/venue-list" element={<VenueList />} />
       <Route path="/fvt-venue-list" element={<FavoriteVenueList />} />
+      <Route path="/garden-some-page" element={<GradenSomePage />} />
       
     </Routes>
   );
