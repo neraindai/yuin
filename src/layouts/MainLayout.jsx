@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Slider from "../components/Slider/Slider";
@@ -13,24 +14,35 @@ import BrideGroomCardList from '../components/ExtraComponent/BrideGroomCardList'
 import TabSection from '../components/ExtraComponent/TabSection';
 
 const MainLayout = ({ children }) => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <Header />
-      <Slider>
-        <SearchSection />
-      </Slider>
-       <main>
-        <RegisterLoginSection />
-        <PopularVenuesSection />
-        <VenueCampaign />
-        <AboutSection/>
-        <StepComponent/>
-        <DecorativeDivider/>
-        <RegisterLoginSection />
-        <TestimonialCarousel/>
-        <BrideGroomCardList />
-         <TabSection />
-      </main>
+
+      {isHome ? (
+        <>
+          <Slider>
+            <SearchSection />
+          </Slider>
+          <main>
+            <RegisterLoginSection />
+            <PopularVenuesSection />
+            <VenueCampaign />
+            <AboutSection />
+            <StepComponent />
+            <DecorativeDivider />
+            <RegisterLoginSection />
+            <TestimonialCarousel />
+            <BrideGroomCardList />
+            <TabSection />
+          </main>
+        </>
+      ) : (
+        <main className="min-h-[60vh]">{children}</main>
+      )}
+
       <Footer />
     </>
   );
