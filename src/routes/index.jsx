@@ -6,6 +6,9 @@ import FavoriteVenueList from "../pages/venue-list/FavoriteVenueList";
 import BudgetWedding from "../pages/budget-wedding/BudgetWedding";
 import FaqAccordion from "../pages/FAQs/FaqAccordion";
 import ContactForm from "../pages/ContactForm/ContactForm";
+import ContactFormUI from "../pages/ContactForm/ContactFormUI";
+import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
+import InquiryFlow from "../pages/ContactForm/InquiryFlow";
 
 const AppRoutes = () => {
   return (
@@ -29,6 +32,15 @@ const AppRoutes = () => {
 
       {/* ContactForm Page */}
       <Route path="/contact-form" element={<ContactForm />} />
+
+      {/* ContactFormUI Page */}
+      <Route path="/contact-form-ui" element={<ContactFormUI />} />
+
+      {/* TermsOfUse Page */}
+      <Route path="/terms-of-use" element={<TermsOfUse />} />
+
+      {/* InquiryFlow Page */}
+      <Route path="/inquiry-flow" element={<InquiryFlow />} />
       
     </Routes>
   );

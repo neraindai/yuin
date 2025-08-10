@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
-import ContactBanner from "../../assets/images/ContactBanner.jpg"
+import ContactBanner from "../../assets/images/ContactBanner.jpg";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   return (
     <>
-    {/* Mini Hero Image */}
+      {/* Mini Hero Image */}
       <HeroMiniImage image={ContactBanner} />
 
       <section>
@@ -183,46 +183,51 @@ export default function ContactForm() {
                 ご登録確認
               </h2>
 
+              {/* Section 1 */}
               <div className="mb-6">
                 <h3 className="font-semibold border-b pb-1 mb-3">
                   1. お名前と連絡先
                 </h3>
-                <p>
-                  <span className="text-gray-500">名前</span>{" "}
-                  <span className="ml-4 font-medium">{formData.name}</span>
+                <p className="flex mb-4">
+                  <span className="w-40 text-gray-500">名前</span>
+                  <span className="flex-1 font-medium">{formData.name}</span>
                 </p>
-                <p>
-                  <span className="text-gray-500">名前[フリガナ]</span>{" "}
-                  <span className="ml-4 font-medium">{formData.furigana}</span>
+                <p className="flex mb-4">
+                  <span className="w-40 text-gray-500">名前[フリガナ]</span>
+                  <span className="flex-1 font-medium">
+                    {formData.furigana}
+                  </span>
                 </p>
-                <p>
-                  <span className="text-gray-500">メールアドレス</span>{" "}
-                  <span className="ml-4 font-medium">{formData.email}</span>
+                <p className="flex mb-4">
+                  <span className="w-40 text-gray-500">メールアドレス</span>
+                  <span className="flex-1 font-medium">{formData.email}</span>
                 </p>
-                <p>
-                  <span className="text-gray-500">電話番号</span>{" "}
-                  <span className="ml-4 font-medium">{formData.phone}</span>
+                <p className="flex mb-4">
+                  <span className="w-40 text-gray-500">電話番号</span>
+                  <span className="flex-1 font-medium">{formData.phone}</span>
                 </p>
               </div>
 
+              {/* Section 2 */}
               <div className="mb-6">
                 <h3 className="font-semibold border-b pb-1 mb-3">
                   2. お問い合わせ
                 </h3>
-                <p>
-                  <span className="text-gray-500">お問い合わせ項目</span>{" "}
-                  <span className="ml-4 font-medium">
+                <p className="flex mb-4">
+                  <span className="w-40 text-gray-500">お問い合わせ項目</span>
+                  <span className="flex-1 font-medium">
                     {formData.inquiryItem}
                   </span>
                 </p>
-                <p>
-                  <span className="text-gray-500">お問い合わせ内容</span>
-                </p>
-                <p className="ml-4 font-medium whitespace-pre-line">
-                  {formData.inquiryContent}
+                <p className="flex items-start">
+                  <span className="w-40 text-gray-500">お問い合わせ内容</span>
+                  <span className="flex-1 font-medium whitespace-pre-line">
+                    {formData.inquiryContent}
+                  </span>
                 </p>
               </div>
 
+              {/* Button */}
               <button
                 className="w-full bg-green-200 text-green-800 rounded-full py-2 font-semibold"
                 disabled
