@@ -3,7 +3,8 @@ import DecorativeDivider from "../../components/ExtraComponent/DecorativeDivider
 import { motion } from "framer-motion";
 import BudgetSection from "./BudgetSection";
 import BrideGroomCard from "../../components/ExtraComponent/BrideGroomCard";
-import { bridegroom1, bridegroom2 } from '../../assets';
+import { bridegroom1, bridegroom2 } from "../../assets";
+import Footer from "../../components/Footer/Footer";
 
 const BudgetWedding = () => {
   return (
@@ -181,6 +182,8 @@ const BudgetWedding = () => {
           buttonText="結婚式場 様"
         />
       </div>
+
+      <Footer />
     </section>
   );
 };
