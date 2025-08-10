@@ -3,7 +3,6 @@ import Home from "../pages/Home";
 import CelestialGardenHall from "../pages/CelestialGardenHall/CelestialGardenHall";
 import NotFound from "../pages/NotFound";
 import FavoriteVenueList from "../pages/venue-list/FavoriteVenueList";
-// import GradenSomePage from "../pages/CelestialGardenHall/GradenSomePage";
 import BudgetWedding from "../pages/budget-wedding/BudgetWedding";
 import FaqAccordion from "../pages/FAQs/FaqAccordion";
 import ContactForm from "../pages/ContactForm/ContactForm";
@@ -21,9 +20,6 @@ const AppRoutes = () => {
 
       {/* FavoriteVenueList Page */}
       <Route path="/fvt-venue-list" element={<FavoriteVenueList />} />
-
-      {/* GradenSomePage Page  */}
-      {/* <Route path="/garden-some-page" element={<GradenSomePage />} /> */}
 
       {/*BudgetWedding Page  */}
       <Route path="/budget-wedding" element={<BudgetWedding />} />

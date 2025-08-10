@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Footer from "../../components/Footer/Footer";
+import FaqBanner from "../../assets/images/FAQbanner.png"
+import HeroMiniImage from "../../components/HeroMiniImage";
 
 const Accordion = ({ number, question, answer }) => {
   const [open, setOpen] = useState(false);
@@ -135,49 +137,56 @@ const FaqAccordion = () => {
   }, {});
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-8">
-      {/* Header */}
-      <h2 className="text-center text-3xl font-bold text-gray-800 mb-8">FAQ</h2>
+    <>
+    {/* Mini Hero Image */}
+      <HeroMiniImage image={FaqBanner} />
 
-      {/* Category Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-10">
-        {categories.map((cat) => (
-          <button
-            key={cat.id}
-            onClick={() => setActiveCategory(cat.id)}
-            className={`px-6 py-2 rounded-full border ${
-              activeCategory === cat.id
-                ? "bg-green-200 text-green-800 border-green-300"
-                : "bg-green-50 text-green-600 border-green-200"
-            } transition`}
-          >
-            {cat.label}
-          </button>
-        ))}
-      </div>
+      <section className="max-w-6xl mx-auto px-4 py-8">
+        {/* Header */}
+        <h2 className="text-center text-3xl font-bold text-gray-800 mb-8">
+          FAQ
+        </h2>
 
-      {/* Render each category section */}
-      {Object.entries(groupedFaq).map(([cat, items]) => (
-        <div key={cat} className="mb-10">
-          {/* Category Title */}
-          <div className="inline-block bg-green-100 text-green-800 font-bold px-4 py-2 border border-green-300 mb-0 text-center">
-            {categories.find((c) => c.id === cat)?.label || "その他カテゴリー"}
-          </div>
-
-          {/* Accordion List */}
-          {items.map((item, idx) => (
-            <Accordion
-              key={idx}
-              number={idx + 1}
-              question={item.question}
-              answer={item.answer}
-            />
+        {/* Category Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`px-6 py-2 rounded-full border ${
+                activeCategory === cat.id
+                  ? "bg-green-200 text-green-800 border-green-300"
+                  : "bg-green-50 text-green-600 border-green-200"
+              } transition`}
+            >
+              {cat.label}
+            </button>
           ))}
         </div>
-      ))}
 
+        {/* Render each category section */}
+        {Object.entries(groupedFaq).map(([cat, items]) => (
+          <div key={cat} className="mb-10">
+            {/* Category Title */}
+            <div className="inline-block bg-green-100 text-green-800 font-bold px-4 py-2 border border-green-300 mb-0 text-center">
+              {categories.find((c) => c.id === cat)?.label ||
+                "その他カテゴリー"}
+            </div>
+
+            {/* Accordion List */}
+            {items.map((item, idx) => (
+              <Accordion
+                key={idx}
+                number={idx + 1}
+                question={item.question}
+                answer={item.answer}
+              />
+            ))}
+          </div>
+        ))}
+      </section>
       <Footer />
-    </section>
+    </>
   );
 };
 
