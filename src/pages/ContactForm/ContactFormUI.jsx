@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import ContactBanner from "../../assets/images/ContactBanner.jpg";
+import Header from "../../components/Header/Header";
 
 export default function ContactFormUI() {
   const [formData, setFormData] = useState({});
@@ -18,6 +19,9 @@ export default function ContactFormUI() {
 
   return (
     <>
+    {/* Header part*/}
+      <Header />
+      
       {/* Mini Hero Image */}
       <HeroMiniImage image={ContactBanner} />
 

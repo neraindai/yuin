@@ -1,6 +1,7 @@
 import { useState } from "react";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import ContactBanner from "../../assets/images/ContactBanner.jpg";
+import Header from "../../components/Header/Header";
 
 export default function InquiryFlow() {
   const [step, setStep] = useState(1);
@@ -52,6 +53,9 @@ export default function InquiryFlow() {
 
   return (
     <>
+    {/* Header part*/}
+      <Header />
+      
       {/* Mini Hero Image */}
       <HeroMiniImage image={ContactBanner} />
 

@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import DecorativeDivider from "../../components/ExtraComponent/DecorativeDivider";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import VenueListBanner from "../../assets/images/VenueListBanner.png";
+import Header from "../../components/Header/Header";
 
 const FavoriteVenueList = () => {
   const venues = [
@@ -44,6 +45,9 @@ const FavoriteVenueList = () => {
 
   return (
     <>
+      {/* Header part*/}
+      <Header />
+
       {/* Mini Hero Image */}
       <HeroMiniImage image={VenueListBanner} />
 
