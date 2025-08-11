@@ -19,6 +19,7 @@ export default {
         zen: ['"Zen Maru Gothic"', 'sans-serif'],
         yumincho: ['YoMincho', 'serif'],
         yugothic: ['YuGothic', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
         sm: '12px',
