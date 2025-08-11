@@ -9,11 +9,15 @@ import videoPreview from "../../assets/images/venued-video.png";
 import GradenSomePage from "./GradenSomePage";
 import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
-import CelestialGardenBanner from "../../assets/images/CelestialGardenBanner.png"
+import CelestialGardenBanner from "../../assets/images/CelestialGardenBanner.png";
+import Header from "../../components/Header/Header";
 
 export default function CelestialGardenHall() {
   return (
     <>
+      {/* Header part*/}
+      <Header />
+
       {/* Mini Hero Image */}
       <HeroMiniImage image={CelestialGardenBanner} />
 

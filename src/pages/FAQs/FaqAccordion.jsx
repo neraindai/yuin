@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Footer from "../../components/Footer/Footer";
-import FaqBanner from "../../assets/images/FAQbanner.png"
+import FaqBanner from "../../assets/images/FAQbanner.png";
 import HeroMiniImage from "../../components/HeroMiniImage";
+import Header from "../../components/Header/Header";
 
 const Accordion = ({ number, question, answer }) => {
   const [open, setOpen] = useState(false);
@@ -138,7 +139,10 @@ const FaqAccordion = () => {
 
   return (
     <>
-    {/* Mini Hero Image */}
+      {/* Header part*/}
+      <Header />
+
+      {/* Mini Hero Image */}
       <HeroMiniImage image={FaqBanner} />
 
       <section className="max-w-6xl mx-auto px-4 py-8">

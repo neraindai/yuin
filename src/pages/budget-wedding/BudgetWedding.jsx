@@ -7,10 +7,14 @@ import { bridegroom1, bridegroom2 } from "../../assets";
 import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import BudgetBanner from "../../assets/images/BudgetBanner.png";
+import Header from "../../components/Header/Header";
 
 const BudgetWedding = () => {
   return (
     <>
+      {/* Header part*/}
+      <Header />
+
       {/* Mini Hero Image */}
       <HeroMiniImage image={BudgetBanner} />
 

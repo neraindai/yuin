@@ -1,10 +1,14 @@
 import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import FaqBanner from "../../assets/images/FAQbanner.png";
+import Header from "../../components/Header/Header";
 
 export default function TermsOfUse() {
   return (
     <>
+    {/* Header part*/}
+      <Header />
+
       {/* Mini Hero Image */}
       <HeroMiniImage image={FaqBanner} />
 
