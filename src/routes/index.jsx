@@ -10,6 +10,7 @@ import ContactFormUI from "../pages/ContactForm/ContactFormUI";
 import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
 import InquiryFlow from "../pages/ContactForm/InquiryFlow";
 import Login from "../pages/Login/Login";
+import ServiceFlow from "../pages/ServiceFlow/ServiceFlow";
 
 const AppRoutes = () => {
   return (
@@ -45,6 +46,9 @@ const AppRoutes = () => {
 
       {/* Login Page */}
       <Route path="/login" element={<Login />} />
+
+      {/* ServiceFlow Page */}
+      <Route path="/service-flow" element={<ServiceFlow />} />
       
     </Routes>
   );
