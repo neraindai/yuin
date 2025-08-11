@@ -44,9 +44,12 @@ const Header = () => {
 
         {/* Login Button */}
         <div className="hidden md:block">
-          <button className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-200 transition">
+          <Link
+            to="/login"
+            className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-200 transition"
+          >
             ログイン / 新規登録
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Toggle Button */}

@@ -9,6 +9,7 @@ import ContactForm from "../pages/ContactForm/ContactForm";
 import ContactFormUI from "../pages/ContactForm/ContactFormUI";
 import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
 import InquiryFlow from "../pages/ContactForm/InquiryFlow";
+import Login from "../pages/Login/Login";
 
 const AppRoutes = () => {
   return (
@@ -41,6 +42,9 @@ const AppRoutes = () => {
 
       {/* InquiryFlow Page */}
       <Route path="/inquiry-flow" element={<InquiryFlow />} />
+
+      {/* Login Page */}
+      <Route path="/login" element={<Login />} />
       
     </Routes>
   );
