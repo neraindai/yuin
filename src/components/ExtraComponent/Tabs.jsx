@@ -6,11 +6,11 @@ const Tabs = ({ activeTab, setActiveTab, tabs }) => {
       {tabs.map((tab, idx) => (
         <button
           key={idx}
-          className={`px-6 py-3 pl-14 pr-14 text-semmd font-semibold border-t border-l rounded-t-[20px] last:border-r 
+          className={`px-6 py-3 pl-14 pr-14 text-semmd font-semibold border-t border-b border-l rounded-t-[30px] last:border-r 
             ${
               activeTab === idx
-                ? 'bg-green-100 text-green-700 border-green-300 rounded-t-[20px]'
-                : 'text-gray-600'
+                ? 'bg-green-100 border-green-100 text-green-700 rounded-t-[20px]'
+                : 'text-gray-600 border-primary-text'
             }`}
           onClick={() => setActiveTab(idx)}
         >
