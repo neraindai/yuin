@@ -7,12 +7,17 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center bg-white py-10">
+      <div className="min-h-screen flex flex-col items-center bg-white">
+        <div className="flex flex-col shadow-lg pl-8 pr-4 py-6 mb-8 w-full items-start">
+          <Link to="/">
+              <img src={logo} alt="Logo" className="h-10" />
+            </Link>
+        </div>
         <div className="container mx-auto flex-col">
           {/* Logo Section */}
-          <div className="my-6 flex flex-col items-center">
+          <div className="my-6 flex flex-col items-center mb-12">
             <Link to="/">
-              <img src={logo} alt="Logo" className="h-10" />
+              <img src={logo} alt="Logo" className="h-16" />
             </Link>
           </div>
 
@@ -26,8 +31,8 @@ export default function Login() {
 
               {/* Email */}
               <div className="mb-4">
-                <label className="block mb-3 text-black font-montserrat font-semibold">メールアドレス</label>
-                <div className="flex items-center rounded-[8px] px-3 h-[56px] border-[1px] border-[solid] border-[#ccc]">
+                <label className="block mb-3 text-[#141416] font-montserrat font-semibold">メールアドレス</label>
+                <div className="flex items-center rounded-[8px] px-3 h-[60px] border-[1px] border-[solid] border-[#ccc]">
                   <FaEnvelope size={21} className="text-primary-text mr-3" />
                   <input
                     type="email"
@@ -39,8 +44,8 @@ export default function Login() {
 
               {/* Password */}
               <div className="mb-6">
-                <label className="block mb-3 text-black font-montserrat font-semibold">パスワード</label>
-                <div className="flex items-center rounded-[8px] px-3 h-[56px] border-[1px] border-[solid] border-[#ccc]">
+                <label className="block mb-3 text-[#141416] font-montserrat font-semibold">パスワード</label>
+                <div className="flex items-center rounded-[8px] px-3 h-[60px] border-[1px] border-[solid] border-[#ccc]">
                   <FaLock size={21} className="text-primary-text mr-3" />
                   <input
                     type="password"
@@ -92,10 +97,13 @@ export default function Login() {
                   <SiLine size={23} className="text-green-500" />
                   <span className="text-primary-text font-montserrat font-semibold">LINEでログイン</span>
                 </button>
-                <button className="w-full h-[56px] flex items-center justify-center gap-2 bg-[#BCF8D0] rounded-3xl hover:bg-[#AEE4B0] text-primary-text">
-                  <FaEnvelope size={23} className="text-primary-text" />
+
+                 <Link to="/register">
+                 <button className="w-full mt-5 h-[56px] flex items-center justify-center gap-2 bg-[#BCF8D0] rounded-3xl hover:bg-[#AEE4B0] text-primary-text">
+                 <FaEnvelope size={23} className="text-primary-text" />
                   <span className="text-primary-text font-montserrat font-semibold">メールでサインアップ</span>
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -103,12 +111,12 @@ export default function Login() {
           <div className="footerNote text-center mt-20">
             {/* Forgot Password */}
             <div className="mt-4">
-              <a
+              <Link to="/reset-password"><a
                 href="#"
                 className="text-base font-semibold text-black mt-4 paragraph text-blue-500 underline hover:text-blue-600"
               >
                 パスワードをお忘れの方
-              </a>
+              </a></Link>
             </div>
             {/* Footer Note */}
 

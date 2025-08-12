@@ -22,12 +22,14 @@
   input[type="tel"],
   input[type="number"],
   select {
-    @apply text-sm h-11 border border-gray-300 rounded-md px-8 font-montserrat;
+    @apply text-nm h-[56px] border border-gray-300 rounded-md px-6 font-montserrat font-medium text-black;
   }
 
   input::placeholder,
   select::placeholder {
     color: #393C40;
+    opacity: .7;
+    font-weight: medium;
   }
 }
 
@@ -38,6 +40,9 @@
 
   .paragraph {
     @apply text-base font-normal text-black-text tracking-tightest;
+  }
+  .badges {
+    @apply text-sm font-semibold text-black-text tracking-tightest pl-4 pr-4 rounded-[34px] py-2 ml-2 font-yugothic;
   }
 }
 

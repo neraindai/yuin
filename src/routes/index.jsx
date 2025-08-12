@@ -10,6 +10,11 @@ import ContactFormUI from "../pages/ContactForm/ContactFormUI";
 import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
 import InquiryFlow from "../pages/ContactForm/InquiryFlow";
 import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import EditProfile from "../pages/EditProfile/EditProfile";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
+import EmailVerification from "../pages/EmailVerification/EmailVerification";
+import ThankYou from "../pages/ThankYou/ThankYou";
 
 const AppRoutes = () => {
   return (
@@ -45,6 +50,21 @@ const AppRoutes = () => {
 
       {/* Login Page */}
       <Route path="/login" element={<Login />} />
+
+      {/* Register Page */}
+      <Route path="/register" element={<Register/>} />
+
+      {/* Register Page */}
+      <Route path="/edit-profile" element={<EditProfile/>} />
+
+       {/* Email Verification Page */}
+      <Route path="/email-verification" element={<EmailVerification/>} />
+
+      {/* Reset Password Page */}
+      <Route path="/reset-password" element={<ResetPassword/>} />
+
+      {/* Thank You Page */}
+      <Route path="/thank-you" element={<ThankYou/>} />
       
     </Routes>
   );
