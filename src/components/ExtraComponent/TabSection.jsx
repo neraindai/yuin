@@ -50,7 +50,11 @@ const TabSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="max-w-4xl mx-auto mt-10 rounded-md shadow-sm">
+    <div className="container mx-automb-8 mt-10 rounded-md">
+      <div className="flex flex-col mb-10">
+        <h2 className="text-center heading text-3xl font-bold mb-5 mt-0 font-yumincho">利用者の声</h2>
+        <p className="text-center relative mb-1 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります</p>
+      </div>
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabLabels} />
       
       {/* Animate tab content */}
@@ -74,6 +78,11 @@ const TabSection = () => {
             ))}
           </motion.div>
         </AnimatePresence>
+        <div className="mt-20 flex align-center justify-center mt-8">
+          <button className="bg-green-100 hover:bg-green-200 font-bold text-semmd pl-12 pr-12 py-3 rounded-full transition text-primary">
+              もっと見る
+            </button>
+          </div>
       </div>
     </div>
   );

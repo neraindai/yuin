@@ -10,7 +10,7 @@ const Accordion = ({ number, question, answer }) => {
         className="w-full flex justify-between items-center p-4 py-4 text-left text-sm font-medium"
         onClick={() => setOpen(!open)}
       >
-        <span className="text-gray-800 text-base"><span className="font-bold pr-2">{ number }</span>{question}</span>
+        <span className="text-gray-800 text-md"><span className="font-bold pr-2 text-semmd font-[montserrat]">{ number }</span>{question}</span>
         <span className="text-xl font-bold text-black">{open ? '−' : '+'}</span>
       </button>
 
@@ -23,7 +23,7 @@ const Accordion = ({ number, question, answer }) => {
             transition={{ duration: 0.25 }}
             className="overflow-hidden pl-4 pr-4"
           >
-            <div className="pb-4 px-1 text-gray-600 text-base leading-relaxed">
+            <div className="pb-4 px-1 text-gray-600 text-md leading-relaxed">
               {answer}
             </div>
           </motion.div>
