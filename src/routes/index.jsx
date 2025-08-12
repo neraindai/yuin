@@ -11,6 +11,12 @@ import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
 import InquiryFlow from "../pages/ContactForm/InquiryFlow";
 import Login from "../pages/Login/Login";
 import ServiceFlow from "../pages/ServiceFlow/ServiceFlow";
+import RegisterForm from "../pages/RegisterForm/RegisterForm";
+import EmailVerification from "../pages/RegisterForm/EmailVerification";
+import WeddingRegisterForm from "../pages/RegisterForm/WeddingRegisterForm";
+import WeddingRegisterSuccess from "../pages/RegisterForm/WeddingRegisterSuccess";
+import PasswordResetForm from "../pages/RegisterForm/PasswordResetForm";
+import PasswordResetSuccess from "../pages/RegisterForm/PasswordResetSuccess";
 
 const AppRoutes = () => {
   return (
@@ -49,7 +55,24 @@ const AppRoutes = () => {
 
       {/* ServiceFlow Page */}
       <Route path="/service-flow" element={<ServiceFlow />} />
-      
+
+      {/* RegisterForm Page */}
+      <Route path="/after/register-form" element={<RegisterForm />} />
+
+      {/* EmailVerification Page */}
+      <Route path="/after/email-verification" element={<EmailVerification />} />
+
+      {/* WeddingRegisterForm Page */}
+      <Route path="/after/wedding-registerForm" element={<WeddingRegisterForm />} />
+
+      {/* WeddingRegisterSuccess Page */}
+      <Route path="/after/wedding-register-success" element={<WeddingRegisterSuccess />} />
+
+      {/* PasswordResetForm Page */}
+      <Route path="/after/password-reset" element={<PasswordResetForm />} />
+
+      {/* PasswordResetSuccess Page */}
+      <Route path="/after/password-reset-success" element={<PasswordResetSuccess />} />
     </Routes>
   );
 };
