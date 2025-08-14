@@ -15,6 +15,22 @@
   p {
     @apply font-yugothic text-base text-black-text font-normal;
   }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    @apply text-nm h-[56px] border border-gray-300 rounded-md px-6 font-montserrat font-medium text-black;
+  }
+
+  input::placeholder,
+  select::placeholder {
+    color: #393C40;
+    opacity: .7;
+    font-weight: medium;
+  }
 }
 
 @layer components {
@@ -25,4 +41,8 @@
   .paragraph {
     @apply text-base font-normal text-black-text tracking-tightest;
   }
+  .badges {
+    @apply text-sm font-semibold text-black-text tracking-tightest pl-4 pr-4 rounded-[34px] py-2 ml-2 font-yugothic;
+  }
 }
+

@@ -17,6 +17,10 @@ import WeddingRegisterForm from "../pages/RegisterForm/WeddingRegisterForm";
 import WeddingRegisterSuccess from "../pages/RegisterForm/WeddingRegisterSuccess";
 import PasswordResetForm from "../pages/RegisterForm/PasswordResetForm";
 import PasswordResetSuccess from "../pages/RegisterForm/PasswordResetSuccess";
+import Register from "../pages/Register/Register";
+import EditProfile from "../pages/EditProfile/EditProfile";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
+import ThankYou from "../pages/ThankYou/ThankYou";
 
 const AppRoutes = () => {
   return (
@@ -73,6 +77,18 @@ const AppRoutes = () => {
 
       {/* PasswordResetSuccess Page */}
       <Route path="/after/password-reset-success" element={<PasswordResetSuccess />} />
+      {/* Register Page */}
+      <Route path="/register" element={<Register/>} />
+
+      {/* Register Page */}
+      <Route path="/edit-profile" element={<EditProfile/>} />
+
+      {/* Reset Password Page */}
+      <Route path="/reset-password" element={<ResetPassword/>} />
+
+      {/* Thank You Page */}
+      <Route path="/thank-you" element={<ThankYou/>} />
+      
     </Routes>
   );
 };

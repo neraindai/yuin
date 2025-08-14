@@ -19,6 +19,10 @@ import iconquote from './iconquote.svg';
 import bridegroom1 from './bridegroom1.png';
 import bridegroom2 from './bridegroom2.png';
 import iconarrowgreen from './iconarrowgreen.png';
+import bridal1 from './bridal1.jpg';
+import bridal2 from './bridal2.jpg';
+import bridal3 from './bridal3.jpg';
+import bridal4 from './bridal4.jpg';
 
 
 export {
@@ -40,6 +44,10 @@ export {
   iconquote,
   bridegroom1, 
   bridegroom2,
-  iconarrowgreen
+  iconarrowgreen,
+  bridal1,
+  bridal2,
+  bridal3,
+  bridal4,
   
 };

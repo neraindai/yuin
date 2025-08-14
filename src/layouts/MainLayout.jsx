@@ -12,6 +12,7 @@ import DecorativeDivider from '../components/ExtraComponent/DecorativeDivider';
 import TestimonialCarousel from '../components/ExtraComponent/TestimonialCarousel';
 import BrideGroomCardList from '../components/ExtraComponent/BrideGroomCardList';
 import TabSection from '../components/ExtraComponent/TabSection';
+import BridalRealtedList from '../components/ExtraComponent/BridalRelatedList';
 
 const MainLayout = ({ children }) => {
   const location = useLocation();
@@ -36,7 +37,10 @@ const MainLayout = ({ children }) => {
             <RegisterLoginSection />
             <TestimonialCarousel />
             <BrideGroomCardList />
+            <DecorativeDivider />
             <TabSection />
+            <DecorativeDivider />
+            <BridalRealtedList />
           </main>
         </>
       ) : (
