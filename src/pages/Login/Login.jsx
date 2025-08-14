@@ -2,9 +2,17 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { SiLine } from "react-icons/si";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 export default function Login() {
+    const { setIsLoggedIn } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+      setIsLoggedIn(true); // change header style
+      navigate("/"); // redirect to home
+    };
   return (
     <>
       <div className="min-h-screen flex flex-col items-center bg-white">
@@ -56,7 +64,10 @@ export default function Login() {
               </div>
 
               {/* Login Button */}
-              <button className="w-full h-[56px] flex items-center justify-center bg-[#BCF8D0] text-green-900 rounded-3xl font-semibold hover:bg-[#AEE4B0]">
+              <button
+                onClick={handleLogin}
+                className="w-full h-[56px] flex items-center justify-center bg-[#BCF8D0] text-green-900 rounded-3xl font-semibold hover:bg-[#AEE4B0]"
+              >
                 ログイン
               </button>
 

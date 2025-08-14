@@ -1,9 +1,18 @@
 import DecorativeDivider from './DecorativeDivider';
 import ActionCard from './ActionCard';
 
+
+import { useAuth } from "../../context/AuthContext";
+
+
 const RegisterLoginSection = () => {
+  const {isLoggedIn} = useAuth();
   return (
-    <section className="px-4 py-12 text-center">
+    <>
+    {isLoggedIn ? (
+      <div>login pachi ko design aha gardey</div>
+    ) : (
+      <section className="px-4 py-12 text-center">
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
         <ActionCard
           label="会員登録すれば、よりお得な情報が見れます！"
@@ -16,6 +25,9 @@ const RegisterLoginSection = () => {
       </div>
       <DecorativeDivider />
     </section>
+    )}
+    
+    </>
   );
 };
 
