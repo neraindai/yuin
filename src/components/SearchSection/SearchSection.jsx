@@ -1,9 +1,8 @@
-import { FaSearch, FaMapMarkerAlt, FaSearchLocation } from "react-icons/fa";
-
+import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function SearchSection() {
   return (
-    <div className="mt-16 mb-16 w-[488px] p-5 shadow-[0_4px_16px_rgba(0,0,0,0.1)] rounded-[10px] bg-white bg-opacity-90 rounded-lg p-6 max-w-md shadow-lg">
+    <div className="mt-16 mb-16 w-[488px] max-w-md p-6 bg-white bg-opacity-90 shadow-[0_4px_16px_rgba(0,0,0,0.1)] rounded-lg">
       <h2 className="text-lg font-semibold mb-4 flex items-center space-x-2">
         <FaMapMarkerAlt />
         <span>結婚式場を探す</span>
@@ -12,10 +11,12 @@ export default function SearchSection() {
       <form className="space-y-4 text-sm">
         {/* Search by area */}
         <div>
-          <label className="font-bold text-[#5B5B5B] text-[12px] font-zen font-semibold block mb-1">挙式希望エリアから探す</label>
-          <div className="flex items-center border rounded-md overflow-hidden">
+          <label className="text-[#5B5B5B] text-[12px] font-zen font-bold block mb-1">
+            挙式希望エリアから探す
+          </label>
+          <div className="flex items-center border rounded-md overflow-hidden h-10">
             <select
-              className="flex-1 px-3 py-2 outline-none border-none"
+              className="flex-1 h-full px-3 outline-none border-none rounded-none"
               defaultValue=""
             >
               <option value="" disabled>
@@ -24,11 +25,10 @@ export default function SearchSection() {
               <option>東京</option>
               <option>大阪</option>
               <option>名古屋</option>
-              {/* Add more options */}
             </select>
             <button
               type="submit"
-              className="bg-green-100 text-green-700 px-3 py-2"
+              className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
             >
               <FaSearch />
             </button>
@@ -37,16 +37,18 @@ export default function SearchSection() {
 
         {/* Search by venue name */}
         <div>
-          <label className="font-bold text-[#5B5B5B] text-[12px] font-zen font-semibold block mb-1">式場名で探す</label>
-          <div className="flex items-center border rounded-md overflow-hidden">
+          <label className="text-[#5B5B5B] text-[12px] font-zen font-bold block mb-1">
+            式場名で探す
+          </label>
+          <div className="flex items-center border rounded-md overflow-hidden h-10">
             <input
               type="text"
               placeholder="式場名を入力してください"
-              className="flex-1 px-3 py-2 outline-none"
+              className="flex-1 h-full px-3 outline-none rounded-none"
             />
             <button
               type="submit"
-              className="bg-green-100 text-green-700 px-3 py-2"
+              className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
             >
               <FaSearch />
             </button>
@@ -55,16 +57,18 @@ export default function SearchSection() {
 
         {/* Search by keyword */}
         <div>
-          <label className="font-bold text-[#5B5B5B] text-[12px] font-zen font-semibold block mb-1">キーワードで探す</label>
-          <div className="flex items-center border rounded-md overflow-hidden">
+          <label className="text-[#5B5B5B] text-[12px] font-zen font-bold block mb-1">
+            キーワードで探す
+          </label>
+          <div className="flex items-center border rounded-md overflow-hidden h-10">
             <input
               type="text"
-              placeholder="式場名を入力してください"
-              className="flex-1 px-3 py-2 outline-none"
+              placeholder="キーワードを入力してください"
+              className="flex-1 h-full px-3 outline-none rounded-none"
             />
             <button
               type="submit"
-              className="bg-green-100 text-green-700 px-3 py-2"
+              className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
             >
               <FaSearch />
             </button>

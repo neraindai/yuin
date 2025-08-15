@@ -16,6 +16,7 @@ import VenueShowcaseTab from "../../components/tabs/VenueShowcaseTab";
 import BridalFairList from "../../components/tabs/BridalFairListTab";
 import RecommendedBridalFairTab from "../../components/tabs/RecommendedBridalFairTab";
 import ReviewsSection from "../../components/tabs/ReviewsSectionTab";
+import InfoSectionComponents from "../budget-wedding/InfoSectionComponents";
 
 export default function CelestialGardenHall() {
   const tabs = [
@@ -44,7 +45,16 @@ export default function CelestialGardenHall() {
     { label: "クチコミ", content: <div>
       <ReviewsSection />
     </div> },
-    { label: "スタッフの声", content: <p>スタッフからのメッセージ。</p> },
+    { label: "スタッフの声", content: <div>
+      {/* Main Heading */}
+      <h1
+        className="text-center text-xl md:text-2xl font-semibold my-8"
+        style={{ color: "#01b29a" }}
+      >
+        スタッフの声
+      </h1> 
+      <InfoSectionComponents />
+    </div> },
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0].label);
