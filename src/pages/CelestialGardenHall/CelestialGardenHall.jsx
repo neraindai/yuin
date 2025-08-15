@@ -14,6 +14,8 @@ import Header from "../../components/Header/Header";
 import VenueSectionTab from "../../components/tabs/VenueSectionTab";
 import VenueShowcaseTab from "../../components/tabs/VenueShowcaseTab";
 import BridalFairList from "../../components/tabs/BridalFairListTab";
+import RecommendedBridalFairTab from "../../components/tabs/RecommendedBridalFairTab";
+import ReviewsSection from "../../components/tabs/ReviewsSectionTab";
 
 export default function CelestialGardenHall() {
   const tabs = [
@@ -36,8 +38,12 @@ export default function CelestialGardenHall() {
     { label: "フェア", content: <div>
       <BridalFairList />
     </div> },
-    { label: "料金・プラン", content: <p>料金とプランの詳細。</p> },
-    { label: "クチコミ", content: <p>お客様のレビュー一覧。</p> },
+    { label: "料金・プラン", content: <div>
+      <RecommendedBridalFairTab />
+    </div> },
+    { label: "クチコミ", content: <div>
+      <ReviewsSection />
+    </div> },
     { label: "スタッフの声", content: <p>スタッフからのメッセージ。</p> },
   ];
 
