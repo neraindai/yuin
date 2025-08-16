@@ -7,8 +7,9 @@ import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import BudgetBanner from "../../assets/images/BudgetBanner.png";
 import Header from "../../components/Header/Header";
-import InfoSectionComponents from "./InfoSectionComponents";
+// import InfoSectionComponents from "./InfoSectionComponents";
 import SectionHeader from "../../components/ExtraComponent/SectionHeader";
+import OverlayContent from "../../components/ExtraComponent/OverlayContent";
 
 const BudgetWedding = () => {
   return (
@@ -22,10 +23,34 @@ const BudgetWedding = () => {
       <section className="container mx-auto">
         {/* Top Title */}
         <div className="text-center my-10">
-          <SectionHeader sectionTitle="費用を抑えて結婚式を挙げたい方へ" />
+          <SectionHeader sectionTitle="費用を抑えて結婚式を挙げたい方へ" noborder />
         </div>
 
-        <InfoSectionComponents />
+        {/* <InfoSectionComponents /> */}
+        <>
+          <OverlayContent
+            title="ゆいのね」の強み"
+            description="ゆいのね」は、高校生や教育関係者が安心して使える会場検索サイトです。全国の提携会場を一括で検索・比較でき、進路指導やキャリアサポートに役立つ場をスムーズに見つけることができます。
+            信頼性の高い地域企業と連携しており、掲載情報の正確さにもこだわっています。"
+          />
+          <OverlayContent
+            title="ゆいのね」の強み"
+            description="ゆいのね」は、高校生や教育関係者が安心して使える会場検索サイトです。全国の提携会場を一括で検索・比較でき、進路指導やキャリアサポートに役立つ場をスムーズに見つけることができます。
+            信頼性の高い地域企業と連携しており、掲載情報の正確さにもこだわっています。"
+            reverseColumn
+          />
+          <OverlayContent
+            title="ゆいのね」の強み"
+            description="ゆいのね」は、高校生や教育関係者が安心して使える会場検索サイトです。全国の提携会場を一括で検索・比較でき、進路指導やキャリアサポートに役立つ場をスムーズに見つけることができます。
+            信頼性の高い地域企業と連携しており、掲載情報の正確さにもこだわっています。"
+          />
+          <OverlayContent
+            title="ゆいのね」の強み"
+            description="ゆいのね」は、高校生や教育関係者が安心して使える会場検索サイトです。全国の提携会場を一括で検索・比較でき、進路指導やキャリアサポートに役立つ場をスムーズに見つけることができます。
+            信頼性の高い地域企業と連携しており、掲載情報の正確さにもこだわっています。"
+            reverseColumn
+          />
+        </>
 
         <DecorativeDivider />
 

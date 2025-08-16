@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { FaChevronLeft, FaChevronRight, FaHome, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaHome,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 // Import images
 import mainImage from "../../assets/images/venued1.png";
@@ -10,6 +15,7 @@ import videoPreview from "../../assets/images/venued-video.png";
 
 import GradenSomePage from "../../pages/CelestialGardenHall/GradenSomePage";
 import Footer from "../../components/Footer/Footer";
+import SectionHeader from "../ExtraComponent/SectionHeader";
 
 export default function VenueShowcaseTab() {
   const images = [
@@ -35,7 +41,7 @@ export default function VenueShowcaseTab() {
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-semibold text-[#3a9d85]">
+            <h1 className="text-left heading text-2xl md:text-2xl lg:text-3xl font-bold mt-0 font-yumincho">
               セレスティアルガーデンホール
             </h1>
             <button className="bg-[#d0f2df] text-[#2a7a65] px-5 py-2 rounded-full text-sm">
@@ -98,16 +104,19 @@ export default function VenueShowcaseTab() {
 
             {/* Right Text */}
             <div className="flex flex-col h-full">
-              <h2 className="text-lg font-semibold text-[#3a9d85] mb-3">
+              {/* Title */}
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-[#3a9d85] mb-3">
                 セレスティアルガーデンホール
               </h2>
+
+              {/* Content */}
               <div className="content border-t border-b border-black py-4 flex-1 flex flex-col justify-center">
-                <p className="leading-relaxed mb-3">
+                <p className="text-xs sm:text-sm md:text-base leading-relaxed mb-3">
                   セレスティアルガーデンホールは、まるで空と自然が織りなす神秘の舞台。
                   緑に包まれた庭園と優雅なホールが調和し、昼は陽光にきらめき、
                   夜は星空に抱かれる幻想的な空間です。
                 </p>
-                <p className="text-sm leading-relaxed mb-3">
+                <p className="text-xs sm:text-sm md:text-base leading-relaxed mb-3">
                   クラシックとモダンが融合したデザインは、特別な一日をより一層華やかに彩ります。
                   まるで天上の楽園にいるかのような、非日常を感じられる極上のロケーションです。
                 </p>
@@ -115,27 +124,34 @@ export default function VenueShowcaseTab() {
 
               {/* Contact Info */}
               <div className="mt-4 space-y-4">
-                <div className="grid grid-cols-[24px_60px_1fr] gap-x-3 items-start">
-                  <FaHome className="text-[#3a9d85] mt-1" />
-                  <span className="text-sm text-[#3a9d85] font-semibold">
+                <div className="grid grid-cols-[24px_70px_1fr] gap-x-3 items-start">
+                  <FaHome className="text-[#3a9d85] mt-1 text-base w-6" />
+                  <span className="text-xs sm:text-sm md:text-base text-[#3a9d85] font-semibold">
                     住所：
                   </span>
                   <div>
-                    <div className="text-sm text-black">東京駅</div>
-                    <p className="text-sm mt-1 leading-relaxed">
+                    <div className="text-xs sm:text-sm md:text-base text-black">
+                      東京駅
+                    </div>
+                    <p className="text-xs sm:text-sm md:text-base mt-1 leading-relaxed">
                       東京メトロ新宿三丁目駅C5出口より徒歩2分、JR渋谷駅から新宿三丁目駅まで電車で12分、
                       JR池袋駅から新宿三丁目駅まで電車で10分
                     </p>
                   </div>
                 </div>
-                <div className="grid grid-cols-[24px_60px_1fr] gap-x-3 items-start">
-                  <FaPhoneAlt className="text-[#3a9d85] mt-1" />
-                  <span className="text-sm text-[#3a9d85] font-semibold">
+
+                <div className="grid grid-cols-[24px_70px_1fr] gap-x-3 items-start">
+                  <FaPhoneAlt className="text-[#3a9d85] mt-1 text-base w-6" />
+                  <span className="text-xs sm:text-sm md:text-base text-[#3a9d85] font-semibold">
                     連絡先：
                   </span>
                   <div>
-                    <div className="text-sm text-black">1234-456-789</div>
-                    <div className="text-sm text-black">www.xxxxx.com</div>
+                    <div className="text-xs sm:text-sm md:text-base text-black">
+                      1234-456-789
+                    </div>
+                    <div className="text-xs sm:text-sm md:text-base text-black">
+                      www.xxxxx.com
+                    </div>
                   </div>
                 </div>
               </div>
@@ -149,9 +165,14 @@ export default function VenueShowcaseTab() {
 
           {/* Video Section */}
           <div className="text-center">
-            <h2 className="text-lg font-semibold mb-4">
+            {/* <h2 className="text-lg font-semibold mb-4">
               セレスティアルガーデンホール
-            </h2>
+            </h2> */}
+
+            <SectionHeader
+              sectionTitle="セレスティアルガーデンホール"
+              noborder
+            />
             <div className="relative w-full max-w-5xl mx-auto">
               <img
                 src={videoPreview}

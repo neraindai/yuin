@@ -8,6 +8,7 @@ import VenueListBanner from "../../assets/images/VenueListBanner.png";
 import Header from "../../components/Header/Header";
 import VenueSearchBar from "../../components/SearchSection/VenueSearchBar";
 import SectionHeader from "../../components/ExtraComponent/SectionHeader";
+import BridalRealtedList from "../../components/ExtraComponent/BridalRelatedList";
 
 const FavoriteVenueList = () => {
   const venues = [
@@ -81,6 +82,10 @@ const FavoriteVenueList = () => {
         {/* Divider Line */}
         <DecorativeDivider />
       </section>
+
+      <div className="mt-8">
+        <BridalRealtedList />
+      </div>
 
       {/* Footer part */}
       <Footer />

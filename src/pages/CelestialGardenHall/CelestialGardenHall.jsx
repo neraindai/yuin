@@ -47,7 +47,7 @@ export default function CelestialGardenHall() {
         <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8">
           {/* Title + Button */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-4">
-            <h1 className="text-center heading text-3xl font-bold mt-0 font-yumincho">
+            <h1 className="text-center heading text-2xl md:text-2xl lg:text-3xl font-bold mt-0 font-yumincho">
               セレスティアルガーデンホール
             </h1>
             <button className="bg-[#d0f2df] text-[#2a7a65] px-4 py-2 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm whitespace-nowrap">
