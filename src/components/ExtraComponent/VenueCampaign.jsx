@@ -64,7 +64,7 @@ const PopularVenuesSection = () => {
     <section className="py-8 text-center">
       <div className="container mx-auto px-4 py-3">
       <SectionHeader
-      sectionTitle="キャンペーン中の会場 kun ho"
+      sectionTitle="キャンペーン中の会場"
       noborder
        />
         

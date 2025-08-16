@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { venue1, venue2, venue3, iconquote } from '../../assets';
 import DecorativeDivider from './DecorativeDivider';
+import SectionHeader from './SectionHeader';
 
 const testimonials = [
   {
@@ -58,10 +59,7 @@ const TestimonialCard = ({ image, name, email, title, message }) => (
 export default function TestimonialCarousel() {
   return (
     <section className="py-10">
-      <div className="container mx-auto text-center mb-8">
-        <h2 className="text-center heading text-3xl font-bold mb-5 mt-0 font-yumincho">利用者の声</h2>
-        <p className="text-center relative mb-1 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります</p>
-      </div>
+    <SectionHeader sectionTitle="利用者の声" shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります" />
 
       <Swiper
         modules={[Navigation]}

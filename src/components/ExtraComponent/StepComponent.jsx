@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import StepCard from './StepCard';
 import DecorativeDivider from './DecorativeDivider';
 import { steps1,steps2,steps3,steps4,steps5} from '../../assets';
+import SectionHeader from "./SectionHeader";
 const steps = [
   {
     image: steps1,
@@ -39,13 +40,7 @@ const StepComponent = () => {
     
     <div className="container mx-auto">
       <DecorativeDivider/>
-      <h2 className="text-center heading text-3xl font-bold mb-5 mt-5 font-yumincho">
-        サービスの流れ
-      </h2>
-      
-      <p className="text-center relative mb-16 font-yumincho pr-16 pl-16 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">
-        「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。]
-      </p>
+      <SectionHeader sectionTitle="サービスの流れ" shortDescription="「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。" />
       <div className="mb-8">
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4"

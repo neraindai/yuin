@@ -46,3 +46,23 @@
   }
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  @apply w-10 h-10 bg-center bg-no-repeat bg-contain;
+}
+
+.swiper-button-prev {
+  background-image: url('/src/assets/icons/arrow.png');
+}
+
+.swiper-button-next {
+  background-image: url('/src/assets/icons/arrow.png');
+  transform: scaleX(-1);
+}
+
+/* Hide default Swiper arrow icons */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply hidden;
+}
+
