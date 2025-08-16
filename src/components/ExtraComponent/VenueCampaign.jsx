@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 
 import VenueCard from './VenueCard';
 import { venue1, venue2, venue3, venue4 } from '../../assets';
+import SectionHeader from './SectionHeader';
 
 const venues = [
   {
@@ -61,8 +62,13 @@ const venues = [
 const PopularVenuesSection = () => {
   return (
     <section className="py-8 text-center">
-        <div className="container mx-auto px-4 py-3">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 heading">キャンペーン中の会場</h2>
+      <div className="container mx-auto px-4 py-3">
+      <SectionHeader
+      sectionTitle="キャンペーン中の会場 kun ho"
+      noborder
+       />
+        
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 heading"></h2>
 
       <Swiper
         modules={[Autoplay, Navigation]}

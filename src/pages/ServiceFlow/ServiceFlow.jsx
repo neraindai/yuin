@@ -5,6 +5,7 @@ import HeroMiniImage from "../../components/HeroMiniImage";
 import BudgetBanner from "../../assets/images/BudgetBanner.png";
 import Footer from "../../components/Footer/Footer";
 import DecorativeDivider from "../../components/ExtraComponent/DecorativeDivider";
+import TabSection from "../../components/ExtraComponent/TabSection";
 
 const steps = [
   {
@@ -113,7 +114,9 @@ export default function ServiceFlow() {
         </div>
       </div>
 
-        <DecorativeDivider />
+      <DecorativeDivider />
+
+      <TabSection />
 
       {/* Footer part  */}
       <Footer />

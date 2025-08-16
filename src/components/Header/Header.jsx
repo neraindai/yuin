@@ -6,6 +6,17 @@ import { useAuth } from "../../context/AuthContext";
 import mailIcon from "../../assets/icons/mail.png";
 import bellIcon from "../../assets/icons/bell.png";
 import bookmarkIcon from "../../assets/icons/bookmark.png";
+import { motion, AnimatePresence } from "framer-motion";
+
+// mobile menu
+const navLinks = [
+  { to: "/", label: "ホーム", className: "text-green-600" },
+  { to: "/celestial-garden-hall", label: "会場を探す" },
+  { to: "/budget-wedding", label: "広告協賛で費用を抑える" },
+  { to: "/faq-accordion", label: "FAQ" },
+  { to: "/contact-form-ui", label: "お問い合わせ" },
+  { to: "/terms-of-use", label: "利用規約" },
+];
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -94,6 +105,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Toggle */}
+        {/* Toggle Button */}
         <div className="md:hidden">
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
@@ -104,6 +116,33 @@ const Header = () => {
           </button>
         </div>
       </div>
+      {/* Mobile Menu */}
+       <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden px-4 pb-4 overflow-hidden z-[222]"
+          >
+            <ul className="flex flex-col space-y-3 text-sm font-medium text-gray-700">
+              {navLinks.map((link, index) => (
+                <li key={index} className="border-b border-gray-300 pb-2">
+                  <Link to={link.to} className={link.className || ""}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="pt-3 pb-3">
+              <button className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-200 transition w-full text-left">
+                  ログイン / 新規登録
+                </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

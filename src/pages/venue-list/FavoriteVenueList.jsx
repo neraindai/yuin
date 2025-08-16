@@ -6,6 +6,7 @@ import DecorativeDivider from "../../components/ExtraComponent/DecorativeDivider
 import HeroMiniImage from "../../components/HeroMiniImage";
 import VenueListBanner from "../../assets/images/VenueListBanner.png";
 import Header from "../../components/Header/Header";
+import VenueSearchBar from "../../components/SearchSection/VenueSearchBar"
 
 const FavoriteVenueList = () => {
   const venues = [
@@ -49,7 +50,10 @@ const FavoriteVenueList = () => {
       <Header />
 
       {/* Mini Hero Image */}
-      <HeroMiniImage image={VenueListBanner} />
+      <HeroMiniImage image={VenueListBanner}>
+        {/* Search Bar Component */}
+        <VenueSearchBar />
+      </HeroMiniImage>
 
       <section className="py-12 bg-gray-50">
         <div className="text-center mb-8">

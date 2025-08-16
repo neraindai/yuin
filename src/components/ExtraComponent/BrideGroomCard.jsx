@@ -10,8 +10,8 @@ const BrideGroomCard = ({ title, description, image, buttonText }) => {
         <div className="flex flex-row sm:grid-cols-1 md:flex-row gap-4 p-5">
             
             <div className="w-[calc(100%-187px)]">
-                <h2 className="heading">{title}</h2>
-                <p className="paragraph">{description}</p>
+                <h2 className="heading text-md md:text-semmd lg:text-xl">{title}</h2>
+                <p className="paragraph text-sm md:text-nm">{description}</p>
             </div>
 
             

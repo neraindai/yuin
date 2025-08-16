@@ -78,7 +78,7 @@ const TabSection = () => {
             ))}
           </motion.div>
         </AnimatePresence>
-        <div className="mt-20 flex align-center justify-center mt-8">
+        <div className=" flex align-center justify-center mt-8">
           <button className="bg-green-100 hover:bg-green-200 font-bold text-semmd pl-12 pr-12 py-3 rounded-full transition text-primary">
               もっと見る
             </button>

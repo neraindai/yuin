@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 
 import VenueCard from './VenueCard';
 import { venue1, venue2, venue3, venue4 } from '../../assets';
+import SectionHeader from './SectionHeader';
 
 const venues = [
   {
@@ -62,14 +63,15 @@ const PopularVenuesSection = () => {
   return (
     
     <section className=" text-center">
-       <div className="container mx-auto mb-12">
-        <h2 className="md:text-3xl font-bold mb-5 heading">結婚式場一覧</h2>
-        <p className="text-center relative mb-1 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:bg-[#D5E6DC] after:mt-[25px]">
-          特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！
-        </p>
-      </div>
+      <SectionHeader 
+      sectionTitle="結婚式場一覧"
+      shortDescription="特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！"
+      />
         <div className="container mx-auto ">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 heading">人気会場</h2>
+      <SectionHeader
+      noborder
+      sectionTitle="人気会場"
+       />
 
       <Swiper
         modules={[Autoplay, Navigation]}

@@ -12,7 +12,8 @@ export default {
       },
       colors: {
         'primary-text': '#4C8B6D',
-        'black-text': '#000000',
+        'black-text': '#000000ff',
+        // 'black-opacity': ''
         'light-bg': '#F7F8F1',
       },
       fontFamily: {
