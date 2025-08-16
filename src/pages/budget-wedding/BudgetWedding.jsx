@@ -1,6 +1,5 @@
-import { venue5, venue6 } from "../../assets";
+// import { venue5, venue6 } from "../../assets";
 import DecorativeDivider from "../../components/ExtraComponent/DecorativeDivider";
-import { motion } from "framer-motion";
 import BudgetSection from "./BudgetSection";
 import BrideGroomCard from "../../components/ExtraComponent/BrideGroomCard";
 import { bridegroom1, bridegroom2 } from "../../assets";
