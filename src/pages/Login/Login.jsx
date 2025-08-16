@@ -66,7 +66,7 @@ export default function Login() {
               {/* Login Button */}
               <button
                 onClick={handleLogin}
-                className="w-full h-[56px] flex items-center justify-center bg-[#BCF8D0] text-green-900 rounded-3xl font-semibold hover:bg-[#AEE4B0]"
+                className="w-full h-[56px] flex items-center justify-center bg-[#BCF8D0] text-primary-text rounded-3xl font-semibold hover:bg-[#AEE4B0]"
               >
                 ログイン
               </button>
@@ -105,7 +105,7 @@ export default function Login() {
                   <span className="text-primary-text font-montserrat font-semibold">Googleでログイン</span>
                 </button>
                 <button className="w-full h-[56px] flex items-center justify-center gap-2 bg-[#BCF8D0] rounded-3xl hover:bg-[#AEE4B0] text-primary-text">
-                  <SiLine size={23} className="text-green-500" />
+                  <SiLine size={23} className="text-primary-text" />
                   <span className="text-primary-text font-montserrat font-semibold">LINEでログイン</span>
                 </button>
 
@@ -124,14 +124,14 @@ export default function Login() {
             <div className="mt-4">
               <Link to="/reset-password"><a
                 href="#"
-                className="text-base font-semibold text-black mt-4 paragraph text-blue-500 underline hover:text-blue-600"
+                className="text-base font-semibold text-black mt-4 paragraph underline hover:text-blue-600"
               >
                 パスワードをお忘れの方
               </a></Link>
             </div>
             {/* Footer Note */}
 
-            <p className="mt-6 text-sm text-black text-center text-nm text-black mt-4 paragraph leading-[22px]">
+            <p className="text-sm text-black text-center mt-4 paragraph leading-[22px]">
               パスワードの再設定をご希望の場合は、以下の手順に従ってください。ご不明な点がございました <br/>ら、サポートまでお問い合わせください。
             </p>
           </div>

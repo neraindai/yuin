@@ -8,6 +8,7 @@ import HeroMiniImage from "../../components/HeroMiniImage";
 import BudgetBanner from "../../assets/images/BudgetBanner.png";
 import Header from "../../components/Header/Header";
 import InfoSectionComponents from "./InfoSectionComponents";
+import SectionHeader from "../../components/ExtraComponent/SectionHeader";
 
 const BudgetWedding = () => {
   return (
@@ -20,8 +21,8 @@ const BudgetWedding = () => {
 
       <section className="container mx-auto">
         {/* Top Title */}
-        <div className="text-center mb-10">
-          <h2 className="heading mt-5">費用を抑えて結婚式を挙げたい方へ</h2>
+        <div className="text-center my-10">
+          <SectionHeader sectionTitle="費用を抑えて結婚式を挙げたい方へ" />
         </div>
 
         <InfoSectionComponents />

@@ -38,7 +38,7 @@ export default function BridalFairList() {
     <div className="max-w-6xl mx-auto px-4 py-6">
       {/* Main Heading */}
       <h1
-        className="text-center text-xl md:text-2xl font-semibold mb-8"
+        className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-8"
         style={{ color: "#01b29a" }}
       >
         週末開催のおすすめブライダルフェア
@@ -47,31 +47,33 @@ export default function BridalFairList() {
       {events.map((event, idx) => (
         <div key={idx} className="mb-10">
           {/* Date */}
-          <p className="font-semibold mb-3">
+          <p className="font-semibold mb-3 text-sm sm:text-base">
             <span className="text-[#01b29a]">{event.date}</span>
             <span className="text-gray-900">のブライダルフェア詳細</span>
           </p>
 
           {/* Card */}
-          <div className="gap-8 justify-between overflow-hidden md:flex">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 overflow-hidden">
             {/* Image */}
             <img
               src={event.image}
               alt={event.title}
-              className="w-60 object-cover rounded-2xl h-83"
+              className="w-full h-48 md:w-60 md:h-80 object-cover rounded-2xl"
             />
 
             {/* Content */}
-            <div className="p-5 flex flex-col justify-between md:w-2/3">
+            <div className="p-4 md:p-5 flex flex-col justify-between md:w-2/3">
               {/* Title */}
-              <h2 className="text-lg font-semibold mb-3">{event.title}</h2>
+              <h2 className="text-base sm:text-lg font-semibold mb-3">
+                {event.title}
+              </h2>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-3">
                 {event.tags.map((tag, tagIdx) => (
                   <span
                     key={tagIdx}
-                    className="text-sm px-3 py-1 rounded-full"
+                    className="text-xs sm:text-sm px-3 py-1 rounded-full"
                     style={{ backgroundColor: "#ccf5f0", color: "#01b29a" }}
                   >
                     {tag}
@@ -80,25 +82,27 @@ export default function BridalFairList() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-700 mb-4">{event.description}</p>
+              <p className="text-gray-700 text-sm sm:text-base mb-4">
+                {event.description}
+              </p>
 
               {/* Time + Button */}
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mt-4 bg-gray-50 p-6">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mt-4 bg-gray-50 p-4 sm:p-6 rounded-xl">
+                {/* Time Info */}
                 <div>
                   <p className="font-semibold">開催時間</p>
-                </div>
-
-                <div>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 text-sm sm:text-base">
                     {event.times.join(" / ")}
                     <br />
-                    <span className="text-sm text-gray-500">
+                    <span className="text-xs sm:text-sm text-gray-500">
                       (所要時間：約3時間程度)
                     </span>
                   </p>
                 </div>
+
+                {/* Button */}
                 <button
-                  className="font-medium px-5 py-2 rounded-full transition"
+                  className="font-medium px-4 sm:px-5 py-2 rounded-full transition w-full sm:w-auto"
                   style={{
                     backgroundColor: "#ccf5f0",
                     color: "#01b29a",
@@ -113,21 +117,6 @@ export default function BridalFairList() {
       ))}
 
       {/* Pagination */}
-      {/* <div className="flex justify-center gap-2 mb-8">
-        <button className="px-3 py-1 border rounded">&lt; 前へ</button>
-        {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-          <button
-            key={n}
-            className={`px-3 py-1 border rounded ${
-              n === 1 ? "text-white" : ""
-            }`}
-            style={n === 1 ? { backgroundColor: "#01b29a" } : {}}
-          >
-            {n}
-          </button>
-        ))}
-        <button className="px-3 py-1 border rounded">次へ &gt;</button>
-      </div> */}
       <div className="flex justify-center gap-2 mb-8">
         <Pagination />
       </div>
@@ -135,20 +124,17 @@ export default function BridalFairList() {
       {/* Big CTA */}
       <div className="text-center pt-8">
         <button
-          className="font-semibold px-6 py-4 rounded-full shadow-md transition"
+          className="w-full sm:w-auto font-semibold px-6 py-4 rounded-full shadow-md transition"
           style={{
             backgroundColor: "#aaf0e8",
             color: "#016f60",
           }}
         >
-          費用負担のサービスを受けるための面談をする <br />
-          <p className="text-sm mt-2">
+          費用負担のサービスを受けるための面談をする
+          <p className="text-xs sm:text-sm mt-2 font-normal">
             費用負担のサービスを受けたい方は直接話していただく必要があります
           </p>
         </button>
-        {/* <p className="text-sm text-gray-500 mt-2">
-          費用負担のサービスを受けたい方は直接話していただく必要があります
-        </p> */}
       </div>
     </div>
   );

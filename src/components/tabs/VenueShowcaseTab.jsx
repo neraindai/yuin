@@ -1,4 +1,5 @@
-import { FaHome, FaPhoneAlt } from "react-icons/fa";
+import { useState } from "react";
+import { FaChevronLeft, FaChevronRight, FaHome, FaPhoneAlt } from "react-icons/fa";
 
 // Import images
 import mainImage from "../../assets/images/venued1.png";
@@ -11,6 +12,23 @@ import GradenSomePage from "../../pages/CelestialGardenHall/GradenSomePage";
 import Footer from "../../components/Footer/Footer";
 
 export default function VenueShowcaseTab() {
+  const images = [
+    { src: mainImage, alt: "メイン会場" },
+    { src: venued2, alt: "ガーデンビュー" },
+    { src: venued3, alt: "室内装飾" },
+    { src: venued4, alt: "セレモニースペース" },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  const prevImage = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextImage = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <>
       <section>
@@ -27,30 +45,52 @@ export default function VenueShowcaseTab() {
 
           {/* Main Content */}
           <div className="grid md:grid-cols-2 gap-8 mt-6 items-stretch">
-            {/* Left Images */}
+            {/* Left Carousel */}
             <div className="flex flex-col h-full">
-              <img
-                src={mainImage}
-                alt="メイン会場"
-                className="rounded-lg object-cover w-full h-72"
-              />
-              <div className="grid grid-cols-3 gap-2 mt-3">
+              {/* Main Image with Arrows */}
+              <div className="relative">
+                <button
+                  onClick={prevImage}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white"
+                >
+                  <FaChevronLeft className="text-green-800" />
+                </button>
+
                 <img
-                  src={venued2}
-                  alt="ガーデンビュー"
-                  className="rounded-lg object-cover w-full h-24"
+                  src={images[current].src}
+                  alt={images[current].alt}
+                  className="rounded-lg object-cover w-full h-72 shadow"
                 />
-                <img
-                  src={venued3}
-                  alt="室内装飾"
-                  className="rounded-lg object-cover w-full h-24"
-                />
-                <img
-                  src={venued4}
-                  alt="セレモニースペース"
-                  className="rounded-lg object-cover w-full h-24"
-                />
+
+                <button
+                  onClick={nextImage}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white"
+                >
+                  <FaChevronRight className="text-green-800" />
+                </button>
               </div>
+
+              {/* Thumbnails (click to change main image) */}
+              <div className="grid grid-cols-3 gap-2 mt-3">
+                {images.slice(1).map((img, idx) => {
+                  const actualIndex = idx + 1; // skip mainImage
+                  return (
+                    <img
+                      key={idx}
+                      src={img.src}
+                      alt={img.alt}
+                      onClick={() => setCurrent(actualIndex)}
+                      className={`rounded-lg object-cover w-full h-24 cursor-pointer border-2 ${
+                        current === actualIndex
+                          ? "border-green-700"
+                          : "border-transparent"
+                      }`}
+                    />
+                  );
+                })}
+              </div>
+
+              {/* Button */}
               <button className="w-full mt-3 bg-[#baf5d1] hover:bg-[#a1e6be] text-[#2a7a65] py-2 rounded-full text-sm font-medium">
                 もっと見る
               </button>

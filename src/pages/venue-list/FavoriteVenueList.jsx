@@ -6,7 +6,8 @@ import DecorativeDivider from "../../components/ExtraComponent/DecorativeDivider
 import HeroMiniImage from "../../components/HeroMiniImage";
 import VenueListBanner from "../../assets/images/VenueListBanner.png";
 import Header from "../../components/Header/Header";
-import VenueSearchBar from "../../components/SearchSection/VenueSearchBar"
+import VenueSearchBar from "../../components/SearchSection/VenueSearchBar";
+import SectionHeader from "../../components/ExtraComponent/SectionHeader";
 
 const FavoriteVenueList = () => {
   const venues = [
@@ -56,12 +57,17 @@ const FavoriteVenueList = () => {
       </HeroMiniImage>
 
       <section className="py-12 bg-gray-50">
-        <div className="text-center mb-8">
+        {/* <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-green-700">
             お気に入り結婚式場一覧
           </h2>
           <p className="text-sm text-gray-500 mt-1">合計お気に入り数：全38件</p>
-        </div>
+        </div> */}
+
+        <SectionHeader
+          sectionTitle="お気に入り結婚式場一覧"
+          shortDescription="合計お気に入り数：全38件"
+        />
 
         <div className="flex flex-col gap-6 items-center">
           {venues.map((venue, index) => (

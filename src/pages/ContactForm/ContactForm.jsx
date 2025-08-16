@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import ContactBanner from "../../assets/images/ContactBanner.jpg";
 import Header from "../../components/Header/Header";
+import SectionHeader from "../../components/ExtraComponent/SectionHeader";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -27,27 +28,35 @@ export default function ContactForm() {
     setStep(2);
   };
 
+  const handleBack = () => {
+    setStep(1);
+  };
+
+  const handleConfirm = () => {
+    // TODO: You can send formData to API here
+    setStep(3);
+  };
+
   return (
     <>
-    {/* Header part*/}
+      {/* Header part*/}
       <Header />
-      
+
       {/* Mini Hero Image */}
       <HeroMiniImage image={ContactBanner} />
 
       <section>
         <div className="min-h-screen bg-white text-black flex flex-col items-center py-10">
+          {/* STEP 1: 入力フォーム */}
           {step === 1 && (
             <form
               onSubmit={handleSubmit}
               className="w-full max-w-lg bg-white rounded-lg p-6"
             >
-              <h1 className="text-center text-2xl font-bold mb-2">
-                お問い合わせフォーム
-              </h1>
-              <p className="text-center text-sm mb-8">
-                [会場見学やフェアに関するお問い合わせには対応しておりません。適切なお問い合わせ方法をご利用ください]
-              </p>
+              <SectionHeader
+                sectionTitle="お問い合わせフォーム"
+                shortDescription="会場見学やフェアに関するお問い合わせには対応しておりません。適切なお問い合わせ方法をご利用ください"
+              />
 
               <h2 className="font-semibold mb-4 border-b pb-1">
                 1. お名前と連絡先
@@ -174,16 +183,17 @@ export default function ContactForm() {
 
               <button
                 type="submit"
-                className="w-full bg-green-200 text-green-800 rounded-full py-2 font-semibold hover:bg-green-300"
+                className="w-full bg-green-200 text-primary-text rounded-full py-2 font-semibold hover:bg-green-300"
               >
                 次へ
               </button>
             </form>
           )}
 
+          {/* STEP 2: 確認画面 */}
           {step === 2 && (
             <div className="w-full max-w-lg bg-white rounded-lg p-6 text-black">
-              <h2 className="text-green-600 font-semibold text-lg mb-6">
+              <h2 className="text-primary-text font-semibold text-lg mb-6">
                 ご登録確認
               </h2>
 
@@ -231,12 +241,39 @@ export default function ContactForm() {
                 </p>
               </div>
 
-              {/* Button */}
+              {/* Buttons */}
+              <div className="flex gap-4">
+                <button
+                  onClick={handleBack}
+                  className="w-1/2 bg-gray-200 text-gray-700 rounded-full py-2 font-semibold hover:bg-gray-300"
+                >
+                  戻る
+                </button>
+                <button
+                  onClick={handleConfirm}
+                  className="w-1/2 bg-green-200 text-primary-text rounded-full py-2 font-semibold hover:bg-green-300"
+                >
+                  送信
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* STEP 3: 完了画面 */}
+          {step === 3 && (
+            <div className="w-full max-w-lg bg-white rounded-lg p-6 text-center text-black">
+              <h2 className="text-primary-text font-semibold text-xl mb-4">
+                お問い合わせありがとうございました
+              </h2>
+              <p className="text-gray-600 mb-6">
+                ご入力いただいた内容を送信しました。<br />
+                担当者よりご連絡差し上げますので、しばらくお待ちください。
+              </p>
               <button
-                className="w-full bg-green-200 text-green-800 rounded-full py-2 font-semibold"
-                disabled
+                onClick={() => setStep(1)}
+                className="bg-green-200 text-primary-text rounded-full py-2 px-6 font-semibold hover:bg-green-300"
               >
-                確定
+                フォームに戻る
               </button>
             </div>
           )}

@@ -15,19 +15,19 @@ const sections = [
     title: "セレモニー",    
     description:
       "自然光が降り注ぐ幻想的な空間で叶える、心に残る華麗な瞬間。まるで映画のワンシーンのような挙式のひとときをご覧ください。",
-    images: [img1, img2, img3, img4, img5, img6],
+    images: [img1, img2, img3, img4, img5, img6, img2],
   },
   {
     title: "パーティー",
     description:
       "温もりあるデザインと開放感あふれる空間で、大切なゲストと過ごす笑顔あふれるひととき。華やかで心地よいパーティーシーンを写真で体感。",
-    images: [img1, img2, img3, img4, img5, img6],
+    images: [img1, img2, img3, img4, img5, img6, img2],
   },
   {
     title: "ロケーション・施設",
     description:
       "緑豊かなガーデンや洗練された館内設備など、美しいロケーションをご紹介。非日常を感じる贅沢な空間をご覧ください。",
-    images: [img1, img2, img3, img4, img5, img6],
+    images: [img1, img2, img3, img4, img5, img6, img2],
   },
 ];
 
@@ -94,7 +94,7 @@ function ImageGalleryBlock({ title, description, images }) {
               src={img}
               alt=""
               onClick={() => setCurrent(index)}
-              className={`w-20 h-16 object-cover rounded cursor-pointer border-2 ${
+              className={`w-32 h-24 object-cover rounded-lg cursor-pointer border-2 ${
                 current === index ? "border-green-700" : "border-transparent"
               }`}
             />

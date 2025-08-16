@@ -9,16 +9,16 @@ const Accordion = ({ number, question, answer }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border border-green-300 border-t-1 last:border-b">
+    <div className="border border-primary-text border-t-1 last:border-b">
       <button
         className="w-full flex justify-between items-center px-4 py-3 text-left"
         onClick={() => setOpen(!open)}
       >
         <span className="flex items-start gap-3 text-gray-800 font-medium">
-          <span className="font-bold text-green-700">Q{number}</span>
+          <span className="font-bold text-primary-text">Q{number}</span>
           {question}
         </span>
-        <span className="text-xl font-bold text-green-600">
+        <span className="text-xl font-bold text-primary-text">
           {open ? "−" : "+"}
         </span>
       </button>
@@ -33,7 +33,7 @@ const Accordion = ({ number, question, answer }) => {
             className="overflow-hidden"
           >
             <div className="px-4 pb-4 flex gap-3 text-gray-600 text-sm leading-relaxed">
-              <span className="font-bold text-green-700">A</span>
+              <span className="font-bold text-primary-text">A</span>
               <span>{answer}</span>
             </div>
           </motion.div>
@@ -159,8 +159,8 @@ const FaqAccordion = () => {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-6 py-2 rounded-full border ${
                 activeCategory === cat.id
-                  ? "bg-green-200 text-green-800 border-green-300"
-                  : "bg-green-50 text-green-600 border-green-200"
+                  ? "bg-green-200 text-primary-text border-primary-text"
+                  : "bg-green-50 text-primary-text border-primary-text"
               } transition`}
             >
               {cat.label}
@@ -172,7 +172,7 @@ const FaqAccordion = () => {
         {Object.entries(groupedFaq).map(([cat, items]) => (
           <div key={cat} className="mb-10">
             {/* Category Title */}
-            <div className="inline-block bg-green-100 text-green-800 font-bold px-4 py-2 border border-green-300 mb-0 text-center">
+            <div className="inline-block bg-green-100 text-primary-text font-bold px-4 py-2 border border-primary-text mb-0 text-center">
               {categories.find((c) => c.id === cat)?.label ||
                 "その他カテゴリー"}
             </div>

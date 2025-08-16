@@ -207,7 +207,7 @@ export default function WeddingRegisterForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-green-200 text-green-900 font-medium py-3 rounded-full hover:bg-green-300"
+          className="w-full bg-green-200 text-primary-text font-medium py-3 rounded-full hover:bg-green-300"
         >
           確認する
         </button>

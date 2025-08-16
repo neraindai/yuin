@@ -6,6 +6,7 @@ import BudgetBanner from "../../assets/images/BudgetBanner.png";
 import Footer from "../../components/Footer/Footer";
 import DecorativeDivider from "../../components/ExtraComponent/DecorativeDivider";
 import TabSection from "../../components/ExtraComponent/TabSection";
+import SectionHeader from "../../components/ExtraComponent/SectionHeader";
 
 const steps = [
   {
@@ -56,9 +57,11 @@ export default function ServiceFlow() {
 
       <div className="bg-white py-12">
         {/* Title */}
-        <h2 className="text-center text-green-700 text-2xl font-bold mb-12">
+        {/* <h2 className="text-center text-green-700 text-2xl font-bold mb-12">
           サービスの流れ
-        </h2>
+        </h2> */}
+
+        <SectionHeader sectionTitle="サービスの流れ" />
 
         {/* Steps */}
         <div className="flex flex-col items-center gap-10">
@@ -85,13 +88,13 @@ export default function ServiceFlow() {
                 {/* Text */}
                 <div className="flex flex-col md:flex-row gap-4 rounded-lg shadow-sm bg-gray-50 p-6 flex-1">
                   {/* Number */}
-                  <div className="text-green-600 font-bold text-lg md:w-12">
+                  <div className="text-primary-text font-bold text-lg md:w-12">
                     {step.number}
                   </div>
 
                   {/* Title + Description */}
                   <div className="flex-1">
-                    <h3 className="text-green-700 font-bold text-lg mb-2">
+                    <h3 className="text-primary-text font-bold text-lg mb-2">
                       {step.title}
                     </h3>
                     <p className="text-gray-700 text-sm leading-relaxed">

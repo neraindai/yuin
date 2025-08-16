@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import ContactBanner from "../../assets/images/ContactBanner.jpg";
 import Header from "../../components/Header/Header";
+import SectionHeader from "../../components/ExtraComponent/SectionHeader";
 
 export default function InquiryFlow() {
   const [step, setStep] = useState(1);
@@ -53,21 +54,26 @@ export default function InquiryFlow() {
 
   return (
     <>
-    {/* Header part*/}
+      {/* Header part*/}
       <Header />
-      
+
       {/* Mini Hero Image */}
       <HeroMiniImage image={ContactBanner} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         {step === 1 && (
           <>
-            <h1 className="text-2xl font-bold text-center mb-2">
+            {/* <h1 className="text-2xl font-bold text-center mb-2">
               お問い合わせフォーム
             </h1>
             <p className="text-center text-sm text-gray-500 mb-8">
               ※会場探しやフェアに関するお問い合わせには対応しておりません。適切なお問い合わせ方法をご利用ください
-            </p>
+            </p> */}
+
+            <SectionHeader
+              sectionTitle="お問い合わせフォーム"
+              shortDescription="※会場探しやフェアに関するお問い合わせには対応しておりません。適切なお問い合わせ方法をご利用ください"
+            />
 
             <h2 className="text-lg font-semibold border-b border-gray-300 pb-2 mb-6">
               情報を入力してください
@@ -156,7 +162,7 @@ export default function InquiryFlow() {
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-full bg-green-200 hover:bg-green-300 text-green-800 font-medium"
+                className="w-full py-3 rounded-full bg-green-200 hover:bg-green-300 text-primary-text font-medium"
               >
                 次へ
               </button>
@@ -166,7 +172,7 @@ export default function InquiryFlow() {
 
         {step === 2 && (
           <>
-            <h2 className="text-green-700 font-semibold text-lg mb-8">
+            <h2 className="text-primary-text font-semibold text-lg mb-8">
               ご登録確認
             </h2>
             <dl className="grid grid-cols-3 gap-y-6 text-sm">
@@ -200,7 +206,7 @@ export default function InquiryFlow() {
               </button>
               <button
                 onClick={handleConfirm}
-                className="px-8 py-3 rounded-full bg-green-200 hover:bg-green-300 text-green-800 font-medium"
+                className="px-8 py-3 rounded-full bg-green-200 hover:bg-green-300 text-primary-text font-medium"
               >
                 確定
               </button>
