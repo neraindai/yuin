@@ -59,28 +59,31 @@ const TestimonialCard = ({ image, name, email, title, message }) => (
 export default function TestimonialCarousel() {
   return (
     <section className="py-10">
-    <SectionHeader sectionTitle="利用者の声" shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります" />
+      <div className="container mx-auto px-4 py-3">
+      <SectionHeader sectionTitle="利用者の声" shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります" />
 
-      <Swiper
-        modules={[Navigation]}
-        navigation
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-        className="p-9"
-      >
-        {testimonials.map((testimonial, index) => (
-          <SwiperSlide key={index}>
-            <TestimonialCard {...testimonial} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <DecorativeDivider/>
+      </div>
+
+        <Swiper
+          modules={[Navigation]}
+          navigation
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          className="p-9"
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <TestimonialCard {...testimonial} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <DecorativeDivider/>
     </section>
     
   );

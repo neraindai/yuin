@@ -8,7 +8,7 @@ const AboutSection = () => {
     <section className="container mx-auto">
         <DecorativeDivider/>
       {/* Top Title */}
-      <div className="text-center mb-10">
+      <div className="text-center">
       <SectionHeader
       sectionTitle="ゆいのねとは"
       shortDescription="大切な一日を、最高の思い出に。私たちは、理想の結婚式をサポートするために、心を込めたサービスと厳選した会場をご提供しています。"

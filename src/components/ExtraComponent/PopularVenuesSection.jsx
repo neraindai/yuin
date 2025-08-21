@@ -75,7 +75,7 @@ const PopularVenuesSection = () => {
 
       <Swiper
         modules={[Autoplay, Navigation]}
-        spaceBetween={20}
+        spaceBetween={24}
         slidesPerView={1}
         navigation
         autoplay={{ delay: 1000, disableOnInteraction: false }}

@@ -29,7 +29,7 @@ const BridalRealtedList = () =>{
             shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
             />
             
-                <div className='grid grid-cols-[1fr] md:grid-cols-[repeat(4,_1fr)] gap-[15px] md:gap-[20px]'>
+                <div className='grid grid-cols-[1fr] md:grid-cols-[repeat(4,_1fr)] gap-[24px] md:gap-[20px]'>
              {bridalArticle.map((article, index) => (
                     <BridalRelatedCard key={index} {...article} />
                   
