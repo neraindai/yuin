@@ -62,7 +62,7 @@ const venues = [
 const PopularVenuesSection = () => {
   return (
     
-    <section className=" text-center">
+    <section className=" text-center venueslider">
       <SectionHeader 
       sectionTitle="結婚式場一覧"
       shortDescription="特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！"

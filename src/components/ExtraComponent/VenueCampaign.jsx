@@ -61,7 +61,7 @@ const venues = [
 
 const PopularVenuesSection = () => {
   return (
-    <section className="py-8 text-center">
+    <section className="py-8 text-center venueslider">
       <div className="container mx-auto px-4 py-3">
       <SectionHeader
       sectionTitle="キャンペーン中の会場"

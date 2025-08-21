@@ -55,6 +55,13 @@
   background-image: url('/src/assets/icons/arrow.png');
 }
 
+.venueslider .swiper-button-prev {
+  background-image: url('/src/assets/icons/next.png');
+}
+.venueslider .swiper-button-next {
+  background-image: url('/src/assets/icons/next.png');
+}
+
 .swiper-button-next {
   background-image: url('/src/assets/icons/arrow.png');
   transform: scaleX(-1);
