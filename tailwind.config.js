@@ -45,7 +45,7 @@ export default {
         padding: '1rem',
         screens: {
           DEFAULT: '90%', // for all screens by default
-          xl: '1250px',   // from 1280px and up, use max 1200px
+          xl: '1200px',   // from 1280px and up, use max 1200px
         },
       },
     },
