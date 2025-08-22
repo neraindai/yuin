@@ -61,18 +61,18 @@ const venues = [
 
 const PopularVenuesSection = () => {
   return (
-    <section className="py-8 text-center">
-      <div className="container mx-auto px-4 py-3">
+    <section className="py-8 text-center venueslider">
+      <div className="container mx-auto px-4 py-3 customSliderParents">
       <SectionHeader
       sectionTitle="キャンペーン中の会場"
       noborder
        />
         
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 heading"></h2>
+      {/* <h2 className="text-2xl md:text-3xl font-bold mb-8 heading"></h2> */}
 
       <Swiper
         modules={[Autoplay, Navigation]}
-        spaceBetween={20}
+        spaceBetween={24}
         slidesPerView={1}
         navigation
         autoplay={{ delay: 99000, disableOnInteraction: false }}
@@ -82,7 +82,7 @@ const PopularVenuesSection = () => {
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
         }}
-        className="pb-10"
+        className="py-10"
       >
         {venues.map((venue, index) => (
           <SwiperSlide key={index}>

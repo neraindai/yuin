@@ -29,7 +29,7 @@ export default function Slider({ children }) {
                 ))}
             </div>
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"></div>
-                <div className="relative z-10 flex items-center justify-start h-full px-8 md:px-20">
+                <div className="relative z-10 flex items-center justify-start h-full">
                     {children}
                 </div>
             </div>

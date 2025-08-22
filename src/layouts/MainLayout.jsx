@@ -1,18 +1,18 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Slider from "../components/Slider/Slider";
 import SearchSection from "../components/SearchSection/SearchSection";
-import RegisterLoginSection from '../components/ExtraComponent/RegisterLoginSection';
-import PopularVenuesSection from '../components/ExtraComponent/PopularVenuesSection';
-import VenueCampaign from '../components/ExtraComponent/VenueCampaign';
-import AboutSection from '../components/ExtraComponent/AboutSection';
-import StepComponent from '../components/ExtraComponent/StepComponent';
-import DecorativeDivider from '../components/ExtraComponent/DecorativeDivider';
-import TestimonialCarousel from '../components/ExtraComponent/TestimonialCarousel';
-import BrideGroomCardList from '../components/ExtraComponent/BrideGroomCardList';
-import TabSection from '../components/ExtraComponent/TabSection';
-import BridalRealtedList from '../components/ExtraComponent/BridalRelatedList';
+import RegisterLoginSection from "../components/ExtraComponent/RegisterLoginSection";
+import PopularVenuesSection from "../components/ExtraComponent/PopularVenuesSection";
+import VenueCampaign from "../components/ExtraComponent/VenueCampaign";
+import AboutSection from "../components/ExtraComponent/AboutSection";
+import StepComponent from "../components/ExtraComponent/StepComponent";
+import DecorativeDivider from "../components/ExtraComponent/DecorativeDivider";
+import TestimonialCarousel from "../components/ExtraComponent/TestimonialCarousel";
+import BrideGroomCardList from "../components/ExtraComponent/BrideGroomCardList";
+import TabSection from "../components/ExtraComponent/TabSection";
+import BridalRealtedList from "../components/ExtraComponent/BridalRelatedList";
 
 const MainLayout = ({ children }) => {
   const location = useLocation();
@@ -28,7 +28,9 @@ const MainLayout = ({ children }) => {
             <SearchSection />
           </Slider>
           <main>
-            <RegisterLoginSection />
+            <div className="pt-7">
+              <RegisterLoginSection />
+            </div>
             <PopularVenuesSection />
             <VenueCampaign />
             <AboutSection />

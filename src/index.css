@@ -55,11 +55,34 @@
   background-image: url('/src/assets/icons/arrow.png');
 }
 
+.venueslider .swiper-button-prev {
+  background-image: url('/src/assets/icons/next.png');
+}
+.venueslider .swiper-button-next {
+  background-image: url('/src/assets/icons/next.png');
+}
+
 .swiper-button-next {
   background-image: url('/src/assets/icons/arrow.png');
   transform: scaleX(-1);
 }
 
+.venueslider .swiper-button-prev {
+    margin-left: -45px;
+    opacity: 1 !important;
+}
+
+.venueslider .swiper.swiper-initialized {
+    position: static;
+}
+
+.venueslider .customSliderParents {
+    position: relative;
+}
+
+.venueslider .swiper-button-next {
+    margin-right: -40px;
+}
 /* Hide default Swiper arrow icons */
 .swiper-button-prev::after,
 .swiper-button-next::after {

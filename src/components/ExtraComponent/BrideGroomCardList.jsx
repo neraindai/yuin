@@ -11,7 +11,7 @@ const BrideGroomCardList = () => {
       shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
       />
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
       <BrideGroomCard
         title="新郎新婦"
         description="結婚式場のご予約やご相談に関するお問い合わせは、こちらより承っております"

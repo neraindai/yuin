@@ -62,12 +62,12 @@ const venues = [
 const PopularVenuesSection = () => {
   return (
     
-    <section className=" text-center">
+    <section className=" text-center venueslider">
       <SectionHeader 
       sectionTitle="結婚式場一覧"
       shortDescription="特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！"
       />
-        <div className="container mx-auto ">
+        <div className="container mx-auto customSliderParents">
       <SectionHeader
       noborder
       sectionTitle="人気会場"
@@ -75,7 +75,7 @@ const PopularVenuesSection = () => {
 
       <Swiper
         modules={[Autoplay, Navigation]}
-        spaceBetween={20}
+        spaceBetween={24}
         slidesPerView={1}
         navigation
         autoplay={{ delay: 1000, disableOnInteraction: false }}

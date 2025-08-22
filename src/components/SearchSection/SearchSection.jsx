@@ -1,17 +1,18 @@
-import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { books } from "../../assets";
 
 export default function SearchSection() {
   return (
     <div className="mt-16 mb-16 w-[488px] max-w-md p-6 bg-white bg-opacity-90 shadow-[0_4px_16px_rgba(0,0,0,0.1)] rounded-lg">
-      <h2 className="text-lg font-semibold mb-4 flex items-center space-x-2">
-        <FaMapMarkerAlt />
-        <span>結婚式場を探す</span>
+      <h2 className="text-base text-black-text font-semibold mb-4 flex items-center space-x-2">
+        <img src={books} alt="books-icon" />
+        <span> 結婚式場を探す</span>
       </h2>
 
       <form className="space-y-4 text-sm">
         {/* Search by area */}
         <div>
-          <label className="text-[#5B5B5B] text-[12px] font-zen font-bold block mb-1">
+          <label className="text-grey text-[12px] font-zen font-bold block mb-1">
             挙式希望エリアから探す
           </label>
           <div className="flex items-center border rounded-md overflow-hidden h-10">
@@ -37,7 +38,7 @@ export default function SearchSection() {
 
         {/* Search by venue name */}
         <div>
-          <label className="text-[#5B5B5B] text-[12px] font-zen font-bold block mb-1">
+          <label className="text-grey text-[12px] font-zen font-bold block mb-1">
             式場名で探す
           </label>
           <div className="flex items-center border rounded-md overflow-hidden h-10">
@@ -57,7 +58,7 @@ export default function SearchSection() {
 
         {/* Search by keyword */}
         <div>
-          <label className="text-[#5B5B5B] text-[12px] font-zen font-bold block mb-1">
+          <label className="text-grey text-[12px] font-zen font-bold block mb-1">
             キーワードで探す
           </label>
           <div className="flex items-center border rounded-md overflow-hidden h-10">
