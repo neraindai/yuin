@@ -75,7 +75,7 @@ const PopularVenuesSection = () => {
         spaceBetween={24}
         slidesPerView={1}
         navigation
-        autoplay={{ delay: 99000, disableOnInteraction: false }}
+        // autoplay={{ delay: 99000, disableOnInteraction: false }}
         breakpoints={{
           640: { slidesPerView: 1.5 },
           768: { slidesPerView: 2 },

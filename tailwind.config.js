@@ -27,14 +27,14 @@ export default {
       fontSize: {
         xm: '10px',
         sm: '12px',
-        nm: '14px',
+        smd: '14px',
+        nm: '15px',
         base:'16px',
-        md: '17px',
-        semmd: '26px', 
-        xmd:'28px', 
+        md: '24px', 
+        xmd:'26px', 
         lg: '32px',
-        xl: '36px',
-        xxl: '48px',   
+        xl: '36px', 
+          
           
       },
       letterSpacing: {

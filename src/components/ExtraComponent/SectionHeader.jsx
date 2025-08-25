@@ -4,8 +4,8 @@ const SectionHeader = ({sectionTitle, shortDescription, noborder}) => {
     return(
         <>
             <div className="flex flex-col">
-                <h2 className="text-center heading text-semmd md:text-lg lg:text-xl font-bold mt-0 font-yumincho tracking-tightest">{sectionTitle}</h2>
-                <p className={`${noborder ? withoutBorder : withBorder }`}>{shortDescription}</p>
+                <h2 className="text-center heading text-md md:text-lg lg:text-xl font-bold mt-0 font-yumincho tracking-tightest">{sectionTitle}</h2>
+                <p className={`${noborder ? withoutBorder : withBorder } text-smd md:text-nm lg:text-base`}>{shortDescription}</p>
             </div>
         </>
     )
