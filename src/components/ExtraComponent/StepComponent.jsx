@@ -43,17 +43,14 @@ const StepComponent = () => {
       <SectionHeader sectionTitle="サービスの流れ" shortDescription="「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。" />
       <div className="mb-8">
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4"
+          className="flex flex-wrap justify-center px-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.5 }}
         >
           {steps.map((step, index) => (
-            <div
-              key={index}            >
-              <StepCard {...step} />
-            </div>
+              <StepCard key={index} {...step} />
           ))}
         </motion.div>
         <div className="flex align-center justify-center mt-8">
