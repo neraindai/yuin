@@ -1,5 +1,4 @@
 import DecorativeDivider from './DecorativeDivider';
-import { motion } from "framer-motion";
 import SectionHeader from './SectionHeader';
 import OverlayContent from './OverlayContent';
 

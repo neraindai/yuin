@@ -1,21 +1,36 @@
 import BookMark from "../../assets/icons/bookmark";
+import { useAuth } from "../../context/AuthContext";
+import BadgeBtn from "../../components/ExtraComponent/Badge";
+
 
 const FavoriteVenueCard = ({
   imageUrl,
   title,
   description,
-  capacityInfo,
   tag1,
   tag2,
 }) => {
+  const { isLoggedIn } = useAuth(); // ✅ login status
+
   return (
     <div className="flex bg-white rounded-xl shadow-md p-4 relative w-full max-w-4xl mx-auto">
-      <img
-        src={imageUrl}
-        alt={title}
-        className="w-1/3 h-60 object-cover"
-      />
+      {/* Image container */}
+      <div className="relative w-1/3 h-60">
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-full object-cover rounded-lg"
+        />
 
+        {/* ✅ Badge only when logged in */}
+        {isLoggedIn && (
+          <span className="absolute top-2 left-2 z-10">
+            <BadgeBtn />
+          </span>
+        )}
+      </div>
+
+      {/* Right content */}
       <div className="flex flex-col gap-3 w-2/3 px-4">
         <div>
           <div className="mb-2">
@@ -24,10 +39,12 @@ const FavoriteVenueCard = ({
             </h3>
           </div>
 
-          <p className="text-sm text-gray-600 line-clamp-3 pt-2">{description}</p>
+          <p className="text-sm text-gray-600 line-clamp-3 pt-2">
+            {description}
+          </p>
         </div>
 
-        {/* Top tags section */}
+        {/* Tags */}
         <div className="flex gap-2 mt-4">
           <span className="bg-[#F4F4F4] text-gray-700 text-xs px-4 py-1 rounded-full">
             {tag1}
@@ -45,7 +62,7 @@ const FavoriteVenueCard = ({
         </div>
       </div>
 
-      {/* Bookmark icon */}
+      {/* ✅ Bookmark always visible */}
       <div className="absolute top-4 right-4">
         <BookMark />
       </div>

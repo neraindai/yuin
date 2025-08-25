@@ -62,7 +62,7 @@ const venues = [
 const PopularVenuesSection = () => {
   return (
     <section className="py-8 text-center venueslider">
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-4 py-3 customSliderParents">
       <SectionHeader
       sectionTitle="キャンペーン中の会場"
       noborder
@@ -75,7 +75,7 @@ const PopularVenuesSection = () => {
         spaceBetween={24}
         slidesPerView={1}
         navigation
-        autoplay={{ delay: 99000, disableOnInteraction: false }}
+        // autoplay={{ delay: 99000, disableOnInteraction: false }}
         breakpoints={{
           640: { slidesPerView: 1.5 },
           768: { slidesPerView: 2 },

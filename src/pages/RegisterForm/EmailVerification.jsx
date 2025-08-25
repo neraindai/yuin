@@ -68,7 +68,7 @@ export default function EmailVerification() {
 
           <button
             type="submit"
-            className="w-full bg-green-200 text-green-900 font-medium py-2 rounded-3xl hover:bg-green-300 transition"
+            className="w-full bg-green-200 text-primary-text font-medium py-2 rounded-3xl hover:bg-green-300 transition"
           >
             次へ
           </button>

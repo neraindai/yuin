@@ -67,7 +67,7 @@ const PopularVenuesSection = () => {
       sectionTitle="結婚式場一覧"
       shortDescription="特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！"
       />
-        <div className="container mx-auto ">
+        <div className="container mx-auto customSliderParents">
       <SectionHeader
       noborder
       sectionTitle="人気会場"

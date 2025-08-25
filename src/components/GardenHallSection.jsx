@@ -1,4 +1,4 @@
-import React from "react";
+import SectionHeader from "./ExtraComponent/SectionHeader";
 
 const GardenHallSection = ({
   pointNumber,
@@ -8,30 +8,22 @@ const GardenHallSection = ({
   cards
 }) => {
   return (
-    <section className="relative max-w-[1100px] mx-auto px-4 py-12 justify-center text-center">
+    <section className="relative mx-auto px-4 py-10 justify-center text-center">
       {/* Circle Badge */}
       <div className="absolute -top-6 left-0 bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-sm font-semibold leading-tight text-center shadow-lg">
         ポイント<br />{pointNumber}
       </div>
 
-      {/* Heading */}
-      <h2 className="ml-20 text-lg md:text-xl font-bold leading-snug mb-8">
-        {title}
-      </h2>
+      {/* Section Header */}
+      <SectionHeader
+        sectionTitle={title} 
+        shortDescription={description}
+        noborder
+      />
 
       {/* Main Image */}
       <div className="mb-10">
         <img src={mainImage} alt={title} className="w-full rounded-lg" />
-      </div>
-
-      {/* Title & Description */}
-      <div className="text-center mb-14">
-        <h3 className="text-lg md:text-xl font-bold mb-5">
-          特別な日にふさわしい特別な一枚を残せるラグジュアリーホテル
-        </h3>
-        <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-sm md:text-base">
-          {description}
-        </p>
       </div>
 
       {/* Cards */}

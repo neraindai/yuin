@@ -67,6 +67,22 @@
   transform: scaleX(-1);
 }
 
+.venueslider .swiper-button-prev {
+    margin-left: -45px;
+    opacity: 1 !important;
+}
+
+.venueslider .swiper.swiper-initialized {
+    position: static;
+}
+
+.venueslider .customSliderParents {
+    position: relative;
+}
+
+.venueslider .swiper-button-next {
+    margin-right: -40px;
+}
 /* Hide default Swiper arrow icons */
 .swiper-button-prev::after,
 .swiper-button-next::after {

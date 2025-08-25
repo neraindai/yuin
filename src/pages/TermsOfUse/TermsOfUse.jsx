@@ -2,11 +2,12 @@ import Footer from "../../components/Footer/Footer";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import FaqBanner from "../../assets/images/FAQbanner.png";
 import Header from "../../components/Header/Header";
+import SectionHeader from "../../components/ExtraComponent/SectionHeader";
 
 export default function TermsOfUse() {
   return (
     <>
-    {/* Header part*/}
+      {/* Header part*/}
       <Header />
 
       {/* Mini Hero Image */}
@@ -15,14 +16,16 @@ export default function TermsOfUse() {
       <div className="flex justify-center items-center">
         <div className="w-full max-w-4xl rounded-3xl p-10">
           {/* Main Title */}
-          <h1 className="text-center text-green-700 text-2xl font-bold mb-10">
+          {/* <h1 className="text-center text-green-700 text-2xl font-bold mb-10">
             利用規約
-          </h1>
+          </h1> */}
+
+          <SectionHeader sectionTitle="利用規約" />
 
           {/* Content Box */}
           <div className="bg-gray-100 rounded-3xl p-8 shadow">
             <div className="text-center">
-              <h2 className="text-green-700 text-xl font-bold mb-6">
+              <h2 className="text-primary-text text-xl font-bold mb-6">
                 利用規約
               </h2>
               <p className="mb-6">

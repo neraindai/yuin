@@ -1,6 +1,6 @@
 const StepCard = ({ image, title, description, number }) => {
   return (
-    <div className="mt-15">
+    <div className="flex-[0_0_100%] md:[flex-[0_0_calc(50%)]] lg:flex-[0_0_calc(33.33%)] px-4 py-10">
      
       <div className="flex flex-col items-center justify-center">
         <img src={image} alt={title} className="w-auto h-30 object-cover" />

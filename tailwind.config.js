@@ -15,6 +15,8 @@ export default {
         'black-text': '#000000ff',
         // 'black-opacity': ''
         'light-bg': '#F7F8F1',
+        'grey': '#5B5B5B',
+        'dark-blue': '#1E5175',
       },
       fontFamily: {
         zen: ['"Zen Maru Gothic"', 'sans-serif'],
@@ -23,14 +25,16 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
+        xm: '10px',
         sm: '12px',
-        nm: '14px',
+        smd: '14px',
+        nm: '15px',
         base:'16px',
-        md: '17px', 
-        semmd: '20px', 
-        lg: '28px',
-        xl: '36px',
-        xxl: '48px',   
+        md: '24px', 
+        xmd:'26px', 
+        lg: '32px',
+        xl: '36px', 
+          
           
       },
       letterSpacing: {
@@ -46,6 +50,7 @@ export default {
         screens: {
           DEFAULT: '90%', // for all screens by default
           xl: '1200px',   // from 1280px and up, use max 1200px
+          md: '736px',
         },
       },
     },

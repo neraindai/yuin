@@ -1,15 +1,16 @@
-import clsx from "clsx";
+const BadgeBtn = ({ type, children }) => {
+  let baseClasses =
+    "text-white text-xs font-bold px-3 py-1 rounded-full shadow-md";
 
-const Badge = ({ type, children }) => {
-  const styles = clsx(
-    "text-white text-xs font-bold px-3 py-1 rounded-full shadow-md",
-    {
-      "bg-red-500": type === "おすすめ", 
-      "bg-yellow-400 text-black": type === "継続割引",
-    }
-  );
+  let typeClasses = "";
 
-  return <span className={styles}>{children}</span>;
+  if (type === "おすすめ") {
+    typeClasses = "bg-red-500";
+  } else if (type === "継続割引") {
+    typeClasses = "bg-yellow-400 text-black";
+  }
+
+  return <span className={`${baseClasses} ${typeClasses}`}>{children}</span>;
 };
 
-export default Badge;
+export default BadgeBtn;

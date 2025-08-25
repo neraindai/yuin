@@ -35,7 +35,7 @@ export default function WeddingRegisterSuccess() {
       {/* Button */}
       <Link
         to="/"
-        className="w-full max-w-md text-center bg-green-200 text-green-900 px-6 py-3 rounded-full font-medium hover:bg-green-300 transition"
+        className="w-full max-w-md text-center bg-green-200 text-primary-text px-6 py-3 rounded-full font-medium hover:bg-green-300 transition"
       >
         ホームページへ戻る
       </Link>

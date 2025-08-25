@@ -3,7 +3,7 @@ import img2 from "../../assets/images/p2.jpg";
 import img3 from "../../assets/images/p3.jpg";
 import img4 from "../../assets/images/p4.jpg";
 import Pagination from "../ExtraComponent/Pagination";
-import quoteIcon from "../../assets/icons/quote.png"
+import quoteIcon from "../../assets/icons/quote.png";
 
 export default function ReviewsSection() {
   const reviews = [
@@ -44,7 +44,7 @@ export default function ReviewsSection() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
       {/* Section Title */}
-      <h2 className="text-center text-xl font-semibold text-[#01b29a] mb-8">
+      <h2 className="text-center text-lg sm:text-xl md:text-2xl font-semibold text-[#01b29a] mb-8">
         クチコミ
       </h2>
 
@@ -53,10 +53,10 @@ export default function ReviewsSection() {
         {reviews.map((review, idx) => (
           <div
             key={idx}
-            className="flex gap-8 bg-light-bg rounded-lg shadow-md p-6 relative py-10"
+            className="flex flex-col sm:flex-row sm:items-start gap-6 bg-light-bg rounded-lg shadow-md p-6 relative"
           >
             {/* User Image */}
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-300 shadow-lg">
+            <div className="mx-auto sm:mx-0 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-300 shadow-lg">
               <img
                 src={review.img}
                 alt={review.name}
@@ -65,17 +65,19 @@ export default function ReviewsSection() {
             </div>
 
             {/* Review Content */}
-            <div>
+            <div className="text-center sm:text-left">
               <p className="font-semibold text-gray-800">{review.name}</p>
-              <p className="text-sm text-gray-500">{review.email}</p>
-              <p className="mt-2 font-bold">{review.title}</p>
-              <p className="mt-2 text-gray-700 leading-relaxed text-sm">
+              <p className="text-xs sm:text-sm text-gray-500">{review.email}</p>
+              <p className="mt-2 font-bold text-sm sm:text-base">
+                {review.title}
+              </p>
+              <p className="mt-2 text-gray-700 leading-relaxed text-sm sm:text-base">
                 {review.message}
               </p>
             </div>
 
             {/* Quote Icon */}
-            <div className="absolute -top-4 right-4 w-12 h-12 opacity-70">
+            <div className="hidden sm:block absolute -top-4 right-4 w-10 sm:w-12 h-10 sm:h-12 opacity-70">
               <img
                 src={quoteIcon}
                 alt="Quote Icon"
@@ -87,19 +89,21 @@ export default function ReviewsSection() {
       </div>
 
       {/* Pagination */}
-      <Pagination />
+      <div className="mt-6">
+        <Pagination />
+      </div>
 
       {/* Big CTA */}
       <div className="text-center pt-8">
         <button
-          className="font-semibold px-6 py-4 rounded-full shadow-md transition"
+          className="w-full sm:w-auto font-semibold px-6 py-4 rounded-full shadow-md transition"
           style={{
             backgroundColor: "#aaf0e8",
             color: "#016f60",
           }}
         >
-          費用負担のサービスを受けるための面談をする <br />
-          <p className="text-sm mt-2">
+          費用負担のサービスを受けるための面談をする
+          <p className="text-xs sm:text-sm mt-2 font-normal">
             費用負担のサービスを受けたい方は直接話していただく必要があります
           </p>
         </button>
