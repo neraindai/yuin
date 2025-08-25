@@ -30,8 +30,11 @@ export default {
         smd: '14px',
         nm: '15px',
         base:'16px',
+        basemd:'18px',
+        baselg:'20px',
         md: '24px', 
         xmd:'26px', 
+        xlg:'28px', 
         lg: '32px',
         xl: '36px', 
           

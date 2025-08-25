@@ -54,7 +54,18 @@ const StepComponent = () => {
           ))}
         </motion.div>
         <div className="flex align-center justify-center mt-8">
-          <button className="bg-green-100 hover:bg-green-200 font-semibold pl-12 pr-12 py-3 rounded-full transition shadow-md text-primary">
+          <button
+            className="
+    bg-green-100 hover:bg-green-200 
+    font-semibold 
+    px-12 py-3 
+    rounded-full 
+    transition 
+    shadow-md 
+    text-primary 
+    text-base md:text-basemd lg:text-baselg
+  "
+          >
             もっと見る
           </button>
         </div>

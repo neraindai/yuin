@@ -8,8 +8,8 @@ export default function Footer() {
         {/* Left Columns */}
         <div className="flex flex-wrap gap-x-5 gap-y-6 flex-grow justify-between pr-10">
           <div className="mr-[20px]">
-            <h3 className="font-yumincho text-black font-md mb-2">メインページ</h3>
-            <ul className="space-y-2 text-nm text-black font-medium font-yumincho">
+            <h3 className="font-yumincho text-black font-md mb-2 text-basemd md:text-basemd lg:text-baselg">メインページ</h3>
+            <ul className="space-y-2 text-black font-medium font-yumincho text-smd md:text-nm lg:text-base">
               <li>トップページ</li>
               <li>よくある質問</li>
               <li>お問い合わせ</li>
@@ -19,8 +19,8 @@ export default function Footer() {
           </div>
 
           <div className="mr-[20px]">
-            <h3 className="font-yumincho text-black font-md mb-2">式場を探す</h3>
-            <ul className="space-y-2 text-nm text-black font-medium font-yumincho">
+            <h3 className="font-yumincho text-black font-md mb-2 text-basemd md:text-basemd lg:text-baselg">式場を探す</h3>
+            <ul className="space-y-2 text-black font-medium font-yumincho text-smd md:text-nm lg:text-base">
               <li>エリアから探す</li>
               <li>式場タイプから探す</li>
               <li>予算で探す</li>
@@ -28,8 +28,8 @@ export default function Footer() {
           </div>
 
           <div className="mr-[20px]">
-            <h3 className="font-yumincho text-black font-md mb-2">サービス</h3>
-            <ul className="space-y-2 text-nm text-black font-medium font-yumincho">
+            <h3 className="font-yumincho text-black font-md mb-2 text-basemd md:text-basemd lg:text-baselg">サービス</h3>
+            <ul className="space-y-2 text-black font-medium font-yumincho text-smd md:text-nm lg:text-base">
               <li>プラン比較</li>
               <li>会場見学予約</li>
               <li>結婚準備ガイド</li>
@@ -52,18 +52,18 @@ export default function Footer() {
 
           {/* Contact Card */}
           <div className="bg-white rounded-[25px] p-7 shadow-sm border border-gray-200">
-            <p className="text-center paragraph font-medium mb-4 mt-2 text-[#1E5175] underline font-semibold ">
+            <p className="text-center paragraph mb-4 mt-2 text-[#1E5175] underline font-semibold ">
               お問い合わせについて
             </p>
-            <button className="w-full bg-[#B8EACD] py-3 rounded-[25px] text-nm font-yugothic font-semibold mb-2">
+            <button className="w-full bg-[#B8EACD] py-3 rounded-[25px] text-sm font-yugothic font-semibold mb-2">
               お客様向けはこちら
             </button>
-            <button className="w-full bg-[#B8EACD] py-3 rounded-[25px] text-nm font-yugothic font-semibold mb-3">
+            <button className="w-full bg-[#B8EACD] py-3 rounded-[25px] text-sm font-yugothic font-semibold mb-3">
               法人様、広告企業向けはこちら
             </button>
-            <div className="border-t border-gray-300 pt-2 text-center text-nm font-zen font-semibold text-gray-700">
+            <div className="border-t border-gray-300 pt-2 text-center text-sm font-zen font-semibold text-gray-700">
               お問い合わせ電話番号（お客様専用）
-              <div className="text-lg font-bold font-zen">0000-0000-0000</div>
+              <div className="font-bold font-zen text-base md:text-basemd lg:text-baselg">0000-0000-0000</div>
             </div>
           </div>
         </div>

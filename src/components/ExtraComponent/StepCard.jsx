@@ -10,8 +10,8 @@ const StepCard = ({ image, title, description, number }) => {
           <span className="font-yumincho text-lg lg:text-xxl text-primary-text font-normal text-center block lg:inline-block mt-4">{number}</span>
         </div>
         <div className="w-full lg:w-[80%] mt-0 lg:mt-4">
-          <h3 className="font-yugothic text-md text-black-text font-bold text-center lg:text-left">{title}</h3>
-          <p className="font-yugothic text-black-text font-regular text-nm text-center lg:text-left">
+          <h3 className="font-yugothic text-black-text font-bold text-center lg:text-left text-base md:text-basemd lg:text-baselg">{title}</h3>
+          <p className="font-yugothic text-black-text font-regular text-center lg:text-left text-sm md:text-sm lg:text-sm">
            {description}
           </p>
         </div>
