@@ -37,8 +37,6 @@ export default {
         xlg:'28px', 
         lg: '32px',
         xl: '36px', 
-          
-          
       },
       letterSpacing: {
         tightest: '0.3px', // 👈 add your custom spacing
@@ -52,8 +50,8 @@ export default {
         padding: '1rem',
         screens: {
           DEFAULT: '90%', // for all screens by default
-          xl: '1200px',   // from 1280px and up, use max 1200px
-          md: '736px',
+          xl: '1200px',   // from 1200px and up, use max 1200px
+          md: '768px',
         },
       },
     },

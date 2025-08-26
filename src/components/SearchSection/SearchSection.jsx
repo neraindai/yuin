@@ -1,5 +1,6 @@
-import { FaSearch, FaUser } from "react-icons/fa";
-import { books, homeIcon } from "../../assets";
+import { FaSearch } from "react-icons/fa";
+import { books, iconhome, downarrow } from "../../assets";
+import CustomSelect from "../ExtraComponent/CustomSelect";
 
 export default function SearchSection() {
   return (
@@ -9,106 +10,58 @@ export default function SearchSection() {
         <span> 結婚式場を探す</span>
       </h2>
 
-      <form action="">
-        <ul>
-          <li className="mb-4">
-            {/* Label */}
-            <label className="text-black text-[12px] font-zen font-bold block mb-1">
-              ユーザー名
-            </label>
+      
+<form className="space-y-4 text-sm">
+  {/* Search by area */}
+  <div className="relative">
+    <label className="text-grey text-sm font-zen font-bold block mb-1">
+      挙式希望エリアから探す
+    </label>
+    <CustomSelect
+      name="area"
+      placeholder="選択する"
+      options={["選択する", "選択する", "選択する"]}
+      iconLeft={iconhome}
+    />
+  </div>
 
-            {/* Input with icons */}
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="shankar"
-                className="w-full h-full border border-[#ccc] pl-9 pr-9 outline-none rounded"
-              />
+  {/* Search by venue name */}
+  <div>
+    <label className="text-grey text-sm font-zen font-bold block mb-1">
+      式場名で探す
+    </label>
+    <div className="relative flex items-center border rounded-md overflow-hidden h-10">
+      <input
+        type="text"
+        name="venue"
+        placeholder="式場名を入力してください"
+        className="flex-1 h-full py-6 outline-none rounded-none text-[10px]"
+      />
+      <span className="absolute left-3 pointer-events-none text-gray-500">
+          <img src={iconhome} alt="home icon" className="w-4 h-4 block object-cover" />
+        </span>
+      <button
+        type="submit"
+        className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
+      >
+        <FaSearch />
+      </button>
+    </div>
+  </div>
 
-              {/* Left icon */}
-              {/* <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">
-                <inputicon />
-              </span> */}
-              <span className="">
-                <homeIcon />
-              </span>
-
-              {/* Right icon */}
-              <span className="absolute right-0 top-1/2 -translate-y-1/2 bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none">
-                <FaSearch />
-              </span>
-            </div>
-          </li>
-        </ul>
-      </form>
-
-      <form className="space-y-4 text-sm">
-        {/* Search by area */}
-        <div>
-          <label className="text-grey text-[12px] font-zen font-bold block mb-1">
-            挙式希望エリアから探す
-          </label>
-          <div className="flex items-center border rounded-md overflow-hidden h-10">
-            <select
-              className="flex-1 h-full px-3 outline-none border-none rounded-none"
-              defaultValue=""
-            >
-              <option value="" disabled>
-                選択する
-              </option>
-              <option>東京</option>
-              <option>大阪</option>
-              <option>名古屋</option>
-            </select>
-            <button
-              type="submit"
-              className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
-            >
-              <FaSearch />
-            </button>
-          </div>
-        </div>
-
-        {/* Search by venue name */}
-        <div>
-          <label className="text-grey text-[12px] font-zen font-bold block mb-1">
-            式場名で探す
-          </label>
-          <div className="flex items-center border rounded-md overflow-hidden h-10">
-            <input
-              type="text"
-              placeholder="式場名を入力してください"
-              className="flex-1 h-full px-3 outline-none rounded-none"
-            />
-            <button
-              type="submit"
-              className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
-            >
-              <FaSearch />
-            </button>
-          </div>
-        </div>
-
-        {/* Search by keyword */}
-        <div>
-          <label className="text-grey text-[12px] font-zen font-bold block mb-1">
-            キーワードで探す
-          </label>
-          <div className="flex items-center border rounded-md overflow-hidden h-10">
-            <input
-              type="text"
-              placeholder="キーワードを入力してください"
-              className="flex-1 h-full px-3 outline-none rounded-none"
-            />
-            <button
-              type="submit"
-              className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
-            >
-              <FaSearch />
-            </button>
-          </div>
-        </div>
-      </form>
+  {/* Search by keyword */}
+  <div>
+    <label className="text-grey text-sm font-zen font-bold block mb-1">
+      キーワードで探す
+    </label>
+    <CustomSelect
+      name="keyword"
+      placeholder="式場名を入力してください"
+      options={["式場名を入力してください", "式場名を入力してください", "式場名を入力してください"]}
+      iconLeft={iconhome}
+    />
+  </div>
+</form>
     </div>
   );
 }

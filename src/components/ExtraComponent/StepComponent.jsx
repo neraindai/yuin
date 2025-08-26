@@ -38,12 +38,12 @@ const steps = [
 const StepComponent = () => {
   return (
     
-    <div className="container mx-auto">
+    <div className="container mx-auto lg:px-0">
       <DecorativeDivider/>
       <SectionHeader sectionTitle="サービスの流れ" shortDescription="「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。" />
       <div className="mb-8">
         <motion.div
-          className="flex flex-wrap justify-center px-4"
+          className="flex flex-wrap justify-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}

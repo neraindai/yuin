@@ -28,7 +28,7 @@ const Header = () => {
         isLoggedIn ? "bg-green-50" : "bg-white"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+      <div className="container mx-auto flex items-center justify-between py-3">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <Link to="/">
@@ -37,7 +37,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:block">
+        <nav className="hidden lg:block">
           <ul className="flex items-center space-x-6 text-sm font-medium text-gray-700">
             <li>
               <Link to="/" className="text-green-600">
@@ -63,7 +63,7 @@ const Header = () => {
         </nav>
 
         {/* Login / Logout */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           {isLoggedIn ? (
             // Show icons and logout when logged in
             <div className="flex items-center space-x-4 text-black">
@@ -106,7 +106,7 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         {/* Toggle Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
               <HiOutlineX className="w-6 h-6 text-gray-700" />
@@ -124,7 +124,7 @@ const Header = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden px-4 pb-4 overflow-hidden z-[222]"
+            className="absolute top-16 left-0 w-full bg-white shadow-md lg:hidden px-4 pb-4 overflow-hidden z-[222]"
           >
             <ul className="flex flex-col space-y-3 text-sm font-medium text-gray-700">
               {navLinks.map((link, index) => (

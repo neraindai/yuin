@@ -71,6 +71,9 @@
     margin-left: -45px;
     opacity: 1 !important;
 }
+.swiper-button-prev{
+  opacity: 1 !important;
+}
 
 .venueslider .swiper.swiper-initialized {
     position: static;
@@ -83,9 +86,21 @@
 .venueslider .swiper-button-next {
     margin-right: -40px;
 }
+::placeholder{
+  font-size: 10px;
+}
 /* Hide default Swiper arrow icons */
 .swiper-button-prev::after,
 .swiper-button-next::after {
   @apply hidden;
+}
+
+@media(max-width: 768px){
+  .venueslider .swiper-button-prev{
+    margin-left: 0px;
+  }
+  .venueslider .swiper-button-next{
+    margin-right: 0px;
+  }
 }
 
