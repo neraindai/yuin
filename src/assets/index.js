@@ -25,6 +25,7 @@ import bridal3 from './bridal3.jpg';
 import bridal4 from './bridal4.jpg';
 import arrow from './icons/arrow.png';
 import books from './icons/books.png';
+import homeIcon from './icons/homeIcon.png';
 
 
 export {
@@ -53,4 +54,5 @@ export {
   bridal4,
   arrow,
   books,
+  homeIcon,
 };

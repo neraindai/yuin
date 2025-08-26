@@ -1,5 +1,5 @@
 import { FaSearch, FaUser } from "react-icons/fa";
-import { books } from "../../assets";
+import { books, homeIcon } from "../../assets";
 
 export default function SearchSection() {
   return (
@@ -26,8 +26,11 @@ export default function SearchSection() {
               />
 
               {/* Left icon */}
-              <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">
-                <FaUser />
+              {/* <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">
+                <inputicon />
+              </span> */}
+              <span className="">
+                <homeIcon />
               </span>
 
               {/* Right icon */}
