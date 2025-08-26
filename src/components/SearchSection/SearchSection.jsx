@@ -1,4 +1,4 @@
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaUser } from "react-icons/fa";
 import { books } from "../../assets";
 
 export default function SearchSection() {
@@ -8,6 +8,36 @@ export default function SearchSection() {
         <img src={books} alt="books-icon" />
         <span> 結婚式場を探す</span>
       </h2>
+
+      <form action="">
+        <ul>
+          <li className="mb-4">
+            {/* Label */}
+            <label className="text-black text-[12px] font-zen font-bold block mb-1">
+              ユーザー名
+            </label>
+
+            {/* Input with icons */}
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="shankar"
+                className="w-full h-full border border-[#ccc] pl-9 pr-9 outline-none rounded"
+              />
+
+              {/* Left icon */}
+              <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">
+                <FaUser />
+              </span>
+
+              {/* Right icon */}
+              <span className="absolute right-0 top-1/2 -translate-y-1/2 bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none">
+                <FaSearch />
+              </span>
+            </div>
+          </li>
+        </ul>
+      </form>
 
       <form className="space-y-4 text-sm">
         {/* Search by area */}
