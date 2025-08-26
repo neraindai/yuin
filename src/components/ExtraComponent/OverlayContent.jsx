@@ -27,7 +27,7 @@ const OverlayContent = ({title, description, reverseColumn}) =>{
             className="py-5 lg:py-2 w-full lg:w-[495px] bg-[#F7F8F1] rounded-[25px] lg:-ml-[165px] pl-9 pr-9 z-10 mt-0 md:mt-10 mb-10 align-center shadow-custom-green flex flex-col justify-center"
             >
             <h3 className="text-nm md:text-base lg:text-baselg font-bold text-primary-text font-yugothic mb-2 after:content-[''] after:flex after:w-100 after:h-[1px] after:bg-black after:mt-[8px] after:mb-[15px]">{title}</h3>
-            <p className="font-yugothic font-medium text-base md:text-basemd lg:text-baselg">
+            <p className="font-yugothic font-medium text-smd md:text-nm lg:text-basemd">
             {description}
             </p>
             </motion.div>
@@ -57,7 +57,7 @@ const OverlayContent = ({title, description, reverseColumn}) =>{
             className="py-5 lg:py-2 w-full lg:w-[495px] bg-[#F7F8F1] rounded-[25px] lg:-mr-[165px] pl-9 pr-9 z-10 mt-5 md:mt-10 mb-10 align-center shadow-custom-green flex flex-col justify-center"
             >
             <h3 className="text-nm md:text-base lg:text-baselg font-bold text-primary-text font-yugothic mb-2 after:content-[''] after:flex after:w-100 after:h-[1px] after:bg-black after:mt-[8px] after:mb-[15px]">{title}</h3>
-            <p className="font-yugothic font-medium text-base md:text-basemd lg:text-baselg">
+            <p className="font-yugothic font-medium text-smd md:text-nm lg:text-basemd">
             {description}
             </p>
             </motion.div>
