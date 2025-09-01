@@ -1,6 +1,6 @@
 const SectionHeader = ({sectionTitle, shortDescription, noborder}) => {
-    const withBorder = "text-center text-base relative mb-16 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:mt-[25px]";
-    const withoutBorder = "mb-6";
+    const withBorder = "text-center text-base relative mb-10 lg:mb-16 font-yumincho pl-15 pr-15 after:content-[''] after:flex  after:h-[1px] after:mt-[25px]";
+    const withoutBorder = "mb-10 lg:mb-16";
     return(
         <>
             <div className="flex flex-col">
