@@ -7,8 +7,11 @@ export default {
   theme: {
    extend: {
       fontFamily: {
-        yumincho: ['YuMincho', 'serif'],
-        yugothic: ['YuGothic', 'serif'],
+        yumincho: ['Yu Mincho', 'serif'],
+        yugothic: ['Yu Gothic', 'serif'],
+        zen: ['"Zen Maru Gothic"', 'sans-serif'],
+        yugothicui: ['Yu Gothic UI', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
         'primary-text': '#4C8B6D',
@@ -17,12 +20,6 @@ export default {
         'light-bg': '#F7F8F1',
         'grey': '#5B5B5B',
         'dark-blue': '#1E5175',
-      },
-      fontFamily: {
-        zen: ['"Zen Maru Gothic"', 'sans-serif'],
-        yumincho: ['YoMincho', 'serif'],
-        yugothic: ['YuGothic', 'serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
         xm: '10px',
@@ -37,6 +34,13 @@ export default {
         xlg:'28px', 
         lg: '32px',
         xl: '36px', 
+      },
+      fontWeight:{
+        light: '100',
+        regular: '400',
+        semibold: '500',
+        bold: '600',
+        extrabold: '700',
       },
       letterSpacing: {
         tightest: '0.3px', // 👈 add your custom spacing

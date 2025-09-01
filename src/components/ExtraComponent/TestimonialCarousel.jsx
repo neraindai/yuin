@@ -46,24 +46,21 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ image, name, email, title, message }) => (
-  <div className="bg-light-bg rounded-lg shadow p-9 flex flex-col items-center text-center h-full" style={{ boxShadow:'1px 4px 6px 0px rgba(0,0,0,0.2)'}}>
-    <img src={iconquote} className="absolute right-[40px] top-[-10px]" />
+  <div className="bg-light-bg rounded-lg shadow p-6 flex flex-col items-center text-center h-full" style={{ boxShadow:'1px 4px 6px 0px rgba(0,0,0,0.2)'}}>
+    <img src={iconquote} className="absolute right-[20px] top-[-10px]" />
     <img src={image} alt={name} className="w-[82px] h-[82px] border-[2px] border-[#B2D6BC] mt-[-70px] mb-[20px] rounded-full" />
     <h3 className=" font- text-black-text mt-0 font-yugothic text-base md:text-basemd lg:text-baselg">{name}</h3>
-    <span className="text-nm font-md text-black mt-2 mb-2 opacity-0.5">{email}</span>
-    <strong className=" font-md text-black mb-2 text-smd md:text-smd lg:text-base">{title}</strong>
-    <p className="paragraph text-smd md:text-smd lg:text-base">{message}</p>
+    <span className="font-yugothic text-nm font-light text-black mt-2 mb-2 opacity-0.5">{email}</span>
+    <strong className="font-yugothic font-bold text-black mb-2 text-smd lg:text-base">{title}</strong>
+    <p className="paragraph text-sm">{message}</p>
   </div>
 );
 
 export default function TestimonialCarousel() {
   return (
     <section className="py-10">
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-4 py-3 custom-testimonial-slider">
       <SectionHeader sectionTitle="利用者の声" shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります" />
-
-      </div>
-
         <Swiper
           modules={[Navigation]}
           navigation
@@ -75,7 +72,7 @@ export default function TestimonialCarousel() {
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
           }}
-          className="p-9"
+          className="py-14 overflow-hidden"
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
@@ -84,6 +81,7 @@ export default function TestimonialCarousel() {
           ))}
         </Swiper>
         <DecorativeDivider/>
+        </div>
     </section>
     
   );

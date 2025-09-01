@@ -7,11 +7,11 @@ const StepCard = ({ image, title, description, number }) => {
       </div>
       <div className="flex flex-row mt-3 items-start justify-start gap-[10px] mb-[40px]">
         <div className="w-[10%] lg:w-[10%] md:text-left">
-          <span className="font-yumincho text-lg lg:text-xxl text-primary-text font-normal text-center block lg:inline-block lg:mt-4">{number}</span>
+          <span className="font-yumincho font-bold text-lg lg:text-xxl text-primary-text text-center block lg:inline-block lg:mt-4">{number}</span>
         </div>
         <div className="w-[80%] lg:w-[80%] mt-0 lg:mt-4">
-          <h3 className="font-yugothic font-medium text-black-text text-base md:text-basemd lg:text-baselg">{title}</h3>
-          <p className="font-yugothic text-black-text font-regular lg:text-left text-sm">
+          <h3 className="font-yugothicui text-black-text text-base md:text-basemd lg:text-baselg">{title}</h3>
+          <p className="font-yugothicui text-black-text font-light lg:text-left text-sm">
            {description}
           </p>
         </div>

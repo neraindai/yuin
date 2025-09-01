@@ -67,7 +67,7 @@
   transform: scaleX(-1);
 }
 
-.venueslider .swiper-button-prev {
+.venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev {
     margin-left: -45px;
     opacity: 1 !important;
 }
@@ -75,16 +75,23 @@
   opacity: 1 !important;
 }
 
-.venueslider .swiper.swiper-initialized {
+.venueslider .swiper.swiper-initialized, .custom-testimonial-slider .swiper.swiper-initialized {
     position: static;
+}
+
+.custom-testimonial-slider{
+  position: relative;
 }
 
 .venueslider .customSliderParents {
     position: relative;
 }
 
-.venueslider .swiper-button-next {
+.venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next  {
     margin-right: -40px;
+}
+.custom-testimonial-slider .swiper-button-next{
+  margin-right: -50px;
 }
 ::placeholder{
   font-size: 10px;

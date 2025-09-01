@@ -3,10 +3,10 @@ import { logo } from "../../assets";
 export default function Footer() {
   return (
     <footer className="bg-[#E2F1E4] pt-8 pb-4 border-t border-gray-300 mt-[45px]">
-      <div className="container mx-auto pl-5 pr-5 flex flex-wrap justify-between">
+      <div className="container mx-auto flex flex-wrap justify-between">
 
         {/* Left Columns */}
-        <div className="flex flex-wrap gap-x-5 gap-y-6 flex-grow justify-between pr-10">
+        <div className="flex flex-row gap-4 justify-between">
           <div className="mr-[20px]">
             <h3 className="font-yumincho text-black font-md mb-2 text-basemd md:text-basemd lg:text-baselg">メインページ</h3>
             <ul className="space-y-2 text-black font-medium font-yumincho text-smd md:text-nm lg:text-base">

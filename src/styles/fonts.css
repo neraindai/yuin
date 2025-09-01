@@ -31,3 +31,127 @@
   font-weight: 700;
   font-style: normal;
 }
+
+/* new fonts */
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../assets/fonts/yugothicui/YuGothic-Bold.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothic-Bold.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../assets/fonts/yugothicui/YuGothic-Light.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothic-Light.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../assets/fonts/yugothicui/YuGothic-Medium.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothic-Medium.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../assets/fonts/yugothicui/YuGothic-Regular.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothic-Regular.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic UI';
+    src: url('../assets/fonts/yugothicui/YuGothicUI-Light.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Light.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic UI';
+    src: url('../assets/fonts/yugothicui/YuGothicUI-Bold.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Bold.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic UI';
+    src: url('../assets/fonts/yugothicui/YuGothicUI-Regular.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Regular.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic UI';
+    src: url('../assets/fonts/yugothicui/YuGothicUI-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Semibold.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic UI Semilight';
+    src: url('../assets/fonts/yugothicui/YuGothicUI-Semilight.woff2') format('woff2'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Semilight.woff') format('woff'),
+        url('../assets/fonts/yugothicui/YuGothicUI-Semilight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Yu Mincho';
+    src: url('../assests/fonts/yu-mincho/YuMincho-Regular.woff2') format('woff2'),
+        url('../assests/fonts/yu-mincho/YuMincho-Regular.woff') format('woff'),
+        url('../assests/fonts/yu-mincho/YuMincho-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Mincho';
+    src: url('../assests/fonts/yu-mincho/YuMincho-Demibold.woff2') format('woff2'),
+        url('../assests/fonts/yu-mincho/YuMincho-Demibold.woff') format('woff'),
+        url('../assests/fonts/yu-mincho/YuMincho-Demibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Mincho';
+    src: url('../assests/fonts/yu-mincho/YuMincho-Light.woff2') format('woff2'),
+        url('../assests/fonts/yu-mincho/YuMincho-Light.woff') format('woff'),
+        url('../assests/fonts/yu-mincho/YuMincho-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
