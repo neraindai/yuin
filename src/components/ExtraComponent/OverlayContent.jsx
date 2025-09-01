@@ -4,7 +4,7 @@ const OverlayContent = ({title, description, reverseColumn}) =>{
     return (<>
     {!reverseColumn ? (
         <>
-        <div className="flex flex-col lg:flex-row justify-center gap-6 relative mb-8 lg:mb-10 xl:mb-12">
+        <div className="flex flex-col lg:flex-row justify-center lg:gap-6 relative mb-8 lg:mb-10 xl:mb-12">
             {/* Image */}
             <motion.div
             initial={{ opacity: 0, x: 90 }}
@@ -24,7 +24,7 @@ const OverlayContent = ({title, description, reverseColumn}) =>{
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="py-5 lg:py-2 w-full lg:w-[495px] bg-[#F7F8F1] rounded-[25px] lg:-ml-[165px] pl-9 pr-9 z-10 mt-0 md:mt-10 mb-10 align-center shadow-custom-green flex flex-col justify-center"
+            className="relative mt-5 lg:mt-10 mb-10 py-8 lg:py-10 px-8 lg:px-10 w-[96%] lg:w-[495px] bg-[#F7F8F1] rounded-[25px] before:content-[''] before:bg-[#C3F1D6] before:absolute before:right-[-4%] lg:before:right-[-20px] before:bottom-[-20px] before:h-full before:w-full before:rounded-[25px] before:z-[-1] lg:-ml-[165px] align-center flex flex-col justify-start"
             >
             <h3 className="text-nm md:text-base lg:text-baselg font-bold text-primary-text font-yugothic mb-2 after:content-[''] after:flex after:w-100 after:h-[1px] after:bg-black after:mt-[8px] after:mb-[15px]">{title}</h3>
             <p className="font-yugothic font-medium text-smd md:text-nm lg:base">
@@ -34,7 +34,7 @@ const OverlayContent = ({title, description, reverseColumn}) =>{
         </div>
         </>
         ) : (<>
-            <div className="lg:flex lg:flex-row-reverse justify-center gap-6 relative mb-8 lg:mb-10 xl:mb-12">
+            <div className="lg:flex lg:flex-row-reverse justify-center lg:gap-6 relative mb-8 lg:mb-10 xl:mb-12">
             {/* Image */}
             <motion.div
             initial={{ opacity: 0, x: 90 }}
@@ -54,7 +54,7 @@ const OverlayContent = ({title, description, reverseColumn}) =>{
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="py-5 lg:py-2 w-full lg:w-[495px] bg-[#F7F8F1] rounded-[25px] lg:-mr-[165px] pl-9 pr-9 z-10 mt-5 md:mt-10 mb-10 align-center shadow-custom-green flex flex-col justify-center"
+            className="relative py-8 lg:py-10 px-8 lg:px-10 mt-5 lg:mt-10 mb-10 w-[95%] lg:w-[495px] bg-[#F7F8F1] rounded-[25px] lg:-mr-[165px] before:content-[''] before:bg-[#C3F1D6] before:absolute before:right-[-4%] lg:before:left-[-20px] before:bottom-[-20px] before:h-full before:w-full before:rounded-[25px] before:z-[-1] align-center flex flex-col justify-start"
             >
             <h3 className="text-nm md:text-base lg:text-baselg font-bold text-primary-text font-yugothic mb-2 after:content-[''] after:flex after:w-100 after:h-[1px] after:bg-black after:mt-[8px] after:mb-[15px]">{title}</h3>
             <p className="font-yugothic font-medium text-smd md:text-nm lg:base">

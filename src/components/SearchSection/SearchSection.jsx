@@ -49,8 +49,33 @@ export default function SearchSection() {
     </div>
   </div>
 
+
   {/* Search by keyword */}
   <div>
+    <label className="text-grey text-sm font-zen font-bold block mb-1">
+      キーワードで探す
+    </label>
+    <div className="relative flex items-center border rounded-md overflow-hidden h-10">
+      <input
+        type="text"
+        name="venue"
+        placeholder="キーワードで探す"
+        className="flex-1 h-full py-6 outline-none rounded-none text-[10px]"
+      />
+      <span className="absolute left-3 pointer-events-none text-gray-500">
+          <img src={iconhome} alt="home icon" className="w-4 h-4 block object-cover" />
+        </span>
+      <button
+        type="submit"
+        className="bg-green-100 text-green-700 px-3 h-full flex items-center justify-center rounded-none"
+      >
+        <FaSearch />
+      </button>
+    </div>
+  </div>
+
+  {/* Search by keyword */}
+  {/* <div>
     <label className="text-grey text-sm font-zen font-bold block mb-1">
       キーワードで探す
     </label>
@@ -60,7 +85,7 @@ export default function SearchSection() {
       options={["式場名を入力してください", "式場名を入力してください", "式場名を入力してください"]}
       iconLeft={iconhome}
     />
-  </div>
+  </div> */}
 </form>
     </div>
   );
