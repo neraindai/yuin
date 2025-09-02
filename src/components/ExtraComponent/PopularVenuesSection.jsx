@@ -68,12 +68,13 @@ const venues = [
 
 const PopularVenuesSection = () => {
   return (
-    <section className=" text-center venueslider">
+    <section className="text-center venueslider">
+      <div className="container mx-auto">
       <SectionHeader
         sectionTitle="結婚式場一覧"
         shortDescription="特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！"
       />
-      <div className="container mx-auto customSliderParents">
+      <div className="customSliderParents px-[0px] lg:px-0">
         <SectionHeader noborder sectionTitle="人気会場" />
 
         <Swiper
@@ -105,6 +106,7 @@ const PopularVenuesSection = () => {
             もっと見る
           </button>
         </div>
+      </div>
       </div>
     </section>
   );

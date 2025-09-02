@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header
-      className={`border-b shadow-sm transition-colors duration-300 ${
+      className={`relative border-b shadow-sm transition-colors duration-300 ${
         isLoggedIn ? "bg-green-50" : "bg-white"
       }`}
     >

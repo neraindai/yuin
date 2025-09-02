@@ -20,6 +20,7 @@ export default {
         'light-bg': '#F7F8F1',
         'grey': '#5B5B5B',
         'dark-blue': '#1E5175',
+        'btn-color': '#C3F1D6',
       },
       fontSize: {
         xm: '10px',
@@ -55,6 +56,7 @@ export default {
         screens: {
           DEFAULT: '90%', // for all screens by default
           xl: '1200px',   // from 1200px and up, use max 1200px
+          lg: '1024px',
           md: '768px',
         },
       },

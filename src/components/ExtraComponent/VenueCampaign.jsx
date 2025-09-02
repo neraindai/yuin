@@ -69,7 +69,8 @@ const venues = [
 const PopularVenuesSection = () => {
   return (
     <section className="py-8 text-center venueslider">
-      <div className="container mx-auto px-4 py-3 customSliderParents">
+      <div className="container mx-auto">
+      <div className="px-[0px] lg:px-0 py-3 customSliderParents">
         <SectionHeader sectionTitle="キャンペーン中の会場" noborder />
 
         {/* <h2 className="text-2xl md:text-3xl font-bold mb-8 heading"></h2> */}
@@ -86,7 +87,7 @@ const PopularVenuesSection = () => {
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
           }}
-          className="py-10"
+          className="pt-0 pb-4 lg:pb-10"
         >
           {venues.map((venue, index) => (
             <SwiperSlide key={index}>
@@ -103,6 +104,7 @@ const PopularVenuesSection = () => {
             もっと見る
           </button>
         </div>
+      </div>
       </div>
     </section>
   );

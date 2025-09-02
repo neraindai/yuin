@@ -44,7 +44,7 @@ export default function ReviewsSection() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
       {/* Section Title */}
-      <h2 className="text-center text-lg sm:text-xl md:text-2xl font-semibold text-[#01b29a] mb-8">
+      <h2 className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-8 text-primary-text">
         クチコミ
       </h2>
 
@@ -56,7 +56,7 @@ export default function ReviewsSection() {
             className="flex flex-col sm:flex-row sm:items-start gap-6 bg-light-bg rounded-lg shadow-md p-6 relative"
           >
             {/* User Image */}
-            <div className="mx-auto sm:mx-0 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-300 shadow-lg">
+            <div className="mx-auto sm:mx-0 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex-shrink-0 rounded-full overflow-hidden border-2 border-[#B2D6BC] shadow-lg">
               <img
                 src={review.img}
                 alt={review.name}
@@ -77,11 +77,11 @@ export default function ReviewsSection() {
             </div>
 
             {/* Quote Icon */}
-            <div className="hidden sm:block absolute -top-4 right-4 w-10 sm:w-12 h-10 sm:h-12 opacity-70">
+            <div className="hidden sm:block absolute md:top-[35px] lg:top-[-42px] right-4 w-10 sm:w-12 h-10 sm:h-12 opacity-70">
               <img
                 src={quoteIcon}
                 alt="Quote Icon"
-                className="w-full h-full object-contain"
+                className="object-cover block w-[91px] lg:w-[101px] h-[77px] lg:h-[87px]"
               />
             </div>
           </div>
@@ -96,11 +96,7 @@ export default function ReviewsSection() {
       {/* Big CTA */}
       <div className="text-center pt-8">
         <button
-          className="w-full sm:w-auto font-semibold px-6 py-4 rounded-full shadow-md transition"
-          style={{
-            backgroundColor: "#aaf0e8",
-            color: "#016f60",
-          }}
+          className="font-medium px-4 sm:px-5 py-2 rounded-full transition w-full sm:w-auto bg-[#BCF8D0] text-black shadow-md"
         >
           費用負担のサービスを受けるための面談をする
           <p className="text-xs sm:text-sm mt-2 font-normal">

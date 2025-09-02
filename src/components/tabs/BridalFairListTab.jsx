@@ -6,7 +6,7 @@ import Pagination from "../ExtraComponent/Pagination";
 const events = [
   {
     date: "4月19日(日)",
-    title: "【豪華150万特典】全館見学×新作ドレス紹介×デザート試食",
+    title: "[豪華150万特典]全館見学×新作ドレス紹介×デザート試食",
     tags: ["見学", "試食あり", "相談会", "会場コーディネート"],
     description:
       "会場のすべてをじっくり見学できるほか、店舗の新作ドレスを間近でチェック。さらに、150万円相当の豪華特典がもらえるチャンスをお見逃しなく！",
@@ -35,11 +35,10 @@ const events = [
 
 export default function BridalFairList() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-6">
+    <div className="max-w-6xl mx-auto py-6">
       {/* Main Heading */}
       <h1
-        className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-8"
-        style={{ color: "#01b29a" }}
+        className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-8 text-primary-text"
       >
         週末開催のおすすめブライダルフェア
       </h1>
@@ -48,23 +47,25 @@ export default function BridalFairList() {
         <div key={idx} className="mb-10">
           {/* Date */}
           <p className="font-semibold mb-3 text-sm sm:text-base">
-            <span className="text-[#01b29a]">{event.date}</span>
-            <span className="text-gray-900">のブライダルフェア詳細</span>
+            <span className="text-primary-text font-yugothic font-bold text-xlg">{event.date}</span>
+            <span className="text-gray-900 font-yugothic font-regular text-base">のブライダルフェア詳細</span>
           </p>
 
           {/* Card */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 overflow-hidden">
+          <div className="grid grid-cols-[1fr] lg:grid-cols-[384px,_1fr] gap-3 lg:gap-6 overflow-hidden">
             {/* Image */}
-            <img
-              src={event.image}
-              alt={event.title}
-              className="w-full h-48 md:w-60 md:h-80 object-cover rounded-2xl"
-            />
+            <div className="h-[200px] lg:h-[100%]">
+              <img
+                src={event.image}
+                alt={event.title}
+                className="w-[100%] h-[100%] object-cover rounded-2xl"
+              />
+            </div>
 
             {/* Content */}
-            <div className="p-4 md:p-5 flex flex-col justify-between md:w-2/3">
+            <div className="flex flex-col justify-between">
               {/* Title */}
-              <h2 className="text-base sm:text-lg font-semibold mb-3">
+              <h2 className="font-yugothic text-basemd md:text-baselg lg:text-md font-semibold mb-3 text-black">
                 {event.title}
               </h2>
 
@@ -73,8 +74,7 @@ export default function BridalFairList() {
                 {event.tags.map((tag, tagIdx) => (
                   <span
                     key={tagIdx}
-                    className="text-xs sm:text-sm px-3 py-1 rounded-full"
-                    style={{ backgroundColor: "#ccf5f0", color: "#01b29a" }}
+                    className="text-xs lg:text-sm px-3 py-1 px-5 rounded-full bg-[#E0F4E8] text-[#000]"
                   >
                     {tag}
                   </span>
@@ -102,11 +102,7 @@ export default function BridalFairList() {
 
                 {/* Button */}
                 <button
-                  className="font-medium px-4 sm:px-5 py-2 rounded-full transition w-full sm:w-auto"
-                  style={{
-                    backgroundColor: "#ccf5f0",
-                    color: "#01b29a",
-                  }}
+                  className="font-medium px-4 sm:px-5 py-2 rounded-full transition w-full sm:w-auto bg-[#BCF8D0] text-black shadow-md"
                 >
                   フェアについてのメッセージ
                 </button>
@@ -124,14 +120,10 @@ export default function BridalFairList() {
       {/* Big CTA */}
       <div className="text-center pt-8">
         <button
-          className="w-full sm:w-auto font-semibold px-6 py-4 rounded-full shadow-md transition"
-          style={{
-            backgroundColor: "#aaf0e8",
-            color: "#016f60",
-          }}
+          className="w-full sm:w-auto font-yugothic font-bold text-base lg:text-baselg px-8 lg:px-10 py-10 lg:py-4 rounded-full shadow-md transition bg-[#BCF8D0] text-primary-text"
         >
           費用負担のサービスを受けるための面談をする
-          <p className="text-xs sm:text-sm mt-2 font-normal">
+          <p className="text-sm mt-2 font-yugothic font-normal text-primary-text">
             費用負担のサービスを受けたい方は直接話していただく必要があります
           </p>
         </button>

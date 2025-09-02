@@ -35,7 +35,7 @@ const Pagination = () => {
         <button
           key={num}
           className={`px-3 py-1 rounded-full ${
-            num === 1 ? "bg-green-500 text-white" : "hover:bg-gray-200"
+            num === 1 ? "bg-primary-text text-white" : "hover:bg-gray-200"
           }`}
         >
           {num}

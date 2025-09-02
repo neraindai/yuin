@@ -6,6 +6,8 @@
 @layer base {
   body {
     @apply font-yugothic text-primary-text;
+    width: 100%;
+    height: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -67,7 +69,7 @@
   transform: scaleX(-1);
 }
 
-.venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev {
+.venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev, .customSliderButton button.prev {
     margin-left: -45px;
     opacity: 1 !important;
 }
@@ -90,6 +92,9 @@
 .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next  {
     margin-right: -40px;
 }
+.customSliderButton button.next{
+  margin-right: -57px;;
+}
 .custom-testimonial-slider .swiper-button-next{
   margin-right: -50px;
 }
@@ -101,13 +106,58 @@
 .swiper-button-next::after {
   @apply hidden;
 }
-
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+*{
+  box-sizing: border-box;
+}
+.tab_footer footer{
+  display: none;
+}
 @media(max-width: 768px){
-  .venueslider .swiper-button-prev{
+  
+  .venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev{
+    margin-left: -22px;
+  }
+  .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next{
+    margin-right: -22px;
+  }
+  .custom-testimonial-slider .swiper-button-prev{
+    margin-left: -1px;
+  }
+  .custom-testimonial-slider .swiper-button-next{
+    margin-right: -1px;
+  }
+  .venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev{
+    display: none;
+  }
+  .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next{
+    display: none;
+  }
+}
+
+@media(max-width: 767px){
+  .uwanted-span{
+  display: none;
+}
+.customSliderButton button.prev, .customSliderButton button.next{
+  display: none;;
+}
+  /* .venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev{
+    margin-left: -20px;
+  }
+  .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next{
+    margin-right: -20px;
+  }
+  .custom-testimonial-slider .swiper-button-prev{
     margin-left: 0px;
   }
-  .venueslider .swiper-button-next{
+  .custom-testimonial-slider .swiper-button-next{
     margin-right: 0px;
-  }
+  } */
+  
 }
 

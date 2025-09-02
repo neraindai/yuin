@@ -4,7 +4,8 @@ import OverlayContent from './OverlayContent';
 
 const AboutSection = () => {
   return (
-    <section className="container mx-auto">
+    <section className="w-full">
+      <div className="container mx-auto">
         <DecorativeDivider/>
       {/* Top Title */}
       <div className="text-center">
@@ -25,8 +26,7 @@ const AboutSection = () => {
             信頼性の高い地域企業と連携しており、掲載情報の正確さにもこだわっています。"
             reverseColumn
          />
-
-      
+         </div>
     </section>
   );
 };

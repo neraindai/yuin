@@ -44,6 +44,22 @@ const FavoriteVenueList = () => {
       tag1: "100人",
       tag2: "飲食あり / 教会式",
     },
+    {
+      imageUrl: venue,
+      title: "ザ・リッツ東京ガーデン",
+      description:
+        "高層階からの夜景が楽しめるラグジュアリーなホテルウェディング。上質なおもてなしと非日常の空間で、特別な一日を演出します。",
+      tag1: "100人",
+      tag2: "飲食あり / 教会式",
+    },
+    {
+      imageUrl: venue,
+      title: "ザ・リッツ東京ガーデン",
+      description:
+        "高層階からの夜景が楽しめるラグジュアリーなホテルウェディング。上質なおもてなしと非日常の空間で、特別な一日を演出します。",
+      tag1: "100人",
+      tag2: "飲食あり / 教会式",
+    },
   ];
 
   return (
@@ -58,6 +74,7 @@ const FavoriteVenueList = () => {
       </HeroMiniImage>
 
       <section className="py-12 bg-gray-50">
+        <div className="container mx-auto">
         {/* <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-green-700">
             お気に入り結婚式場一覧
@@ -68,9 +85,10 @@ const FavoriteVenueList = () => {
         <SectionHeader
           sectionTitle="お気に入り結婚式場一覧"
           shortDescription="合計お気に入り数：全38件"
+          
         />
 
-        <div className="flex flex-col gap-6 items-center">
+        <div className="grid grid-cols-[1fr] md:grid-cols-[repeat(2,1fr)] lg:grid-cols-[repeat(3,1fr)] gap-6 items-center">
           {venues.map((venue, index) => (
             <FavoriteVenueCard key={index} {...venue} />
           ))}
@@ -81,6 +99,7 @@ const FavoriteVenueList = () => {
 
         {/* Divider Line */}
         <DecorativeDivider />
+        </div>
       </section>
 
       <div className="mt-8">

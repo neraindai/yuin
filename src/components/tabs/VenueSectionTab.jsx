@@ -8,6 +8,7 @@ import img3 from "../../assets/images/v3.jpg";
 import img4 from "../../assets/images/v1.jpg";
 import img5 from "../../assets/images/v2.jpg";
 import img6 from "../../assets/images/v3.jpg";
+import { nextArrow } from "../../assets";
 
 // Example data for three sections
 const sections = [
@@ -65,12 +66,12 @@ function ImageGalleryBlock({ title, description, images }) {
           {description}
         </p>
 
-        <div className="relative">
+        <div className="relative customSliderButton">
           <button
             onClick={prevImage}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white"
+            className="prev absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full w-[50px]"
           >
-            <FaChevronLeft className="text-green-800" />
+            <img src={nextArrow} alt="arrow" />
           </button>
 
           <img
@@ -81,9 +82,9 @@ function ImageGalleryBlock({ title, description, images }) {
 
           <button
             onClick={nextImage}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white"
+            className="next absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full w-[50px]"
           >
-            <FaChevronRight className="text-green-800" />
+            <img src={nextArrow} alt="arrow" className="scale-x-[-1]" />
           </button>
         </div>
 

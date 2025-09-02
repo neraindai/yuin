@@ -10,6 +10,7 @@ import Header from "../../components/Header/Header";
 // import InfoSectionComponents from "./InfoSectionComponents";
 import SectionHeader from "../../components/ExtraComponent/SectionHeader";
 import OverlayContent from "../../components/ExtraComponent/OverlayContent";
+import BrideGroomCardList from "../../components/ExtraComponent/BrideGroomCardList";
 
 const BudgetWedding = () => {
   return (
@@ -57,21 +58,7 @@ const BudgetWedding = () => {
         <BudgetSection />
 
         <DecorativeDivider />
-
-        <div className="grid grid-cols-2 gap-[10px] my-12">
-          <BrideGroomCard
-            title="新郎新婦"
-            description="結婚式場のご予約やご相談に関するお問い合わせは、こちらより承っております"
-            image={bridegroom1}
-            buttonText="新郎新婦 様"
-          />
-          <BrideGroomCard
-            title="結婚式場"
-            description="弊社サービスへのご掲載やご提携に関するお問い合わせは、こちらよりご連絡ください"
-            image={bridegroom2}
-            buttonText="結婚式場 様"
-          />
-        </div>
+        <BrideGroomCardList />
       </section>
 
       {/* Footer part  */}

@@ -59,8 +59,7 @@ export default function RecommendedBridalFairTab() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Heading */}
       <h1
-        className="text-center text-2xl md:text-3xl font-semibold mb-10"
-        style={{ color: "#01b29a" }}
+        className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-8 text-primary-text"
       >
         週末開催のおすすめブライダルフェア
       </h1>
@@ -83,7 +82,7 @@ export default function RecommendedBridalFairTab() {
           {/* Content */}
           <div className="md:w-2/3 flex flex-col">
             {/* Title */}
-            <h3 className="text-lg md:text-xl font-semibold mb-2 text-black">
+            <h3 className="font-yugothic text-basemd md:text-baselg lg:text-md font-semibold mb-3 text-black">
               【{event.date}】{event.title}
             </h3>
             {/* Description */}
@@ -98,42 +97,30 @@ export default function RecommendedBridalFairTab() {
               </span>
             </p>
             {/* Tags */}{" "}
-            <div className="flex mb-5">
+            <div className="mb-5 ml-0 lg:ml-[93px]">
               {" "}
               {/* First row of tags */}{" "}
-              <div className="flex flex-wrap gap-2">
+              <div className="grid grid-cols-[repeat(2,_1fr)] justify-center gap-2">
                 {" "}
-                {event.tags.slice(0, 3).map((tag, tagIdx) => (
+                {event.tags.slice(0, 6).map((tag, tagIdx) => (
                   <span
                     key={tagIdx}
-                    className="text-sm px-3 py-1 rounded-full bg-[#ccf5f0] text-[#01b29a]"
+                    className="text-xm px-3 py-3 px-5 rounded-full bg-[#E0F4E8] text-black text-center"
                   >
                     {" "}
                     {tag}{" "}
                   </span>
                 ))}{" "}
               </div>{" "}
-              {/* Second row of tags */}{" "}
-              <div className="flex flex-wrap gap-2">
-                {" "}
-                {event.tags.slice(3).map((tag, tagIdx) => (
-                  <span
-                    key={tagIdx}
-                    className="text-sm px-3 py-1 rounded-full bg-[#ccf5f0] text-[#01b29a]"
-                  >
-                    {" "}
-                    {tag}{" "}
-                  </span>
-                ))}{" "}
-              </div>{" "}
-            </div>
-            {/* Button */}
+              
+              {/* Button */}
             <button
-              className="w-full sm:w-40 py-2 rounded-full font-medium text-white text-sm text-center"
-              style={{ backgroundColor: "#01b29a" }}
+              className="font-medium px-4 mt-10 sm:px-5 py-3 lg:py-4 rounded-full transition w-full lg:w-[200px] sm:w-auto bg-[#BCF8D0] text-primary-text"
             >
               見学予約する
             </button>
+            </div>
+            
           </div>
         </div>
       ))}
@@ -146,11 +133,7 @@ export default function RecommendedBridalFairTab() {
       {/* Big CTA */}
       <div className="text-center pt-10">
         <button
-          className="w-full sm:w-auto font-semibold px-6 py-4 rounded-full shadow-md transition"
-          style={{
-            backgroundColor: "#aaf0e8",
-            color: "#016f60",
-          }}
+          className="font-medium px-4 sm:px-5 py-2 rounded-full transition w-full sm:w-auto bg-[#BCF8D0] text-black shadow-md"
         >
           費用負担のサービスを受けるための面談をする
           <p className="text-sm mt-2 font-normal">

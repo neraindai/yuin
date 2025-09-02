@@ -37,7 +37,7 @@ const steps = [
 ];
 const StepComponent = () => {
   return (
-    
+    <section>
     <div className="container mx-auto lg:px-0">
       <DecorativeDivider/>
       <SectionHeader sectionTitle="サービスの流れ" shortDescription="「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。" />
@@ -62,6 +62,7 @@ const StepComponent = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

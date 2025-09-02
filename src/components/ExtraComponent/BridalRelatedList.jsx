@@ -23,17 +23,19 @@ const bridalArticle = [
 ];
 const BridalRealtedList = () =>{
     return(
-        <section className="container mx-automb-8">
-            <SectionHeader 
-            sectionTitle="利用者の声"
-            shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
-            />
-            
-                <div className='grid grid-cols-[1fr] md:grid-cols-[repeat(4,_1fr)] gap-[24px] md:gap-[20px]'>
-             {bridalArticle.map((article, index) => (
-                    <BridalRelatedCard key={index} {...article} />
-                  
-            ))}
+        <section className="mb-8">
+            <div className="container mx-auto">
+                <SectionHeader 
+                sectionTitle="利用者の声"
+                shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
+                />
+                
+                    <div className='grid grid-cols-[1fr] md:grid-cols-[repeat(2,_1fr)] lg:grid-cols-[repeat(4,_1fr)] gap-[24px] md:gap-[20px]'>
+                {bridalArticle.map((article, index) => (
+                        <BridalRelatedCard key={index} {...article} />
+                    
+                ))}
+                </div>
               </div>
         </section>
     );

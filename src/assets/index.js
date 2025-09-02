@@ -27,6 +27,9 @@ import arrow from './icons/arrow.png';
 import books from './icons/books.png';
 import iconhome from './icons/iconhome.png';
 import downarrow from './icons/downarrow.png';
+import tabIcon from './icons/tabIcon.svg';
+import playBtn from './icons/playBtn.png';
+import nextArrow from './icons/next.png';
 
 
 export {
@@ -57,4 +60,7 @@ export {
   books,
   iconhome,
   downarrow,
+  tabIcon,
+  playBtn,
+  nextArrow,
 };

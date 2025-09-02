@@ -7,6 +7,7 @@ const RegisterLoginSection = () => {
   const { isLoggedIn } = useAuth();
   return (
     <>
+    <section>
       {isLoggedIn ? (
         <div  className="container mx-auto">
           {/* Title */}
@@ -109,7 +110,9 @@ const RegisterLoginSection = () => {
           <DecorativeDivider />
         </>
       )}
+      </section>
     </>
+    
   );
 };
 

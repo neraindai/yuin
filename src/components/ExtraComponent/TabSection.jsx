@@ -68,7 +68,8 @@ const TabSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="container mx-automb-8 mt-10 rounded-md">
+    <section className="w-full">
+    <div className="container mx-auto mb-8 mt-10 rounded-md">
       <SectionHeader
           sectionTitle="利用者の声"
           shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
@@ -107,6 +108,7 @@ const TabSection = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

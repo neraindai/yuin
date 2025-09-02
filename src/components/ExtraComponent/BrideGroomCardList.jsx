@@ -6,25 +6,27 @@ import SectionHeader from './SectionHeader';
 const BrideGroomCardList = () => {
   return (
     
-    <section className="container mx-automb-8">
-      <SectionHeader sectionTitle="利用者の声" 
-      shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
-      />
+    <section className="mb-8">
+      <div className="container mx-auto">
+          <SectionHeader sectionTitle="利用者の声" 
+          shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
+          />
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
-      <BrideGroomCard
-        title="新郎新婦"
-        description="結婚式場のご予約やご相談に関するお問い合わせは、こちらより承っております"
-        image={bridegroom1}
-        buttonText="新郎新婦 様"
-      />
-      <BrideGroomCard
-        title="結婚式場"
-        description="弊社サービスへのご掲載やご提携に関するお問い合わせは、こちらよりご連絡ください"
-        image={bridegroom2}
-        buttonText="結婚式場 様"
-      />
-    </div>
+        <div className="grid grid-cols-[1fr] xl:grid-cols-[repeat(2,_1fr)] gap-[24px] w-full xl:w-[980px] mx-auto">
+          <BrideGroomCard
+            title="新郎新婦"
+            description="結婚式場のご予約やご相談に関するお問い合わせは、こちらより承っております"
+            image={bridegroom1}
+            buttonText="新郎新婦 様"
+          />
+          <BrideGroomCard
+            title="結婚式場"
+            description="弊社サービスへのご掲載やご提携に関するお問い合わせは、こちらよりご連絡ください"
+            image={bridegroom2}
+            buttonText="結婚式場 様"
+          />
+        </div>
+      </div>
     </section>
   );
 };
