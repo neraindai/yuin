@@ -3,7 +3,7 @@ import CustomSelect from "../ExtraComponent/CustomSelect";
 
 const VenueSearchBar = () => {
   return (
-    <div className="w-full max-w-3xl flex flex-col items-start gap-4">
+    <div className="w-full md:w-[450px] lg:w-[980px] flex flex-col items-start gap-4">
       <div className="container mx-auto">
       {/* Title */}
       <strong className="text-white text-base md:text-baselg lg:text-md mb-2 lg:mb-0 block">

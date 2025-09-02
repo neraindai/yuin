@@ -48,13 +48,13 @@ const BudgetSection = () => {
       <div className="w-1/2 mx-auto border-t border-green-200 mb-8"></div>
 
       {/* Icons Row 1 */}
-      <div className="grid grid-cols-[repeat(2,_1fr)] md:grid-cols-[repeat(4,_1fr)] lg:grid-cols-[repeat(8,_1fr)] gap-4 lg:gap-6 justify-center">
+      <div className="grid grid-cols-[repeat(2,_1fr)] md:grid-cols-[repeat(4,_1fr)] lg:grid-cols-[repeat(8,_1fr)] gap-y-8 gap-x-4 lg:gap-x-6 justify-center">
         {iconsRow1.map((icon, index) => (
-          <div key={index}> 
+          <div key={index} className="flex flex-row justify-center items-center"> 
           <img
             src={icon}
             alt={`icon-${index}`}
-            className="w-12 lg:w-17 h-17 object-contain"
+            className="w-16 lg:w-17 h-17 object-contain"
           />
           </div>
         ))}

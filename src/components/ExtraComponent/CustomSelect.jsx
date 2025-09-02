@@ -100,7 +100,7 @@ export default function CustomSelect({ name, placeholder, options, iconLeft, wit
           {options.map((option, i) => (
             <div
               key={i}
-              className="px-3 py-2 cursor-pointer hover:bg-blue-100 text-gray-700 text-base"
+              className="px-3 py-2 cursor-pointer hover:bg-[#BCF8D0] text-primary-text text-nm"
               onClick={() => {
                 setSelected(option);
                 setOpen(false);
