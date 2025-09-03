@@ -40,7 +40,7 @@ const Header = () => {
         <nav className="hidden lg:block">
           <ul className="flex items-center space-x-4 xl:space-x-6 text-sm font-medium text-gray-700">
             <li>
-              <Link to="/" className="text-green-600 font-yugothic font-bold text-sm xl:text-base">
+              <Link to="/" className="text-primary-text font-yugothic font-bold text-sm xl:text-base">
                 ホーム
               </Link>
             </li>
@@ -97,7 +97,7 @@ const Header = () => {
             // Show login/register when logged out
             <Link
               to="/login"
-              className="font-yugothic font-bold text-sm xl:base bg-green-100 text-green-800 px-[15px] xl:px-[20px] py-[10px] xl:py-[15px] rounded-full hover:bg-green-200 transition"
+              className="font-yugothic font-bold text-sm xl:base bg-bgBtn text-primary-text px-[15px] xl:px-[20px] py-[10px] xl:py-[15px] rounded-full hover:bg-green-200 transition"
             >
               ログイン / 新規登録
             </Link>
@@ -124,7 +124,7 @@ const Header = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-16 left-0 w-full bg-white shadow-md lg:hidden px-4 pb-4 overflow-hidden z-[222]"
+            className="absolute top-15 left-0 w-full bg-white shadow-md lg:hidden px-4 pb-4 overflow-hidden z-[222]"
           >
             <ul className="flex flex-col space-y-3 text-sm font-medium text-gray-700">
               {navLinks.map((link, index) => (

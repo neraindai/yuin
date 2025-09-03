@@ -28,20 +28,14 @@ const MainLayout = ({ children }) => {
             <SearchSection />
           </Slider>
           <main>
-            <div className="pt-7">
-              <RegisterLoginSection />
-            </div>
             <PopularVenuesSection />
             <VenueCampaign />
             <AboutSection />
             <StepComponent />
-            <DecorativeDivider />
             <RegisterLoginSection />
             <TestimonialCarousel />
             <BrideGroomCardList />
-            <DecorativeDivider />
             <TabSection />
-            <DecorativeDivider />
             <BridalRealtedList />
           </main>
         </>

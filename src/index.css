@@ -9,6 +9,9 @@
     width: 100%;
     height: 100%;
   }
+  .container{
+    padding: 0px;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-yugothic font-bold text-primary-text;
@@ -33,6 +36,14 @@
     opacity: .7;
     font-weight: medium;
   }
+  
+  .banner_form input{
+    box-sizing: border-box;
+    padding-left: 35px;
+  }
+}
+section{
+  margin-bottom: 60px;
 }
 
 @layer components {
@@ -56,7 +67,18 @@
 .swiper-button-prev {
   background-image: url('/src/assets/icons/arrow.png');
 }
-
+.venueslider .swiper-button-prev, .venueslider .swiper-button-next{
+  width: 16px;
+  height: 28px;
+}
+.custom-testimonial-slider .swiper-button-prev, .custom-testimonial-slider .swiper-button-next{
+  width: 58px;
+  height: 58px;
+}
+.venueslider .swiper-button-prev, .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-prev, .custom-testimonial-slider .swiper-button-next{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .venueslider .swiper-button-prev {
   background-image: url('/src/assets/icons/next.png');
 }
@@ -89,14 +111,17 @@
     position: relative;
 }
 
-.venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next  {
+.venueslider .swiper-button-next{
     margin-right: -40px;
 }
 .customSliderButton button.next{
   margin-right: -57px;;
 }
+.custom-testimonial-slider .swiper-button-prev{
+  margin-left: -87px;
+}
 .custom-testimonial-slider .swiper-button-next{
-  margin-right: -50px;
+  margin-right: -87px;
 }
 ::placeholder{
   font-size: 10px;
@@ -117,12 +142,19 @@ html,body{
 .tab_footer footer{
   display: none;
 }
+
 @media(max-width: 768px){
+  section{
+    margin-bottom: 48px;
+  }
+  .container{
+    padding: 0px 32px;
+  }
   
-  .venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev{
+  .venueslider .swiper-button-prev{
     margin-left: -22px;
   }
-  .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next{
+  .venueslider .swiper-button-next{
     margin-right: -22px;
   }
   .custom-testimonial-slider .swiper-button-prev{
@@ -131,21 +163,34 @@ html,body{
   .custom-testimonial-slider .swiper-button-next{
     margin-right: -1px;
   }
-  .venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev{
-    display: none;
+  .custom-testimonial-slider .swiper-button-prev, .custom-testimonial-slider .swiper-button-next{
+    width: 33px;
+    height: 33px;
   }
-  .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next{
-    display: none;
+  .custom-testimonial-slider .swiper-button-prev{
+    margin-left: -25px;
   }
+  .custom-testimonial-slider .swiper-button-next{
+    margin-right: -25px;
+}
 }
 
 @media(max-width: 767px){
-  .uwanted-span{
+  section{
+    margin-bottom: 32px;
+  }
+.uwanted-span{
   display: none;
 }
 .customSliderButton button.prev, .customSliderButton button.next{
   display: none;;
 }
+.venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev{
+    display: none;
+  }
+  .venueslider .swiper-button-next, .custom-testimonial-slider .swiper-button-next{
+    display: none;
+  }
   /* .venueslider .swiper-button-prev, .custom-testimonial-slider .swiper-button-prev{
     margin-left: -20px;
   }

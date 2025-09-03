@@ -68,9 +68,9 @@ const venues = [
 
 const PopularVenuesSection = () => {
   return (
-    <section className="py-8 text-center venueslider">
+    <section className="text-center venueslider">
       <div className="container mx-auto">
-      <div className="px-[0px] lg:px-0 py-3 customSliderParents">
+      <div className="px-[0px] md:px-[15px] lg:px-0 py-3 customSliderParents">
         <SectionHeader sectionTitle="キャンペーン中の会場" noborder />
 
         {/* <h2 className="text-2xl md:text-3xl font-bold mb-8 heading"></h2> */}
@@ -96,10 +96,10 @@ const PopularVenuesSection = () => {
           ))}
         </Swiper>
 
-        <div className="mt-4">
+        <div className="mt-[28px] md:mt-[36px] lg:mt-[54px]">
           <button
             className="
-    bg-green-100 hover:bg-green-200 font-semibold px-12 py-3 rounded-full transition shadow-md text-primary text-base md:text-basemd lg:text-baselg"
+    bg-bgBtn text-primary-text hover:bg-green-200 font-semibold px-12 py-3 rounded-full transition shadow-md text-primary text-base md:text-basemd lg:text-baselg"
           >
             もっと見る
           </button>

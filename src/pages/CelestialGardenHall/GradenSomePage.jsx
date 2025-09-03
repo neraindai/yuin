@@ -28,9 +28,11 @@ const GradenSomePage = () => {
       <GardenHallSection
         pointNumber={1}
         mainImage={mainGardenHall}
-        title="専用テラス付の『セレスティアルガーデンホール』"
+        title="専用テラス付の『セレスティアルガーデンホール"
         description="陽光と緑に包まれた「セレスティアルガーデンホール」。ガラスドームから差し込む光が幻想的な雰囲気を演出します。自然石のガーデンテラスでは、挙式後にゲストと幸せを分かち合う特別なひとときを。"
         cards={cardsData}
+        colorBlack
+        smallHeading
       />
 
       <GardenHallSection
@@ -39,6 +41,8 @@ const GradenSomePage = () => {
         title="専用テラス付の『セレスティアルガーデンホール』"
         description="陽光と緑に包まれた「セレスティアルガーデンホール」。ガラスドームから差し込む光が幻想的な雰囲気を演出します。自然石のガーデンテラスでは、挙式後にゲストと幸せを分かち合う特別なひとときを。"
         cards={cardsData}
+        colorBlack
+        smallHeading
       />
 
       <GardenHallSection
@@ -47,6 +51,8 @@ const GradenSomePage = () => {
         title="専用テラス付の『セレスティアルガーデンホール』"
         description="陽光と緑に包まれた「セレスティアルガーデンホール」。ガラスドームから差し込む光が幻想的な雰囲気を演出します。自然石のガーデンテラスでは、挙式後にゲストと幸せを分かち合う特別なひとときを。"
         cards={cardsData}
+        colorBlack
+        smallHeading
       />
     </>
   );

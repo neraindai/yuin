@@ -2,8 +2,8 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { logo } from "../../assets";
 export default function Footer() {
   return (
-    <footer className="bg-[#E2F1E4] pt-8 pb-4 border-t border-gray-300 mt-[45px]">
-      <div className="container mx-auto flex flex-wrap justify-between">
+    <footer className="bg-[#E2F1E4] border-t border-gray-300 mt-[45px]">
+      <div className="container mx-auto flex flex-wrap justify-between py-8 md:py-10 lg:py-16">
 
         {/* Left Columns */}
         <div className="grid grid-cols-[repeat(2,_1fr)] lg:grid-cols-[repeat(4,_1fr)] gap-4 w-full lg:w-[70%]">
@@ -55,10 +55,10 @@ export default function Footer() {
             <p className="text-center paragraph mb-4 mt-2 text-[#1E5175] underline font-semibold ">
               お問い合わせについて
             </p>
-            <button className="w-full bg-[#B8EACD] py-3 rounded-[25px] text-sm font-yugothic font-semibold mb-2">
+            <button className="w-full bg-bgBtn text-primary-text py-3 rounded-[25px] text-sm font-yugothic font-semibold mb-2">
               お客様向けはこちら
             </button>
-            <button className="w-full bg-[#B8EACD] py-3 rounded-[25px] text-sm font-yugothic font-semibold mb-3">
+            <button className="w-full bg-bgBtn text-primary-text py-3 rounded-[25px] text-sm font-yugothic font-semibold mb-3">
               法人様、広告企業向けはこちら
             </button>
             <div className="border-t border-gray-300 pt-2 text-center text-sm font-zen font-semibold text-gray-700">
@@ -70,7 +70,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="container mx-auto px-4 mt-6 border-t border-gray-300 pt-3 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+      <div className="container mx-auto py-5 border-t border-gray-300 pt-3 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
         <div className="flex items-center gap-2">
          <img src={logo} alt="Logo" className="mb-5 mt-3 lg:mt-0 lg:mb-0 h-8" />
         </div>

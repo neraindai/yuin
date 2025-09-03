@@ -74,7 +74,7 @@ const PopularVenuesSection = () => {
         sectionTitle="結婚式場一覧"
         shortDescription="特別な瞬間にふさわしい会場を簡単検索！人気の会場や最新トレンドも一挙紹介！"
       />
-      <div className="customSliderParents px-[0px] lg:px-0">
+      <div className="customSliderParents px-0 md:px-[15px] lg:px-0">
         <SectionHeader noborder sectionTitle="人気会場" />
 
         <Swiper
@@ -98,10 +98,10 @@ const PopularVenuesSection = () => {
           ))}
         </Swiper>
 
-        <div className="mt-4">
+        <div className="mb-[32px] md:mb-[48px] lg:mb-[60px] mt-[28px] md:mt-[36px] lg:mt-[54px]">
           <button
             className="
-    bg-green-100 hover:bg-green-200 font-semibold px-12 py-3 rounded-full transition shadow-md text-primary text-base md:text-basemd lg:text-baselg"
+    bg-bgBtn text-primary-text hover:bg-green-200 font-semibold px-12 py-3 rounded-full transition shadow-md text-primary text-base md:text-basemd lg:text-baselg"
           >
             もっと見る
           </button>

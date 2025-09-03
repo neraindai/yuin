@@ -7,7 +7,6 @@ const RegisterLoginSection = () => {
   const { isLoggedIn } = useAuth();
   return (
     <>
-    <section>
       {isLoggedIn ? (
         <div  className="container mx-auto">
           {/* Title */}
@@ -93,12 +92,10 @@ const RegisterLoginSection = () => {
               </div>
             </div>
           </div>
-
-          <DecorativeDivider />
         </div>
       ) : (
         <>
-          <section className="px-4 text-center">
+        <div className="container mt-[26px] px-4 text-center">
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
               <ActionCard
                 label="会員登録すれば、よりお得な情報が見れます！"
@@ -106,11 +103,10 @@ const RegisterLoginSection = () => {
               />
               <ActionCard label="会員の方はこちら" buttonText="ログイン" />
             </div>
-          </section>
-          <DecorativeDivider />
+          </div>
         </>
       )}
-      </section>
+      <DecorativeDivider />
     </>
     
   );

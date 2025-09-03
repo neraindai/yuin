@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Tabs from "./Tabs";
 import Accordion from "./Accordion";
 import SectionHeader from "./SectionHeader";
+import DecorativeDivider from "./DecorativeDivider";
 
 const tabLabels = ["新郎新婦", "結婚式場", "広告会社"];
 
@@ -69,45 +70,46 @@ const TabSection = () => {
 
   return (
     <section className="w-full">
-    <div className="container mx-auto mb-8 mt-10 rounded-md">
-      <SectionHeader
-          sectionTitle="利用者の声"
-          shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
+      <div className="container mx-auto mb-8 mt-10 rounded-md">
+        <SectionHeader
+            sectionTitle="利用者の声"
+            shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
+          />
+        <Tabs
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          tabs={tabLabels}
         />
-      <Tabs
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        tabs={tabLabels}
-      />
 
-      {/* Animate tab content */}
-      <div className="min-h-[200px]">
-        <AnimatePresence mode="wait" className="">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            className="border border-green-200"
-          >
-            {content[activeTab].map((item, index) => (
-              <Accordion
-                key={index}
-                number={`Q${index + 1}`}
-                question={item.question}
-                answer={item.answer || ""}
-              />
-            ))}
-          </motion.div>
-        </AnimatePresence>
-        <div className=" flex align-center justify-center mt-8">
-          <button className="bg-green-100 hover:bg-green-200 font-bold text-semmd pl-12 pr-12 py-3 rounded-full transition text-primary">
-            もっと見る
-          </button>
+        {/* Animate tab content */}
+        <div className="min-h-[200px]">
+          <AnimatePresence mode="wait" className="">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="border border-green-200"
+            >
+              {content[activeTab].map((item, index) => (
+                <Accordion
+                  key={index}
+                  number={`Q${index + 1}`}
+                  question={item.question}
+                  answer={item.answer || ""}
+                />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+          <div className=" flex align-center justify-center mt-8">
+            <button className="bg-bgBtn text-primary-text hover:bg-green-200 font-bold text-semmd pl-12 pr-12 py-3 rounded-full transition">
+              もっと見る
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      <DecorativeDivider />
     </section>
   );
 };

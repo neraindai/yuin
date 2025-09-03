@@ -58,9 +58,10 @@ const TestimonialCard = ({ image, name, email, title, message }) => (
 
 export default function TestimonialCarousel() {
   return (
-    <section className="py-10">
-      <div className="container mx-auto px-[30px] lg:px-0 py-3 custom-testimonial-slider">
+    <section className="">
+      <div className="container mx-auto px-[30px] md:px-[30px] lg:px-0 py-3 custom-testimonial-slider">
       <SectionHeader sectionTitle="利用者の声" shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります" />
+        <div className="relative">
         <Swiper
           modules={[Navigation]}
           navigation
@@ -80,8 +81,9 @@ export default function TestimonialCarousel() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <DecorativeDivider/>
         </div>
+        </div>
+        <DecorativeDivider/>
     </section>
     
   );

@@ -2,11 +2,12 @@ import React from 'react';
 import BrideGroomCard from './BrideGroomCard';
 import { bridegroom1, bridegroom2 } from '../../assets';
 import SectionHeader from './SectionHeader';
+import DecorativeDivider from './DecorativeDivider';
 
 const BrideGroomCardList = () => {
   return (
     
-    <section className="mb-8">
+    <section className="">
       <div className="container mx-auto">
           <SectionHeader sectionTitle="利用者の声" 
           shortDescription="数多くのカップルがここで出会えました。実際にご利用いただいた皆さまの声から、あなたの理想にぴったりの出会いがきっと見つかります"
@@ -27,6 +28,7 @@ const BrideGroomCardList = () => {
           />
         </div>
       </div>
+      <DecorativeDivider />
     </section>
   );
 };

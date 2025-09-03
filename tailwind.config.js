@@ -21,6 +21,7 @@ export default {
         'grey': '#5B5B5B',
         'dark-blue': '#1E5175',
         'btn-color': '#C3F1D6',
+        'bgBtn': '#BCF8D0',
       },
       fontSize: {
         xm: '10px',

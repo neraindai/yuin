@@ -27,6 +27,7 @@ const AboutSection = () => {
             reverseColumn
          />
          </div>
+         <DecorativeDivider />
     </section>
   );
 };

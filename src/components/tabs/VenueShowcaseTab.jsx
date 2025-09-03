@@ -39,10 +39,10 @@ export default function VenueShowcaseTab() {
 
   return (
     <>
-      <section>
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          {/* Main Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6 items-stretch w-full md:w-[547px] lg:w-full mx-auto"> 
+      <div className="">
+        {/* Main Content */}
+        <section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6 items-stretch w-full md:w-[547px] lg:w-full mx-auto">
             {/* Left Carousel */}
             <div className="flex flex-col h-full">
               {/* Main Image with Arrows */}
@@ -78,11 +78,10 @@ export default function VenueShowcaseTab() {
                       src={img.src}
                       alt={img.alt}
                       onClick={() => setCurrent(actualIndex)}
-                      className={`rounded-lg object-cover w-full h-24 cursor-pointer border-2 ${
-                        current === actualIndex
-                          ? "border-green-700"
-                          : "border-transparent"
-                      }`}
+                      className={`rounded-lg object-cover w-full h-24 cursor-pointer border-2 ${current === actualIndex
+                        ? "border-green-700"
+                        : "border-transparent"
+                        }`}
                     />
                   );
                 })}
@@ -97,7 +96,7 @@ export default function VenueShowcaseTab() {
             {/* Right Text */}
             <div className="flex flex-col h-full">
               {/* Title */}
-              <h2 className="font-yugothic text-md md:text-xlg lg:text-xl font-bold text-[#3a9d85] mb-3">
+              <h2 className="font-yugothic text-md md:text-xlg lg:text-xl font-bold text-black mb-3">
                 セレスティアルガーデンホール
               </h2>
 
@@ -110,7 +109,7 @@ export default function VenueShowcaseTab() {
                   まるで天上の楽園にいるかのような、非日常を感じられる極上のロケーションです。
                 </p>
               </div>
-              
+
               {/* Contact Info */}
               <div className="mt-4 space-y-4">
                 <div className="grid grid-cols-[24px_70px_1fr] gap-x-3 items-start">
@@ -146,11 +145,11 @@ export default function VenueShowcaseTab() {
               </div>
             </div>
           </div>
-
-          {/* Divider */}
           <DecorativeDivider />
+        </section>
 
-          {/* Video Section */}
+        {/* Video Section */}
+        <section>
           <div className="text-center">
             {/* <h2 className="text-lg font-semibold mb-4">
               セレスティアルガーデンホール
@@ -171,25 +170,20 @@ export default function VenueShowcaseTab() {
                 className="absolute inset-0 flex items-center justify-center"
                 aria-label="動画を再生"
               >
-                <img src={playBtn} alt="playBtn" className="w-[80px]"/>
+                <img src={playBtn} alt="playBtn" className="w-[80px]" />
               </button>
             </div>
           </div>
+          <DecorativeDivider />
+        </section>
 
-          {/* Bottom Divider */}
-          <div className="my-8 flex justify-center">
-            <div className="w-16 border-t border-gray-300"></div>
-          </div>
-
-          {/* Garden Hall */}
+        {/* Garden Hall */}
+        <div>
           <div className="garden-hall">
             <GradenSomePage />
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <Footer />
+      </div>
     </>
   );
 }

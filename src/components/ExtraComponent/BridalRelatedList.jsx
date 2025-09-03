@@ -23,7 +23,7 @@ const bridalArticle = [
 ];
 const BridalRealtedList = () =>{
     return(
-        <section className="mb-8">
+        <section className="">
             <div className="container mx-auto">
                 <SectionHeader 
                 sectionTitle="利用者の声"

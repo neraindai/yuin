@@ -5,10 +5,12 @@ const GardenHallSection = ({
   mainImage,
   title,
   description,
-  cards
+  cards,
+  colorBlack,
+  smallHeading
 }) => {
   return (
-    <section className="relative px-4 py-10 justify-center text-center">
+    <section className="relative px-4 justify-center text-center">
       <div className="static w-full md:w-full lg:w-[771px] mx-auto">
         <div className="static grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] lg:grid-cols-[1fr] justify-start gap-5 lg:gap-10 mb-4 md:mb-8 lg:mb-2">
           {/* Circle Badge */}
@@ -21,7 +23,8 @@ const GardenHallSection = ({
           sectionTitle={title} 
           shortDescription={description}
           noborder
-          colorBlack
+          colorBlack={colorBlack}
+          smallHeading={smallHeading}
         />
         </div>
 

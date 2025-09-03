@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import StepCard from './StepCard';
-import DecorativeDivider from './DecorativeDivider';
 import { steps1,steps2,steps3,steps4,steps5} from '../../assets';
 import SectionHeader from "./SectionHeader";
 const steps = [
@@ -38,30 +37,29 @@ const steps = [
 const StepComponent = () => {
   return (
     <section>
-    <div className="container mx-auto lg:px-0">
-      <DecorativeDivider/>
-      <SectionHeader sectionTitle="サービスの流れ" shortDescription="「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。" />
-      <div className="mb-8">
-        <motion.div
-          className="flex flex-wrap justify-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.5 }}
-        >
-          {steps.map((step, index) => (
-              <StepCard key={index} {...step} />
-          ))}
-        </motion.div>
-        <div className="flex align-center justify-center mt-8">
-          <button
-            className="bg-green-100 hover:bg-green-200 font-semibold px-12 py-3 rounded-full transition shadow-md text-primary text-base md:text-basemd lg:text-baselg"
+      <div className="container mx-auto">
+        <SectionHeader sectionTitle="サービスの流れ" shortDescription="「ゆいのね」では、おふたりの想いに寄り添いながら、結婚式当日まで安心して進められるサポートをご提供しています。ご相談から当日までのステップを丁寧にご案内します。" />
+        <div className="mb-8">
+          <motion.div
+            className="flex flex-wrap justify-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
           >
-            もっと見る
-          </button>
+            {steps.map((step, index) => (
+                <StepCard key={index} {...step} />
+            ))}
+          </motion.div>
+          <div className="flex align-center justify-center mt-8">
+            <button
+              className="bg-bgBtn text-primary-text hover:bg-green-200 font-semibold px-12 py-3 rounded-full transition shadow-md text-base md:text-basemd lg:text-baselg"
+            >
+              もっと見る
+            </button>
+          </div>
         </div>
       </div>
-    </div>
     </section>
   );
 };
