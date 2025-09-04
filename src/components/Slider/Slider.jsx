@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { slide1, slide2 } from '../../assets';
 import ActionCard from "../ExtraComponent/ActionCard";
 import RegisterLoginSection from "../ExtraComponent/RegisterLoginSection";
+import MobileViewSideBar from "../ExtraComponent/MobileViewSideBar";
 
 const images = [slide1, slide2];
 
@@ -37,6 +38,8 @@ export default function Slider({ children }) {
                   </div>
               </div>
       </div>
+      {/* mobile search bar area */}
+      {/* <MobileViewSideBar /> */}
       <RegisterLoginSection />
     </section>
   );
