@@ -9,11 +9,12 @@ import img4 from "../../assets/images/v1.jpg";
 import img5 from "../../assets/images/v2.jpg";
 import img6 from "../../assets/images/v3.jpg";
 import { nextArrow } from "../../assets";
+import SectionHeader from "../ExtraComponent/SectionHeader";
 
 // Example data for three sections
 const sections = [
   {
-    title: "セレモニー",    
+    title: "セレモニ",    
     description:
       "自然光が降り注ぐ幻想的な空間で叶える、心に残る華麗な瞬間。まるで映画のワンシーンのような挙式のひとときをご覧ください。",
     images: [img1, img2, img3, img4, img5, img6, img2],
@@ -34,12 +35,8 @@ const sections = [
 
 export default function VenueSectionTab() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10">
-      <h2 className="text-green-700 text-center text-xl font-semibold mb-2">
-        挙式会場
-      </h2>
-      <div className="border-t border-green-700 w-16 mx-auto mb-10"></div>
-
+    <div className="py-10">
+      <SectionHeader sectionTitle="挙式会場" noborder />
       {sections.map((section, idx) => (
         <ImageGalleryBlock key={idx} {...section} />
       ))}
@@ -61,11 +58,7 @@ function ImageGalleryBlock({ title, description, images }) {
   return (
     <>
       <div className="mb-12">
-        <h3 className="text-center text-lg font-bold mb-2">{title}</h3>
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
-          {description}
-        </p>
-
+        <SectionHeader sectionTitle={title} shortDescription={description} smallHeading colorBlack />
         <div className="relative customSliderButton">
           <button
             onClick={prevImage}
@@ -95,7 +88,7 @@ function ImageGalleryBlock({ title, description, images }) {
               src={img}
               alt=""
               onClick={() => setCurrent(index)}
-              className={`w-32 h-24 object-cover rounded-lg cursor-pointer border-2 ${
+              className={`w-[calc(100%_/_7_-_10px)] object-cover rounded-lg cursor-pointer border-2 ${
                 current === index ? "border-green-700" : "border-transparent"
               }`}
             />

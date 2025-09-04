@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { logo } from "../../assets";
 export default function Footer() {
   return (
-    <footer className="bg-[#E2F1E4] border-t border-gray-300 mt-[45px]">
+    <footer className="bg-[#E2F1E4] border-t border-gray-300">
       <div className="container mx-auto flex flex-wrap justify-between py-8 md:py-10 lg:py-16">
 
         {/* Left Columns */}
