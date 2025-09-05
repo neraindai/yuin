@@ -9,13 +9,63 @@ const MobileViewSideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState(null);
 
+  // const toggleAccordion = (index) => {
+  //   setActiveAccordion(activeAccordion === index ? null : index);
+  // };
+
+  // Sample accordion data
+  const accordionData = [
+    {
+      title: "首都圏",
+      content: ["東京都", "神奈川県", "埼玉県", "千葉県"],
+    },
+    {
+      title: "首都圏",
+      content: ["東京都", "神奈川県", "埼玉県", "千葉県"],
+    },
+    {
+      title: "首都圏",
+      content: ["東京都", "神奈川県", "埼玉県", "千葉県"],
+    },
+    {
+      title: "北陸・甲信越・静岡",
+    },
+    {
+      title: "中国",
+    },
+    {
+      title: "四国",
+    },
+    {
+      title: "九州・沖縄",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeChild, setActiveChild] = useState({ parent: null, child: null });
+  const [activeSingle, setActiveSingle] = useState(null);
+
   const toggleAccordion = (index) => {
-    setActiveAccordion(activeAccordion === index ? null : index);
+    setActiveIndex(activeIndex === index ? null : index);
+    setActiveSingle(null); // reset single when accordion opens
+  };
+
+  const handleChildClick = (parentIndex, childIndex) => {
+    setActiveChild({ parent: parentIndex, child: childIndex });
+    setActiveSingle(null); // reset single if submenu clicked
+  };
+
+  const handleSingleClick = (index) => {
+    setActiveSingle(index);
+    setActiveIndex(null); // reset accordion if single clicked
+    setActiveChild({ parent: null, child: null }); // reset submenu if single clicked
   };
 
   return (
     <>
-      <SectionHeader sectionTitle="結婚式場を探す" noborder />
+      <div className="mt-[15px]">
+        <SectionHeader sectionTitle="結婚式場を探す" noborder />
+      </div>
 
       <div className="container">
         {/* Buttons */}
@@ -34,7 +84,7 @@ const MobileViewSideBar = () => {
           {/* Button 1 */}
           <button
             onClick={() => setIsOpen(true)}
-            className="flex flex-col items-center justify-center rounded-2xl bg-green-200 py-6 shadow-md hover:bg-green-300 transition"
+            className="flex flex-col items-center justify-center rounded-2xl bg-bgBtn py-6 shadow-md hover:bg-green-300 transition"
           >
             <img
               src={homeIcon}
@@ -47,7 +97,7 @@ const MobileViewSideBar = () => {
           </button>
 
           {/* Button 2 */}
-          <button className="flex flex-col items-center justify-center rounded-2xl bg-green-200 py-6 shadow-md hover:bg-green-300 transition">
+          <button className="flex flex-col items-center justify-center rounded-2xl bg-bgBtn py-6 shadow-md hover:bg-green-300 transition">
             <img
               src={buildingIcon}
               alt="building icon"
@@ -100,7 +150,7 @@ const MobileViewSideBar = () => {
 
         {/* Sidebar Popup */}
         <div
-          className={`bg-white fixed top-0 left-0 h-full w-full shadow-lg transform transition-transform duration-300 z-50
+          className={`bg-white pt-16 fixed top-0 left-0 h-full w-full shadow-lg transform transition-transform duration-300 z-50
   ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
         >
           {/* Logo at top-left */}
@@ -123,83 +173,78 @@ const MobileViewSideBar = () => {
           </button>
 
           {/* Sidebar links */}
-          <ul className="py-6 space-y-4 mt-20 bg-white">
-            {/* Accordion links */}
-            {["link 1", "link 2", "link 3"].map((link, index) => (
-              <li key={index}>
-                <span
-                  className={`flex justify-between items-center font-bold cursor-pointer px-4 py-2 transition-colors ${
-                    activeAccordion === index
-                      ? "bg-green-200 text-green-900"
-                      : "bg-transparent text-gray-800"
-                  } hover:bg-green-100`}
-                  onClick={() => toggleAccordion(index)}
-                >
-                  {link}
-                  <span
-                    className={`w-6 h-5 flex items-center justify-center rounded-sm text-sm font-bold transition-colors ${
-                      activeAccordion === index
-                        ? "bg-white text-black"
-                        : "bg-green-500 text-white"
-                    }`}
-                  >
-                    {activeAccordion === index ? "−" : "+"}
-                  </span>
-                </span>
+          <ul className="main_parent">
+            <label className="text-sm text-[#5B5B5B] bg-[#F5F5F5] py-3 px-2 block text-center">挙式希望エリアから探す</label>
+            {accordionData.map((item, index) => (
+              <li className="main_child" key={index}>
+                <div>
+                  {/* Accordion Header */}
+                  {activeIndex === index ? (<>
+                    <div className={`bg-bgBtn py-3 px-3 title_wrap flex justify-between items-center rounded ${item.content ? "cursor-pointer" : "cursor-pointer"
+                      } ${activeSingle === index ? "bg-bgBtn" : ""}`}
+                      onClick={() =>
+                        item.content ? toggleAccordion(index) : handleSingleClick(index)
+                      }>
+                      {activeSingle === index ? (<><a href="#"><strong>{item.title}</strong></a></>) : (<><strong>{item.title}</strong></>)}
 
-                {/* Accordion Body */}
-                <ul
-                  className={`list-disc pl-6 mt-2 space-y-2 text-sm overflow-hidden transition-all duration-300 ${
-                    activeAccordion === index
-                      ? "max-h-40 opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <li>
-                    <a
-                      href="#"
-                      className="text-black hover:bg-green-100 rounded px-4 py-1 block"
+                      {/* Show + / - only if content exists */}
+                      
+                      {item.content && (
+                        <div className="iconWrap">
+                          <span className={`flex flex-row justify-center items-center p-[5px] w-[20px] h-[20px] ${activeIndex === index ? "bg-white text-primary-text" : "bg-primary-text text-white"}`}>{activeIndex === index ? "-" : "+"}</span>
+                        </div>
+                      )}
+                    </div>
+
+                  </>
+                  ) : (
+                    <>
+                      <div
+                        className={`p-3 title_wrap flex justify-between items-center rounded ${item.content ? "cursor-pointer" : "cursor-pointer"
+                          } ${activeSingle === index ? "bg-bgBtn" : ""}`}
+                        onClick={() =>
+                          item.content ? toggleAccordion(index) : handleSingleClick(index)
+                        } // only toggle if content exists
+                      >
+                        {activeSingle === index ? (<><a href="#"><strong>{item.title}</strong></a></>) : (<><strong>{item.title}</strong></>)}
+
+                        {/* Show + / - only if content exists */}
+                        {item.content && (
+                          <div className="iconWrap">
+                            <span className={`flex flex-row justify-center items-center p-[5px] w-[20px] h-[20px] ${activeIndex === index ? "bg-white text-primary-text" : "bg-primary-text text-white"}`}>{activeIndex === index ? "-" : "+"}</span>
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  )}
+
+
+                  {/* Accordion Content */}
+                  {item.content && (
+                    <ul
+                      className={`second_child accordionContent overflow-hidden transition-all duration-300 list-disc list-inside ${activeIndex === index
+                        ? "max-h-40 opacity-100 mt-2"
+                        : "max-h-0 opacity-0"
+                        }`}
                     >
-                      inner link 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-black hover:bg-green-100 rounded px-4 py-1 block"
-                    >
-                      inner link 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-black hover:bg-green-100 rounded px-4 py-1 block"
-                    >
-                      inner link 3
-                    </a>
-                  </li>
-                </ul>
+                      {item.content.map((sub, subIndex) => (
+                        <li
+                          key={subIndex}
+                          className={`mb-4 px-5 cursor-pointer ${activeChild.parent === index &&
+                            activeChild.child === subIndex
+                            ? "text-primary-text font-semibold"
+                            : "text-black"
+                            }`}
+                          onClick={() => handleChildClick(index, subIndex)}
+                        >
+                          <a href="#">{sub}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </li>
             ))}
-
-            {/* Simple links */}
-            <li>
-              <a
-                href="#"
-                className="block font-bold px-3 py-2 rounded-md transition-colors bg-transparent text-gray-800 hover:bg-green-100"
-              >
-                link 4
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block font-bold px-3 py-2 rounded-md transition-colors bg-transparent text-gray-800 hover:bg-green-100"
-              >
-                link 5
-              </a>
-            </li>
           </ul>
         </div>
 

@@ -4,6 +4,7 @@ import { SiLine } from "react-icons/si";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { orDivider } from "../../assets";
 
 export default function Login() {
     const { setIsLoggedIn } = useAuth();
@@ -33,13 +34,13 @@ export default function Login() {
           <div className="mt-10 flex flex-col md:flex-row w-full rounded-lg overflow-hidden">
             {/* Login Section */}
             <div className="flex-1 flex flex-col justify-start p-10">
-              <h2 className="text-lg font-bold mb-6 text-gray-800">
+              <h2 className="font-yugothic font-bold text-basemd mg:text-baselg text-center lg:text-md font-bold mb-6 text-black">
                 アカウントにログイン
               </h2>
 
               {/* Email */}
               <div className="mb-4">
-                <label className="block mb-3 text-[#141416] font-montserrat font-semibold">メールアドレス</label>
+                <label className="font-yugothic font-semibold text-base block mb-3 text-black">メールアドレス</label>
                 <div className="flex items-center rounded-[8px] px-3 h-[60px] border-[1px] border-[solid] border-[#ccc]">
                   <FaEnvelope size={21} className="text-primary-text mr-3" />
                   <input
@@ -52,7 +53,7 @@ export default function Login() {
 
               {/* Password */}
               <div className="mb-6">
-                <label className="block mb-3 text-[#141416] font-montserrat font-semibold">パスワード</label>
+                <label className="font-yugothic font-semibold text-base block mb-3 text-black">パスワード</label>
                 <div className="flex items-center rounded-[8px] px-3 h-[60px] border-[1px] border-[solid] border-[#ccc]">
                   <FaLock size={21} className="text-primary-text mr-3" />
                   <input
@@ -92,10 +93,10 @@ export default function Login() {
 
             {/* Sign-up Section */}
             <div className="flex-1 flex flex-col justify-start p-10">
-              <h3 className="text-lg font-bold mb-2 text-gray-800 text-center">
+              <h3 className="font-yugothic font-bold text-basemd mg:text-baselg lg:text-md text-center font-bold mb-6 text-black">
                 初めてですか？
               </h3>
-              <p className="paragraph font-montserrat font-md mb-5 mt-4 text-center">
+              <p className="font-yugothic font-semibold text-black paragraph font-md mb-5 mt-4 text-center">
                 登録して、たくさんの新しいチャンスを見つけましょう！
               </p>
 
@@ -108,7 +109,8 @@ export default function Login() {
                   <SiLine size={23} className="text-primary-text" />
                   <span className="text-primary-text font-montserrat font-semibold">LINEでログイン</span>
                 </button>
-
+                
+                <img src={orDivider} alt="divider" className="my-3 mx-auto block object-contain"/>
                  <Link to="/register">
                  <button className="w-full mt-5 h-[56px] flex items-center justify-center gap-2 bg-[#BCF8D0] rounded-3xl hover:bg-[#AEE4B0] text-primary-text">
                  <FaEnvelope size={23} className="text-primary-text" />

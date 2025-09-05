@@ -49,14 +49,16 @@ export default function ContactForm() {
         <div className="min-h-screen bg-white text-black flex flex-col items-center py-10">
           {/* STEP 1: 入力フォーム */}
           {step === 1 && (
+            <>
+            <SectionHeader
+                sectionTitle="お問い合わせフォーム"
+                shortDescription="会場見学やフェアに関するお問い合わせには対応しておりません。適切なお問い合わせ方法をご利用ください"
+              />
             <form
               onSubmit={handleSubmit}
               className="w-full max-w-lg bg-white rounded-lg p-6"
             >
-              <SectionHeader
-                sectionTitle="お問い合わせフォーム"
-                shortDescription="会場見学やフェアに関するお問い合わせには対応しておりません。適切なお問い合わせ方法をご利用ください"
-              />
+              
 
               <h2 className="font-semibold mb-4 border-b pb-1">
                 1. お名前と連絡先
@@ -188,6 +190,7 @@ export default function ContactForm() {
                 次へ
               </button>
             </form>
+            </>
           )}
 
           {/* STEP 2: 確認画面 */}

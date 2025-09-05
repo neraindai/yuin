@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { downarrow } from "../../assets";
 
-export default function CustomSelect({ name, placeholder, options, iconLeft, withouSearchIcon }) {
+export default function CustomSelect({ name, placeholder, options, iconLeft, withouSearchIcon, customModify }) {
   const [selected, setSelected] = useState("");
   const [open, setOpen] = useState(false);
   const selectRef = useRef(null);
@@ -19,7 +19,7 @@ export default function CustomSelect({ name, placeholder, options, iconLeft, wit
   }, []);
 
   return (
-    <div ref={selectRef} className="relative flex items-center border rounded-md h-10 bg-white">
+    <div ref={selectRef} className="relative flex items-center border rounded-md bg-white">
       {/* Hidden input for form submission */}
       <input type="hidden" name={name} value={selected} />
 
@@ -29,7 +29,7 @@ export default function CustomSelect({ name, placeholder, options, iconLeft, wit
         <button
         type="button"
         onClick={() =>  { console.log("clicked"); setOpen(!open); }}
-        className="flex-1 h-full px-1 text-left flex items-center justify-between focus:outline-none"
+        className={`flex-1 h-10 px-1 text-left flex items-center justify-between focus:outline-none ${customModify}`}
       >
         {/* Left icon if provided */}
         {iconLeft && (
@@ -57,7 +57,7 @@ export default function CustomSelect({ name, placeholder, options, iconLeft, wit
         <button
         type="button"
         onClick={() =>  { console.log("clicked"); setOpen(!open); }}
-        className="flex-1 h-full px-3 text-left flex items-center justify-between focus:outline-none"
+        className="flex-1 h-10 px-3 text-left flex items-center justify-between focus:outline-none"
       >
         {/* Left icon if provided */}
         {iconLeft && (

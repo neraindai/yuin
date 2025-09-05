@@ -109,7 +109,7 @@ const Header = () => {
         <div className="lg:hidden">
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
-              <HiOutlineX className="w-6 h-6 text-gray-700" />
+              <HiOutlineX className="w-6 h-6 text-gray-700 mt-2" />
             ) : (
               <HiOutlineMenuAlt3 className="w-6 h-6 text-gray-700" />
             )}
@@ -124,18 +124,18 @@ const Header = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-15 left-0 w-full bg-white shadow-md lg:hidden px-4 pb-4 overflow-hidden z-[222]"
+            className="absolute top-15 left-0 w-full bg-white shadow-md lg:hidden pb-4 overflow-hidden z-[222]"
           >
-            <ul className="flex flex-col space-y-3 text-sm font-medium text-gray-700">
+            <ul className="flex flex-col space-y-3 text-sm font-medium text-gray-700 border-t border-gray-300">
               {navLinks.map((link, index) => (
-                <li key={index} className="border-b border-gray-300 pb-2">
+                <li key={index} className="border-b border-gray-300 py-2 px-4">
                   <Link to={link.to} className={link.className || ""}>
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="pt-3 pb-3">
+            <div className="pt-3 pb-3 mx-4">
               <button className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-200 transition w-full text-left">
                   ログイン / 新規登録
                 </button>

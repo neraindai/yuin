@@ -32,6 +32,7 @@ import playBtn from './icons/playBtn.png';
 import nextArrow from './icons/next.png';
 import homeIcon from './icons/1.png';
 import buildingIcon from './icons/2.png';
+import orDivider from './icons/orDivider.svg';
 
 
 export {
@@ -67,4 +68,5 @@ export {
   nextArrow,
   homeIcon,
   buildingIcon,
+  orDivider,
 };

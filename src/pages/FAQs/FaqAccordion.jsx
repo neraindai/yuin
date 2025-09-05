@@ -4,44 +4,45 @@ import Footer from "../../components/Footer/Footer";
 import FaqBanner from "../../assets/images/FAQbanner.png";
 import HeroMiniImage from "../../components/HeroMiniImage";
 import Header from "../../components/Header/Header";
+import Accordion from "../../components/ExtraComponent/Accordion";
 
-const Accordion = ({ number, question, answer }) => {
-  const [open, setOpen] = useState(false);
+// const Accordion = ({ number, question, answer }) => {
+//   const [open, setOpen] = useState(false);
 
-  return (
-    <div className="border border-primary-text border-t-1 last:border-b">
-      <button
-        className="w-full flex justify-between items-center px-4 py-3 text-left"
-        onClick={() => setOpen(!open)}
-      >
-        <span className="flex items-start gap-3 text-gray-800 font-medium">
-          <span className="font-bold text-primary-text">Q{number}</span>
-          {question}
-        </span>
-        <span className="text-xl font-bold text-primary-text">
-          {open ? "−" : "+"}
-        </span>
-      </button>
+//   return (
+//     <div className="border border-primary-text border-t-1 last:border-b">
+//       <button
+//         className="w-full flex justify-between items-center px-4 py-3 text-left"
+//         onClick={() => setOpen(!open)}
+//       >
+//         <span className="flex items-start gap-3 text-gray-800 font-medium">
+//           <span className="font-bold text-primary-text">Q{number}</span>
+//           {question}
+//         </span>
+//         <span className="text-xl font-bold text-primary-text">
+//           {open ? "−" : "+"}
+//         </span>
+//       </button>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="overflow-hidden"
-          >
-            <div className="px-4 pb-4 flex gap-3 text-gray-600 text-sm leading-relaxed">
-              <span className="font-bold text-primary-text">A</span>
-              <span>{answer}</span>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+//       <AnimatePresence>
+//         {open && (
+//           <motion.div
+//             initial={{ height: 0, opacity: 0 }}
+//             animate={{ height: "auto", opacity: 1 }}
+//             exit={{ height: 0, opacity: 0 }}
+//             transition={{ duration: 0.25 }}
+//             className="overflow-hidden"
+//           >
+//             <div className="px-4 pb-4 flex gap-3 text-gray-600 text-sm leading-relaxed">
+//               <span className="font-bold text-primary-text">A</span>
+//               <span>{answer}</span>
+//             </div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </div>
+//   );
+// };
 
 const FaqAccordion = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -152,16 +153,15 @@ const FaqAccordion = () => {
         </h2>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-between gap-4 mb-10">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-6 py-2 rounded-full border ${
-                activeCategory === cat.id
-                  ? "bg-green-200 text-primary-text border-primary-text"
-                  : "bg-green-50 text-primary-text border-primary-text"
-              } transition`}
+              className={`font-yugothic font-bold px-2 py-2 rounded-full ${activeCategory === cat.id
+                  ? "bg-green-100 text-primary-text"
+                  : "bg-bgBtn text-primary-text"
+                } transition`}
             >
               {cat.label}
             </button>
@@ -172,20 +172,29 @@ const FaqAccordion = () => {
         {Object.entries(groupedFaq).map(([cat, items]) => (
           <div key={cat} className="mb-10">
             {/* Category Title */}
-            <div className="inline-block bg-green-100 text-primary-text font-bold px-4 py-2 border border-primary-text mb-0 text-center">
+            <div className="inline-block bg-bgBtn text-primary-text font-bold px-4 py-2 mb-0 text-center">
               {categories.find((c) => c.id === cat)?.label ||
                 "その他カテゴリー"}
             </div>
-
-            {/* Accordion List */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="border border-green-200"
+            >
+              {/* Accordion List */}
             {items.map((item, idx) => (
-              <Accordion
-                key={idx}
-                number={idx + 1}
-                question={item.question}
-                answer={item.answer}
-              />
-            ))}
+              <Accordion key={idx} number={`Q ${idx+1}`} question={item.question} answer={item.answer} />
+              // <Accordion
+              //   key={idx}
+              //   number={idx + 1}
+              //   question={item.question}
+              //   answer={item.answer}
+              // />
+            
+              ))}
+            </motion.div>
           </div>
         ))}
       </section>
