@@ -39,7 +39,7 @@ export default function Slider({ children }) {
               </div>
       </div>
       {/* mobile search bar area */}
-      {/* <MobileViewSideBar /> */}
+      <MobileViewSideBar />
       <RegisterLoginSection />
     </section>
   );

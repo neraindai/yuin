@@ -30,6 +30,8 @@ import downarrow from './icons/downarrow.png';
 import tabIcon from './icons/tabIcon.svg';
 import playBtn from './icons/playBtn.png';
 import nextArrow from './icons/next.png';
+import homeIcon from './icons/1.png';
+import buildingIcon from './icons/2.png';
 
 
 export {
@@ -63,4 +65,6 @@ export {
   tabIcon,
   playBtn,
   nextArrow,
+  homeIcon,
+  buildingIcon,
 };
