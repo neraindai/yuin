@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { downarrow } from "../../assets";
 
-export default function CustomSelect({ name, placeholder, options, iconLeft, withouSearchIcon, customModify }) {
+export default function CustomSelect({ name, placeholder, options, iconLeft, withoutSearchIcon, customModify }) {
   const [selected, setSelected] = useState("");
   const [open, setOpen] = useState(false);
   const selectRef = useRef(null);
@@ -24,7 +24,7 @@ export default function CustomSelect({ name, placeholder, options, iconLeft, wit
       <input type="hidden" name={name} value={selected} />
 
       {/* Select button */}
-      {withouSearchIcon ? (
+      {withoutSearchIcon ? (
         <>
         <button
         type="button"
@@ -84,7 +84,7 @@ export default function CustomSelect({ name, placeholder, options, iconLeft, wit
       
 
       {/* Search button */}
-      {withouSearchIcon? (<>
+      {withoutSearchIcon? (<>
       
       </>) : (<>
       <button

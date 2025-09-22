@@ -24,7 +24,7 @@ const VenueSearchBar = () => {
                 name="area hello"
                 placeholder="選択する"
                 options={["選択する", "選択する", "選択する"]}
-                withouSearchIcon
+                withoutSearchIcon
               />
         </div>
 
@@ -34,7 +34,7 @@ const VenueSearchBar = () => {
                 name="area hello"
                 placeholder="選択する"
                 options={["選択する", "選択する", "選択する"]}
-                withouSearchIcon
+                withoutSearchIcon
               />
         </div>
 

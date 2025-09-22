@@ -21,6 +21,8 @@ import Register from "../pages/Register/Register";
 import EditProfile from "../pages/EditProfile/EditProfile";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import ThankYou from "../pages/ThankYou/ThankYou";
+import PopularVenue from "../pages/venue-list/PopularVenue";
+import CostCoveredVenue from "../pages/venue-list/CostCoveredVenue";
 
 const AppRoutes = () => {
   return (
@@ -35,6 +37,11 @@ const AppRoutes = () => {
 
       {/* FavoriteVenueList Page */}
       <Route path="/fvt-venue-list" element={<FavoriteVenueList />} />
+      {/* popular venue */}
+      <Route path="/popular-venue" element={<PopularVenue />} />
+
+      {/* cost covered venue */}
+      <Route path="/cost-covered-venue" element={<CostCoveredVenue />} />
 
       {/*BudgetWedding Page  */}
       <Route path="/budget-wedding" element={<BudgetWedding />} />

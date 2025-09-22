@@ -1,6 +1,8 @@
 import { FaSearch } from "react-icons/fa";
 import { books, iconhome, downarrow } from "../../assets";
 import CustomSelect from "../ExtraComponent/CustomSelect";
+import CustomMegaSelect from "../ExtraComponent/CustomMegaSelect";
+
 
 export default function SearchSection() {
   return (
@@ -16,12 +18,13 @@ export default function SearchSection() {
           <label className="text-grey text-sm font-zen font-bold block mb-1">
             挙式希望エリアから探す
           </label>
-          <CustomSelect
+          {/* <CustomSelect
             name="area"
             placeholder="選択する"
             options={["選択する", "選択する", "選択する"]}
             iconLeft={iconhome}
-          />
+          /> */}
+          <CustomMegaSelect />
         </div>
 
         {/* Search by venue name */}
